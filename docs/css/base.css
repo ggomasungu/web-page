@@ -1,0 +1,22 @@
+/*폰트*/
+
+/*숨김처리*/
+h2,h3,h4,h5,h6{display:none}
+
+/*기본설정*/
+html, body {background:white}
+a {text-decoration:none;color:black;display:block}
+nav a:hover, nav a:active, nav a:focus{text-decoration:none}
+
+/*모바일*/
+@media (max-width:767px){
+	
+}
+/*태블릿*/
+@media (min-width:768px) (max-width:1023px) {
+	
+}
+/*PC화면*/
+@media (min-width:1024px) {
+
+}
