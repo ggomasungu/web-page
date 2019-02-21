@@ -1,0 +1,52 @@
+/*컨텐츠영역*/
+#main {position:relative;font-size:0}
+
+/*슬라이드 영역 및 이미지*/
+#slideArea {height:710px;width:100%;position:relative;overflow:hidden}
+#slideArea img {height:710px;width:100%;position:absolute;right:-100%}
+
+/*슬라이드 좌우버튼*/
+.nextpre {
+	position:absolute;top:50%;transform:translateY(-50%);
+	display:inline-block;
+	width:20%;height:100%;
+	cursor: pointer;
+	background:rgba(255,255,255,0.2);
+	line-height: 710px;
+	font-size:120px;color:rgba(255,255,255,0.1);
+	text-align: center;
+}
+.nextpre:hover {
+	background:rgba(30,42,120,0.7);
+	color:white;
+}
+.btnPre {left:0}
+.btnNext {right:0}
+
+/*슬라이드 네비게이션*/
+#slidebtns {
+	position:absolute;top:5%;left:50%;transform:translateX(-50%);
+	height:40px;text-align: center;
+	background:rgba(255,255,255,0.3);
+	border-radius:20px;
+	padding:0 15px
+}
+#slidebtns li {
+	display: inline-block;
+	font-size:25px;color:white;
+	padding-left: 5px;padding-top:7px;
+	cursor: pointer;
+}
+#slidebtns li.btnslide0 {padding-left:0}
+
+@media (max-width:768px) {
+	/*슬라이드 좌우버튼*/
+	.nextpre {font-size:70px;}
+	/*슬라이드 네비게이션*/
+	#slidebtns {
+		height:32px;width:140px;
+	}
+	#slidebtns li {
+	font-size:20px;
+	}
+}

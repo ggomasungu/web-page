@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="css/import.css">
+<link rel="stylesheet" href="css/sub.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="script/search_menu.js"></script>
+<title>모바일웹</title>
+</head>
+<body>
+<header>
+	<div id="header_wrap">
+		<h1 class="main_logo"><a href="index.html">UHBEE MOBILE</a></h1>
+		<a id="btnSearch" href="#"><span class="iconSearch"></span></a>
+		<div id="searchArea"> <!-- 숨겨진 검색영역 -->
+			<form action="/" method="post">
+				<fieldset>
+					<legend>사이트 검색어 입력</legend>
+					<div id="bgSearch">
+						<input type="search" name="/" title="검색어입력">
+					</div>
+					<div id="bgBtnSearch">
+						<input type="submit" class="btnSearch" title="검색">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- 메인메뉴 -->
+	<nav>
+		<h2 class="hidden">메인메뉴</h2>
+		<ul class="main_menu bold verd">
+			<li><a href="company.html" title="company" class="tab_m">COMPANY</a>
+			</li>
+			<li><a href="project.html" title="project" class="tab_m">PROJECT</a>
+			</li>
+			<li><a href="recruit.html" title="recruit" class="tab_m">RECRUIT</a>
+			</li>
+			<li><a href="notice.html" title="notice" class="tab_m">NOTICE</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<section id="contents"> <!-- 서브페이지본문시작 -->
+	<div id="s_main" class="recruit">
+		<h2 class="sub_tit"></h2>
+		<div class="m_cont">
+			<p class="m_tit bold"></p>
+		</div>
+	</div>
+</section>
+<footer>
+	<ul class="shortcut">
+		<li><a href="#">어비홈</a></li>
+		<li><a href="#">아이콘보기</a></li>
+		<li><a href="#" class="li_a_end">전체보기</a></li>
+	</ul>
+	<ul class="buttons">
+		<li><input type="button" value="로그인" onclick="location.reload()"></li>
+		<li><input type="button" value="PC버전"></li>
+		<li><input type="button" value="고객센터" onclick="location.href='request.html'"></li>
+	</ul>
+	<ul class="privacy">
+		<li><a href="#">개인정보취급방침</a></li>
+		<li><a href="#" class="li_a_end">이용약관</a></li>
+	</ul>
+	<div class="end_bar">
+		<span class="copyrights helv">COPYRIGHT&copy; 2019 UHBEE. ALL RIGHTS RESERVED.</span>
+		<a href="#header_wrap"><img src="images/btn_bot_top.png" alt="맨위로"></a>
+	</div>
+</footer>
+</body>
+</html>

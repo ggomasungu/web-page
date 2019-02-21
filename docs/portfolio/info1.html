@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>놀이넷</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/import.css">
+	<link rel="shortcut icon" href="img/common/favicon.ico">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="script/all_mobile_menu.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<!-- 헤더 -->
+	<header>
+		<div id="logobox">
+			<!-- 로고 -->
+			<h1 id="logo"><a href="/"><img src="img/common/logo.png" alt="놀이넷로고" title="놀이넷"></a></h1>
+			<div id="loginArea">
+				<form action="/" class="loginForm">
+					<fieldset>
+						<legend class="hidden">로그인 영역</legend>
+						<span class="idArea">
+							<label for="loginId"><i class="fas fa-id-badge"></i></label>
+							<input type="text" id="loginId" title="아이디 입력" maxlength="15">
+						</span>
+						<span class="pwArea">
+							<label for="loginPw"><i class="fas fa-key"></i></label>
+							<input type="password" id="loginPw" title="비밀번호 입력" maxlength="15">
+						</span>
+						<span class="loginbtnArea">
+							<input type="button" value="로그인" onclick="location.reload()">
+							<input type="button" value="회원가입" onclick="location.href='signup.html'">
+						</span>
+					</fieldset>
+				</form>
+			</div>
+			<div id="logoillust">
+			<a href="/"><img src="img/main/mainBn_img1.jpg" alt="놀이넷로고일러스트"></a>
+			</div>
+		</div>
+	</header>
+	<!--네비게이션-->
+	<nav class="cfx">
+		<h2>메인메뉴</h2>
+		<ul class="cfx">
+			<li><a href="/sub1.html">테마파크란?</a>
+				<div class="subbg">
+					<div class="subbox">
+						<a href="/sub1.html"><img class="gnbicon" src="img/common/icon_1what_og.png" alt="테마파크란 아이콘"></a>
+						<ul>
+							<li>
+								<a href="/sub1_cont1.html">테마파크의 정의</a>
+								<p class="subtext"><span class="subtexttit">테마파크의 정의?</span><br><br>놀이공원? 테마파크? 비슷하지만 조금은 다른, 테마파크에 대해 알아봅시다.</p>
+							</li>
+							<li>
+								<a href="/sub1_cont2.html">테마파크의 역사</a>
+								<p class="subtext"><span class="subtexttit">테마파크의 역사?</span><br><br>테마파크는 언제부터 생겼을까요? 얼마나 오래 됐을까요? 그 역사에 대해 알아봅시다.</p>
+							</li>
+							<li>
+								<a href="/sub1_cont3.html">테마파크의 종류</a>
+								<p class="subtext"><span class="subtexttit">테마파크의 종류?</span><br><br>놀이기구만이 아닌, 각종 즐길거리가 있는 테마파크. 어떤 테마파크들이 있는지 알아봅시다.</p>
+							</li>
+							<li>
+								<a href="/sub1_cont4.html">테마파크의 놀거리</a>
+								<p class="subtext"><span class="subtexttit">테마파크의 놀거리?</span><br><br>어트랙션을 포함한 여러가지 놀거리들을 소개합니다.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="/sub2.html">추천 테마파크</a>
+				<div class="subbg">
+					<div class="subbox">
+						<a href="/sub2.html"><img class="gnbicon" src="img/common/icon_2top_og.png" alt="추천 테마파크 아이콘"></a>
+						<ul>
+							<li>
+								<a href="/">세계 TOP5 테마파크</a>
+								<p class="subtext"><span class="subtexttit">세계 TOP5!</span><br><br>세계에서 가장 유명한 5개의 테마파크를 소개합니다.</p>
+							</li>
+							<li>
+								<a href="/">그 외 가볼만한 테마파크</a>
+								<p class="subtext"><span class="subtexttit">그 외에도</span><br><br>고유한 특징을 지닌 테마파크들도 소개합니다.</p>
+							</li>
+							<li>
+								<a href="/">국내 테마파크 소개</a>
+								<p class="subtext"><span class="subtexttit">국내에도</span><br><br>우리 가까이에 있는, 국내 테마파크들도 소개합니다.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="/sub3.html">사건사고와 해결방안</a>
+				<div class="subbg">
+					<div class="subbox">
+						<a href="/sub3.html"><img class="gnbicon" src="img/common/icon_3danger_og.png" alt="사건사고와 해결방안 아이콘"></a>
+						<ul>
+							<li>
+								<a href="/">사건사고</a>
+								<p class="subtext"><span class="subtexttit">사건사고</span><br><br>테마파크에서 벌어지는, 벌어질 수 있는 사건사고에 대해 알아봅시다.</p>
+							</li>
+							<li>
+								<a href="/">해결방안</a>
+								<p class="subtext"><span class="subtexttit">해결방안</span><br><br>사건사고를 해결하기 위한 방법을 알아봅시다.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="/sub4.html">만든이 소개</a>
+				<div class="subbg">
+					<div class="subbox">
+						<a href="/sub4.html"><img class="gnbicon" src="img/common/icon_4who_og.png" alt="만든이 소개 아이콘"></a>
+						<ul>
+							<li>
+								<a href="/sub4.html">만든이 소개</a>
+								<p class="subtext"><span class="subtexttit">만든이 소개</span><br><br>홈페이지 제작자를 소개합니다.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div id="btnmMenu">
+			<img src="img/common/mobile_menu.png" alt="모바일 메뉴버튼">
+		</div>
+		<div id="mMenu">
+			<div id="mMenuHeader">
+				<p>X</p>
+			</div>
+			<ul class="mMul">
+				<li class="mMli">
+					<p class="mMlip">테마파크란?</p>
+					<ul class="mSubul">
+						<li class="mSubli"><a href="/sub1_cont1.html">테마파크의 정의</a></li>
+						<li class="mSubli"><a href="/sub1_cont2.html">테마파크의 역사</a></li>
+						<li class="mSubli"><a href="/sub1_cont3.html">테마파크의 종류</a></li>
+						<li class="mSubli"><a href="/sub1_cont4.html">테마파크의 놀거리</a></li>
+					</ul>
+				</li>
+				<li class="mMli">
+					<p class="mMlip">추천<br>테마파크</p>
+					<ul class="mSubul">
+						<li class="mSubli"><a href="/">세계 TOP5 테마파크</a></li>
+						<li class="mSubli"><a href="/">그 외 가볼만한 테마파크</a></li>
+						<li class="mSubli"><a href="/">국내 테마파크 소개</a></li>
+					</ul>
+				</li>
+				<li class="mMli">
+					<p class="mMlip">사건사고와<br>해결방안</p>
+					<ul class="mSubul">
+						<li class="mSubli"><a href="/">사건사고</a></li>
+						<li class="mSubli"><a href="/">해결방안</a></li>
+					</ul>
+				</li>
+				<li class="mMli">
+					<p class="mMlip">만든이 소개</p>
+					<ul class="mSubul">
+						<li class="mSubli"><a href="/sub4.html">만든이 소개</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 콘텐츠영역 -->
+	<section id="main">
+			<h2>콘텐츠영역</h2>
+	</section>
+	<!-- 푸터 -->
+	<footer>
+		<div id="footer">
+			<h2>사이트정보</h2>			
+			<ul class="corp_info">
+				<li>
+					<a href="/info1.html" class="borderani">회사소개
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
+							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="/info2.html" class="borderani">이용약관
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
+							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="/info3.html" class="borderani"><span>개인정보취급방침</span>
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
+							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="/info4.html" class="borderani">사이트맵
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
+							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<address>
+				(주)놀이넷<span>|</span>인천광역시 남구 주안로 89 3층 엠파이어빌딩<span>|</span>대표이사 : 임구직<br>
+				사업자등록번호:214-51-99999<span>|</span>전화:032-412-1231~4<span>|</span>FAX:032-412-1230<br>
+				전자우편주소:ThemeNoLE@nole.net<span>|</span>Copyright &copy; 2018 NoLE-Net. All Rights Reserved.
+			</address>
+		</div>
+	</footer>
+</body>
+</html>
