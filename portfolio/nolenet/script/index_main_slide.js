@@ -67,18 +67,9 @@ $(function() {
 			$btnli.find('i').addClass('far');
 			$(this).find('i').removeClass('far');
 			$(this).find('i').addClass('fas');
-			now=turnnow;
 
-			
-
-
-
-
-			clearInterval(repeat);
-
-
-
-			
+			// now=turnnow;
+			// clearInterval(repeat);
 
 			// $slideimg.eq(now-1).css({transform:'translateX(-200%)',transition:'1s'});
 			// $slideimg.eq(now).css({transform:'translateX(-100%)',transition:'1s'});
