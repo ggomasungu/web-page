@@ -56,17 +56,17 @@ $(function() {
 
 	
 	// // 슬라이드 인디케이터 표시 및 이동
-	var $btnli = $('#slidebtns').find('.btnslide');
-	$btnli.each(function() {
-		$(this).click(function() {
-			var turnnow = $btnli.index($(this)),
+	// var $btnli = $('#slidebtns').find('.btnslide');
+	// $btnli.each(function() {
+	// 	$(this).click(function() {
+	// 		var turnnow = $btnli.index($(this)),
 
-			$playstop.find('i').removeClass('fa-pause-circle');
-			$playstop.find('i').addClass('fa-play-circle');
-			$btnli.find('i').removeClass('fas');
-			$btnli.find('i').addClass('far');
-			$(this).find('i').removeClass('far');
-			$(this).find('i').addClass('fas');
+	// 		$playstop.find('i').removeClass('fa-pause-circle');
+	// 		$playstop.find('i').addClass('fa-play-circle');
+	// 		$btnli.find('i').removeClass('fas');
+	// 		$btnli.find('i').addClass('far');
+	// 		$(this).find('i').removeClass('far');
+	// 		$(this).find('i').addClass('fas');
 
 			// now=turnnow;
 			// clearInterval(repeat);
@@ -74,8 +74,8 @@ $(function() {
 			// $slideimg.eq(now-1).css({transform:'translateX(-200%)',transition:'1s'});
 			// $slideimg.eq(now).css({transform:'translateX(-100%)',transition:'1s'});
 
-		});
-	});
+	// 	});
+	// });
 
 
 /*
