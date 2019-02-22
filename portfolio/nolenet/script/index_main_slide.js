@@ -33,6 +33,31 @@ $(function() {
 	var repeat;
 	repeat = setInterval(slidenext,2000);
 
+	// 좌우버튼
+	$('.btnNext').click(function() {
+		clearInterval(repeat);
+		$playstop.find('i').removeClass('fa-pause-circle');
+		$playstop.find('i').addClass('fa-play-circle');
+		slidenext();
+	});
+	$('.btnPre').click(function() {
+		clearInterval(repeat);
+		$playstop.find('i').removeClass('fa-pause-circle');
+		$playstop.find('i').addClass('fa-play-circle');
+
+		if (0>nowimg&&nowimg>=-300) {
+			nowimg+=100
+			$slidebox.animate({left:nowimg+'%'}, 700);
+			$btnli.find('i').removeClass('fas');
+			$btnli.find('i').addClass('far');			
+		}
+		else {
+			nowimg-=300
+			$slidebox.animate({left:nowimg+'%'}, 700);
+			$btnli.find('i').removeClass('fas');
+			$btnli.find('i').addClass('far');			
+		}
+	});
 	
 	// 슬라이드 dot 클릭 이동
 	var $btnli = $('#slidebtns').find('.btnslide');
@@ -49,34 +74,6 @@ $(function() {
 			$(this).find('i').removeClass('far');
 			$(this).find('i').addClass('fas');
 		});
-	});
-
-
-/*
-	function clickindicator() {
-			var now = $(this).attr('class');
-			$slideli.find('i').removeClass('fas');
-			$slideli.find('i').addClass('far');
-			$(this).find('i').removeClass('far');
-			$(this).find('i').addClass('fas')
-			// if ($slideimgs.find('img').eq(0).attr('class')==now) {
-			// 	$(this).css('property', 'value');
-			// }
-	}
-	*/
-
-	// 좌우버튼
-	$('.btnNext').click(function() {
-		clearInterval(repeat);
-		$playstop.find('i').removeClass('fa-pause-circle');
-		$playstop.find('i').addClass('fa-play-circle');
-		slidenext();
-	});
-	$('.btnPre').click(function() {
-		clearInterval(repeat);
-		$playstop.find('i').removeClass('fa-pause-circle');
-		$playstop.find('i').addClass('fa-play-circle');
-		//수정필요 $slidebox.animate({left:nowimg*-1+'%'},700);
 	});
 	
 	// 정지재생버튼
