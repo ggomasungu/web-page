@@ -31,7 +31,7 @@ $(function() {
 
 	// 자동 슬라이드 반복
 	var repeat;
-	repeat = setInterval(slidenext,2000);
+	repeat = setInterval(slidenext,3000);
 
 	// 좌우버튼
 	$('.btnNext').click(function() {
@@ -58,6 +58,8 @@ $(function() {
 			$btnli.find('i').addClass('far');			
 		}
 	});
+	// dot 표시 함수
+	// 슬라이드박스의 left값을 비교해서 if?로 index사용해서?
 	
 	// 슬라이드 dot 클릭 이동
 	var $btnli = $('#slidebtns').find('.btnslide');
