@@ -18,16 +18,26 @@ $(function() {
 	addClassImg();
 
 	// 자동 슬라이드 함수
-	var nowimg = 0,
-		 dot = 0,
+	var nowimg = 0, dotnow = 0,
 		 slength = $slideimg.length;			// 4므로 인덱스 4번째 3나오게 하려고 -1
 	function slidenext() {
 		nowimg=nowimg<=(slength-1)*-100?0:nowimg-=100;
 		$slidebox.animate({left:nowimg+'%'}, 700);
+		finddot();
+	};
+
+	// dot 위치 표시 함수
+	function finddot() {
+		dotnow=nowimg*-0.01
 		$btnli.find('i').removeClass('fas');
 		$btnli.find('i').addClass('far');
-
+		$('.btnslide').eq(dotnow).find('i').removeClass('far');
+		$('.btnslide').eq(dotnow).find('i').addClass('fas');
 	};
+
+	// 첫 이미지 dot 표시
+	$('.btnslide').eq(0).find('i').removeClass('far');
+	$('.btnslide').eq(0).find('i').addClass('fas');
 
 	// 자동 슬라이드 반복
 	var repeat;
@@ -57,9 +67,8 @@ $(function() {
 			$btnli.find('i').removeClass('fas');
 			$btnli.find('i').addClass('far');			
 		}
+		finddot();
 	});
-	// dot 표시 함수
-	// 슬라이드박스의 left값을 비교해서 if?로 index사용해서?
 	
 	// 슬라이드 dot 클릭 이동
 	var $btnli = $('#slidebtns').find('.btnslide');
@@ -77,7 +86,7 @@ $(function() {
 			$(this).find('i').addClass('fas');
 		});
 	});
-	
+
 	// 정지재생버튼
 	var $playstop = $('#slidebtns').find('.btnslide0');
 
