@@ -1,17 +1,13 @@
 $(function() {
-	// 전역변수
-	var $slideimg = $('#slideArea').find('img'),
-		 $playstop = $('#slidebtns').find('.btnslide0'),
-		 // $sln = $slideli.length,
-		 $sin = $slideimg.length, // 고정값4
-		 $sincount = $slideimg.length, // 4기준으로 증가
-		 $sin0 = 0, // 증가해서 4까지
-		 $sinmax = $sin+1, // 최대값5
-		 now = 0,
-		 repeat;
+	var $slidebox = $('#slideBox'),
+		 $slideimg = $('#slideBox').find('img');
 
 	// 이미지에 개수에 따라 이미지와 버튼에 해당순서 클래스 부여 및 버튼 생성
 	function addClassImg() {
+		var $sin = $slideimg.length,			// 고정값4
+			 $sincount = $slideimg.length,	// 4기준으로 증가
+			 $sin0 = 0,								// 증가해서 4까지
+			 $sinmax = $sin+1;					// 최대값5
 		while ($sincount-($sin-1)<$sinmax) {
 			$sin0=$sin==$sin0?0:$sin0+=1;
 			$slideimg.eq($sin0-1).addClass('si_'+$sin0);
@@ -21,61 +17,39 @@ $(function() {
 	}
 	addClassImg();
 
-	// 첫화면 보이게
-	function firstscreen() {
-		$slideimg.first().css({transform:'translateX(-100%)'})
-	};
-	firstscreen();
-
-	// 자동 슬라이드 함수	
+	// 자동 슬라이드 함수
+	var nowimg = 0,
+		 dot = 0,
+		 slength = $slideimg.length;			// 4므로 인덱스 4번째 3나오게 하려고 -1
 	function slidenext() {
-		now=now==$sin-1?0:now+=1;
-		findnow();
-		$slideimg.eq(now-1).css({transform:'translateX(-200%)',transition:'1s'});
-		$slideimg.eq(now).css({transform:'translateX(-100%)',transition:'1s'});
-		setTimeout(
-			function() {
-				$slideimg.css({transform:'translateX(0)',transition:'none'});
-				$slideimg.eq(now).css({transform:'translateX(-100%)',transition:'1s'});
-			}
-		,1000);
-	};
-	// 자동 슬라이드 반복
-	repeat = setInterval(slidenext,3000);
+		nowimg=nowimg<=(slength-1)*-100?0:nowimg-=100;
+		$('#slideBox').animate({left:nowimg+'%'}, 700);
+		$btnli.find('i').removeClass('fas');
+		$btnli.find('i').addClass('far');
 
-	//현재 위치 찾기
-	function findnow() {
-		var findnow = $slideimg.eq(now).attr('class'),
-			 findprev = $slideimg.eq(now-1).attr('class');
-		$('#slidebtns').find('li.'+findnow+'>i').removeClass('far');
-		$('#slidebtns').find('li.'+findnow+'>i').addClass('fas');
-		$('#slidebtns').find('li.'+findprev+'>i').removeClass('fas');
-		$('#slidebtns').find('li.'+findprev+'>i').addClass('far');
-	}
-	findnow();
+	};
+
+	// 자동 슬라이드 반복
+	var repeat;
+	repeat = setInterval(slidenext,2000);
 
 	
-	// // 슬라이드 인디케이터 표시 및 이동
-	// var $btnli = $('#slidebtns').find('.btnslide');
-	// $btnli.each(function() {
-	// 	$(this).click(function() {
-	// 		var turnnow = $btnli.index($(this)),
-
-	// 		$playstop.find('i').removeClass('fa-pause-circle');
-	// 		$playstop.find('i').addClass('fa-play-circle');
-	// 		$btnli.find('i').removeClass('fas');
-	// 		$btnli.find('i').addClass('far');
-	// 		$(this).find('i').removeClass('far');
-	// 		$(this).find('i').addClass('fas');
-
-			// now=turnnow;
-			// clearInterval(repeat);
-
-			// $slideimg.eq(now-1).css({transform:'translateX(-200%)',transition:'1s'});
-			// $slideimg.eq(now).css({transform:'translateX(-100%)',transition:'1s'});
-
-	// 	});
-	// });
+	// 슬라이드 인디케이터 표시 및 이동
+	var $btnli = $('#slidebtns').find('.btnslide');
+	$btnli.each(function() {
+		$(this).click(function() {
+			var $dotclick = $btnli.index($(this))*-100;
+			clearInterval(repeat)
+			$('#slideBox').animate({left:$dotclick+'%'}, 700);
+			nowimg=$dotclick;
+			$playstop.find('i').removeClass('fa-pause-circle');
+			$playstop.find('i').addClass('fa-play-circle');
+			$btnli.find('i').removeClass('fas');
+			$btnli.find('i').addClass('far');
+			$(this).find('i').removeClass('far');
+			$(this).find('i').addClass('fas');
+		});
+	});
 
 
 /*
@@ -111,6 +85,8 @@ $(function() {
 	*/
 
 	// 정지재생버튼
+	var $playstop = $('#slidebtns').find('.btnslide0');
+
 	$playstop.click(function(){
 		if ($playstop.find('i').hasClass('fa-pause-circle')) {
 			clearInterval(repeat);

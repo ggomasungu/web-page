@@ -2,8 +2,9 @@
 #main {position:relative;font-size:0}
 
 /*슬라이드 영역 및 이미지*/
-#slideArea {height:710px;width:100%;position:relative;overflow:hidden}
-#slideArea img {height:710px;width:100%;position:absolute;right:-100%}
+#slideArea {height:710px;width:100%;position:relative;overflow: hidden}
+#slideBox {height: 710px;width:400%;position:relative;left:0}
+#slideBox img {height:710px;width:25%;float:left}
 
 /*슬라이드 좌우버튼*/
 .nextpre {
@@ -15,6 +16,7 @@
 	line-height: 710px;
 	font-size:120px;color:rgba(255,255,255,0.1);
 	text-align: center;
+	z-index:20
 }
 .nextpre:hover {
 	background:rgba(30,42,120,0.7);
@@ -29,7 +31,8 @@
 	height:40px;text-align: center;
 	background:rgba(255,255,255,0.3);
 	border-radius:20px;
-	padding:0 15px
+	padding:0 15px;
+	z-index:20
 }
 #slidebtns li {
 	display: inline-block;
