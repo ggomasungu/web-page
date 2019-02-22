@@ -23,7 +23,7 @@ $(function() {
 		 slength = $slideimg.length;			// 4므로 인덱스 4번째 3나오게 하려고 -1
 	function slidenext() {
 		nowimg=nowimg<=(slength-1)*-100?0:nowimg-=100;
-		$('#slideBox').animate({left:nowimg+'%'}, 700);
+		$slidebox.animate({left:nowimg+'%'}, 700);
 		$btnli.find('i').removeClass('fas');
 		$btnli.find('i').addClass('far');
 
@@ -34,13 +34,13 @@ $(function() {
 	repeat = setInterval(slidenext,2000);
 
 	
-	// 슬라이드 인디케이터 표시 및 이동
+	// 슬라이드 dot 클릭 이동
 	var $btnli = $('#slidebtns').find('.btnslide');
 	$btnli.each(function() {
 		$(this).click(function() {
 			var $dotclick = $btnli.index($(this))*-100;
 			clearInterval(repeat)
-			$('#slideBox').animate({left:$dotclick+'%'}, 700);
+			$slidebox.animate({left:$dotclick+'%'}, 700);
 			nowimg=$dotclick;
 			$playstop.find('i').removeClass('fa-pause-circle');
 			$playstop.find('i').addClass('fa-play-circle');
@@ -63,6 +63,7 @@ $(function() {
 			// 	$(this).css('property', 'value');
 			// }
 	}
+	*/
 
 	// 좌우버튼
 	$('.btnNext').click(function() {
@@ -75,15 +76,9 @@ $(function() {
 		clearInterval(repeat);
 		$playstop.find('i').removeClass('fa-pause-circle');
 		$playstop.find('i').addClass('fa-play-circle');
-		$('#slideimgs').find('img').last().prependTo('#slideimgs');
-		$slideimgs.css('left', '-100%');
-		$slideimgs.animate({left:'0'},800);
-		setTimeout(function () {
-			$('#slideimgs').find('img').first().next();
-		},850)
+		//수정필요 $slidebox.animate({left:nowimg*-1+'%'},700);
 	});
-	*/
-
+	
 	// 정지재생버튼
 	var $playstop = $('#slidebtns').find('.btnslide0');
 
