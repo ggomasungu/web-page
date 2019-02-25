@@ -30,14 +30,14 @@ header, nav, footer {width:100%}
 	/*최소크기설정*/
 	header, nav, section#main, footer {min-width:320px}
 	/*헤더*/
-	header {overflow:hidden;border-bottom:3px solid #1e2a78;margin-top:42px;}
+	header {overflow:hidden;border-bottom:3px solid #1e2a78;margin-top:38px;}
 			/*로고영역*/
 			#logo {text-align:center;font-size:0;width:55%;background:white;margin:0 auto}
 			#logo img {height:80px;width:80px;display:inline-block}
 
 				/*로그인 영역*/
-				#loginArea {height:40px;width:100%;color:#777;position:fixed;top: 0;background:#1e2a78;z-index:50}
-				.loginForm {height:40px;padding-top:7px;text-align: center}
+				#loginArea {height:35px;width:100%;color:#777;position:fixed;top: 0;background:#1e2a78;z-index:50;min-width:320px}
+				.loginForm {padding-top:7px;text-align: center}
 				.loginForm label {color:white}
 				.loginForm input[type="text"], .loginForm input[type="password"] {
 					height:12px;width:50px;
@@ -47,7 +47,7 @@ header, nav, footer {width:100%}
 				.loginForm label i.fa-id-badge {padding-left:4px}
 				.loginForm label i {vertical-align: middle;}
 				.loginForm input[value="로그인"] {
-					margin-left:20px;
+					margin-left:15px;
 				}
 				.loginForm input[value="로그인"],.loginForm input[value="회원가입"] {
 					border: none;
@@ -90,10 +90,10 @@ header, nav, footer {width:100%}
 		.subtext {display:none}
 
 		/*모바일 전용 메뉴*/
-		#btnmMenu {display: block;position: absolute;top:62px;right:10px;border:2px solid #414ea5;padding:3px 5px 1px 5px;cursor: pointer;}
+		#btnmMenu {display: block;position: absolute;top:58px;right:10px;border:2px solid #414ea5;padding:3px 5px 1px 5px;cursor: pointer;}
 		#mMenu {
 			display:block;width:100%;height:500px;
-			position: absolute;top:122px;left:0;margin-left:100%;
+			position: absolute;top:118px;left:0;margin-left:100%;
 			z-index:30;
 			background:#414ea5;
 			border: 1px solid #1e2a78;box-sizing: border-box;
@@ -179,6 +179,7 @@ header, nav, footer {width:100%}
 				}
 				.loginForm input[type="button"] {
 					background:#fff;
+					border: 1px solid #1e2a78;
 					border-radius:20px;
 					outline:none;
 					font-size:11px;
@@ -319,25 +320,29 @@ header, nav, footer {width:100%}
 			#logo {height:110px;width:110px}
 			#logo img {height:110px;width:110px;animation:ril 0.7s ease-out both}
 				/*로그인 영역*/
-				#loginArea {height:40px;width:840px;float: right;position: relative;color:#777;}
+				#loginArea {height:40px;width:840px;float: right;position: relative;color:#777;background:white;padding-right: 10px;box-sizing:border-box}
 				.loginForm {height:40px;padding-top:7px;text-align: right}
 				.loginForm label {color:#1e2a78}
 				.loginForm input[type="text"], .loginForm input[type="password"] {
 					height:20px;width: 100px;
 					padding-left:10px;
-					border-radius:20px;border:2px solid #1e2a78;outline:none;
+					border-radius:20px;border:3px solid #1e2a78;outline:none;
 				}
 				.loginForm input[value="로그인"] {
 					margin-left: 10px;
 				}
 				.loginForm input[type="button"] {
-					background:#fff;
+					background:white;
+					border:1px solid #1e2a78;
 					border-radius:20px;
 					outline:none;
 					font-size:12px;
 					cursor:pointer;
+					color:#1e2a78;
+					font-size:13px
 				}
 				.loginForm input[type="button"]:hover {
+					border:1px solid white;
 					background:#1e2a78;
 					color:white;
 				}
