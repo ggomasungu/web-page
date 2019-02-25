@@ -46,12 +46,14 @@ $(function() {
 	// 좌우버튼
 	$('.btnNext').click(function() {
 		clearInterval(repeat);
+		$slidebox.stop(true);
 		$playstop.find('i').removeClass('fa-pause-circle');
 		$playstop.find('i').addClass('fa-play-circle');
 		slidenext();
 	});
 	$('.btnPre').click(function() {
 		clearInterval(repeat);
+		$slidebox.stop(true);
 		$playstop.find('i').removeClass('fa-pause-circle');
 		$playstop.find('i').addClass('fa-play-circle');
 
@@ -75,7 +77,8 @@ $(function() {
 	$btnli.each(function() {
 		$(this).click(function() {
 			var $dotclick = $btnli.index($(this))*-100;
-			clearInterval(repeat)
+			clearInterval(repeat);
+			$slidebox.stop(true);
 			$slidebox.animate({left:$dotclick+'%'}, 700);
 			nowimg=$dotclick;
 			$playstop.find('i').removeClass('fa-pause-circle');
