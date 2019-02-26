@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2,h3,h4,h5,h6{display:none}
+h2,h3,h4,h5,h6{visibility:hidden; height:0; font-size:0}
 
 /*기본설정*/
 html, body {background:white;font-family:'Noto Sans KR', sans-serif}
