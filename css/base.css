@@ -2,13 +2,15 @@
 h2,h3,h4,h5,h6{display:none}
 
 /*기본설정*/
-html, body {background:white}
+html, body {background:white;font-family:'Noto Sans KR', sans-serif}
 a {text-decoration:none;color:black;display:block}
 nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .cfx:after {content:'';display: block;clear: both}
+.hidden {display: none}
 
 /*공용레이아웃*/
 header, nav, section#contents, footer {width: 100%}
+h1, footer {font-family:'Roboto', sans-serif}
 
 /*모바일*/
 @media (max-width:767px){
