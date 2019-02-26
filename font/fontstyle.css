@@ -3,6 +3,7 @@
 	font-weight: normal;
 	font-style: normal;
 	src:local(※),
+		 url('font/NanumSquareRoundR.woff2') format('woff2'),
 		 url('font/NanumSquareRoundR.woff') format('woff'),
 		 url('font/NanumSquareRoundR.ttf') format('ttf'),
 		 url('font/NanumSquareRoundR.eot') format('eot'),
@@ -13,6 +14,7 @@
 	font-weight: bold;
 	font-style: normal;
 	src:local(※),
+		 url('font/NanumSquareRoundB.woff2') format('woff2'),
 		 url('font/NanumSquareRoundB.woff') format('woff'),
 		 url('font/NanumSquareRoundB.ttf') format('ttf'),
 		 url('font/NanumSquareRoundB.eot') format('eot'),
@@ -23,6 +25,7 @@
 	font-weight: lighter;
 	font-style: normal;
 	src:local(※),
+		 url('font/NanumSquareRoundL.woff2') format('woff2'),
 		 url('font/NanumSquareRoundL.woff') format('woff'),
 		 url('font/NanumSquareRoundL.ttf') format('ttf'),
 		 url('font/NanumSquareRoundL.eot') format('eot'),
