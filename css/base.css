@@ -8,10 +8,43 @@ nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .cfx:after {content:'';display: block;clear: both}
 .hidden {display: none}
 
-/*공용레이아웃*/
-header, nav, section#contents, footer {width: 100%}
-h1, footer {font-family:'Roboto', sans-serif}
+/*		#37B81D 55,184,29  파비콘 색
+보색	#6B0050 107,0,80
+		#B81D90 184,29,144
+		#80FF66 128,255,102
+		#196B08 25,107,8			*/
 
+/*공용레이아웃*/
+header, nav, section#contents, footer {width:100%}
+h1, footer {font-family:'Roboto', sans-serif}
+.notice {
+	position:fixed;top:0;
+	width: 100%;
+	background:rgba(55,184,29,0.6);
+}
+.noticebg {
+	position:absolute;top:0;
+	height:100%;width:100%;
+	background:white;
+	animation:left_to_right 3s infinite
+}
+	.noticetit {
+		display: inline-block;
+		float: left;
+		padding:10px;
+		background:rgba(107,0,80,0.7);
+		font-weight: bold;color:white;
+		animation:blink 3s infinite;
+	}
+	.noticetext {
+		display: inline-block;
+		position: relative;
+		float: left;
+		padding:10px;
+	}
+
+.gmail {display: inline}
+.email_addr {}
 /*모바일*/
 @media (max-width:767px){
 	
@@ -23,4 +56,18 @@ h1, footer {font-family:'Roboto', sans-serif}
 /*PC화면*/
 @media (min-width:1024px) {
 
+}
+
+/*애니메이션*/
+@keyframes blink {
+	0% {opacity:0}
+	25% {opacity:1}
+	50% {opacity:1}
+	75% {opacity:1}
+	100% {opacity:0}
+}
+
+@keyframes left_to_right {
+	0% {left:-100%}
+	100% {left:100%}
 }
