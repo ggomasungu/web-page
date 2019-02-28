@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<!-- <base href="https://ggomasungu.github.io/web-page/"> -->
+	<base href="https://ggomasungu.github.io/web-page/">
 	<title>Web-Site Portfolio by Seon-Gu LIM</title>	
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
@@ -9,46 +9,55 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" href="favicon.png">
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
 <header>
-	<h1><a href=".">Web-Page Portfolio</a></h1>
+	<h1 id="logo"><a href=".">Web-Page Portfolio</a></h1>
 	<nav></nav>
 </header>
 <section id="contents">
 	<h2>컨텐츠 영역</h2>
 		<div id="introduce">
-			<p>웹퍼블리셔</p>
+			<p class="bold">웹퍼블리셔</p>
 			<p>를꿈꾸는</p>
-			<p>임선구</p>
+			<p class="bold">임선구</p>
 			<p>입니</p>
-			<p>다</p>
+			<p class="bold">다</p>
 		</div>
 		<div class="notice">
 			<div class="noticebg"></div>
+			<div class="noticeBox">
 				<span class="noticetit">[Notice]</span>
-				<span class="noticetext"> GitHub Page 서버 상황에 따라 종종 사이트 로딩이 느릴 수 있습니다.</span>
+				<span class="noticetext" title="공지사항"> GitHub Page 서버 상황에 따라 종종 사이트 로딩이 느릴 수 있습니다. </span>
+				<span class="btn_close_notice">
+					<a href="#" class="btn_close_notice" title="공지사항 닫기">[닫기]</a>
+				</span>
+			</div>
 		</div>
-		<div id="cont1">
-			<div id="pf_list"></div>
-				<div class="pf1">
-					<a href="portfolio/nolenet/index.html">놀이넷 가기</a>
-				</div>
-				<div class="pf2"></div>
-				<div class="pf3"></div>
-				<div class="pf4"></div>
-				<div class="pf5"></div>
-				<div class="pf6"></div>			
-		</div>
-		<div id="cont2">
-		</div>
-		<div id="cont3">
+		<div class="btn_open_notice"><a href="#" title="공지사항 열기">Notice</a></div>
+		<div class="contBox">
+			<div id="cont1">
+				<div id="pf_list"></div>
+					<div class="pf1">
+						<a href="portfolio/nolenet/index.html">놀이넷 가기</a>
+					</div>
+					<div class="pf2"></div>
+					<div class="pf3"></div>
+					<div class="pf4"></div>
+					<div class="pf5"></div>
+					<div class="pf6"></div>			
+			</div>
+			<div id="cont2">
+			</div>
+			<div id="cont3">
+			</div>
 		</div>
 </section>
 <footer>
 	<h2>푸터 영역</h2>
 	<p class="contact">CONTACT</p>
-	<p><a href="mailto:ggomasungu@gmail.com?subject=제목을 적어주세요&body=내용을 적어주세요" class="gmail">G-mail :</a><span class="email_addr"> ggomasungu@gmail.com</span></p>
+	<p><a href="mailto:ggomasungu@gmail.com" class="gmail">G-mail :</a><span class="email_addr"> ggomasungu@gmail.com</span></p>
 	<p class="copyright">&copy; Seon-Gu LIM All rights reserved.</p>
 </footer>
 </body>
