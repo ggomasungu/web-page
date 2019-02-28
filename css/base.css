@@ -9,33 +9,24 @@ nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .hidden {display: none}
 .bold {font-weight: bold}
 
-/*공용레이아웃*/
+/*기본레이아웃*/
 header, nav, section#contents, footer {width:100%}
 h1, footer {font-family:'Roboto', sans-serif}
 body {padding-top:30px}
 
 	/*헤더*/
 	#logo {
-		display: inline-block;
 		padding:30px 0 30px 30px;
 		font-size:60px;
+		white-space:nowrap;
 	}
-	#logo a {padding:30px}
-
-	/*컨텐츠 - 소개문*/
-	#introduce {
-		padding-left:50px;
-		font-size:100px;
-	}
-	#introduce p:nth-child(2),#introduce p:nth-child(4) {
-		color:gray;
-	}
+	#logo a {display: inline-block;padding:30px}
 
 	/*컨텐츠 - 공지사항*/
 	.notice {
 		position:fixed;top:0;
-		width: 100%;height:30px;
-		background:rgba(200,200,200,0.3);
+		width: 100%;height:30px;margin-left:-50px;
+		background:linear-gradient(to top, rgba(200,200,200,0.3), white);
 		border-bottom:1px solid rgba(0,0,0,0.7);
 		line-height: 30px;
 		white-space:nowrap;		
@@ -79,13 +70,37 @@ body {padding-top:30px}
 	}
 	.btn_open_notice a {color:white}
 
-	/*컨텐츠 - 본문*/
-	.contBox {padding-left:50px}
+	/*컨텐츠영역*/
+	#contents {padding-left:50px;box-sizing:border-box}
 
+	/*컨텐츠 - 소개문*/
+	#introduce {
+		display: inline-block;
+		margin-bottom: 30px;
+		font-size:100px;
+		white-space:nowrap;
+	}
+	#introduce p:nth-child(2),#introduce p:nth-child(4) {
+		color:gray;
+	}
+
+	/*컨텐츠 - 본문*/
+	#cont1 {
+		display: inline-block;
+		height:500px;
+		margin-left: 100px;
+		background:#efefef;vertical-align: top;
+	}
 	/*푸터*/
-	footer > p {padding-left: 50px}
+	footer {
+		padding:50px 0;margin-top:60px;
+		background:#efefef;
+	}
+	footer > p {padding-left: 50px;margin-bottom: 10px;}
+	.contact {font-size:30px;font-weight: bold;margin-bottom: 30px;}
 	.gmail {display: inline}
 	.email_addr {}
+	.copyright {margin-bottom: 0}
 
 /*모바일*/
 @media (max-width:767px){
