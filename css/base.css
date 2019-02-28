@@ -9,12 +9,6 @@ nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .hidden {display: none}
 .bold {font-weight: bold}
 
-/*		#37B81D 55,184,29  파비콘 색
-보색	#6B0050 107,0,80
-		#B81D90 184,29,144
-		#80FF66 128,255,102
-		#196B08 25,107,8			*/
-
 /*공용레이아웃*/
 header, nav, section#contents, footer {width:100%}
 h1, footer {font-family:'Roboto', sans-serif}
@@ -41,8 +35,8 @@ body {padding-top:30px}
 	.notice {
 		position:fixed;top:0;
 		width: 100%;height:30px;
-		background:rgba(128,255,102,0.4);
-		border-bottom:1px solid rgba(25,107,8,0.9);
+		background:rgba(200,200,200,0.3);
+		border-bottom:1px solid rgba(0,0,0,0.7);
 		line-height: 30px;
 		white-space:nowrap;		
 	}
@@ -61,7 +55,7 @@ body {padding-top:30px}
 		.noticetit {
 			display:inline-block;
 			padding:0 10px;
-			background:rgba(25,107,8,0.9);
+			background:rgba(0,0,0,0.7);
 			font-weight: bold;color:white;
 			animation:blink 3s infinite;
 		}
@@ -77,9 +71,10 @@ body {padding-top:30px}
 		display: none;
 		position: fixed;top: 0;left:50%;
 		width:70px;height: 20px;
-		background:black;
+		background:gray;
 		border-radius:0 0 10px 10px;
 		text-align: center;
+		font-weight: bold;
 		animation:wobble-hor-top 10s both infinite;
 	}
 	.btn_open_notice a {color:white}
