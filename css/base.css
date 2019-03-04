@@ -17,16 +17,16 @@ body {padding-top:30px}
 	/*헤더*/
 	#logo {
 		position: absolute;
+		width:450px;
 		padding-left:50px;
 		margin:50px 0;
 		font-size:50px;font-weight: lighter;
 		white-space:nowrap;
 		overflow: hidden;
 		animation:logo_show 1s steps(50, end);
-		width:450px;
 	}
 	#logo a {display: inline-block;padding:10px}
-	#logo:hover {background:red}
+	#logo:hover {background:#991111}
 	#logo:hover a {color:white}
 
 	/*컨텐츠 - 공지사항*/
@@ -65,7 +65,7 @@ body {padding-top:30px}
 			display: inline;
 			position: relative;
 			font-size:13px;font-weight: bold;
-			color:red;
+			color:#991111;
 		}
 		.btn_close_notice:hover a {
 			background:black;
@@ -111,20 +111,29 @@ body {padding-top:30px}
 		#introduce p:nth-child(2),#introduce p:nth-child(4) {
 			color:#777;
 		}
+		.intro_text {
+			position: absolute;bottom:340px;left:330px;
+			transform:skew(50deg,-50deg);
+			z-index: 10;
+			letter-spacing:3px;color:white;
+			font-family:Roboto;font-weight: bold;
+			white-space:nowrap;
+			font-size:25px;
+		}
 
 	/*컨텐츠 - 본문*/
 	#cont2 {}
 		#showbox {
 			float: left;
 			height:768px;width:60%;
-			background:#ededed;
+			background:#efefef;
 			vertical-align: top;
 		}
 		#pf_list {
 			float: left;
 			height: 768px;width:40%;
 			padding:30px;
-			background:red;
+			background:#991111;
 			box-sizing:border-box;
 		}
 		#pf_list article{
@@ -148,8 +157,8 @@ body {padding-top:30px}
 
 	/*푸터*/
 	footer {
-		margin-top:150px;
-		background:#efefef;
+		margin-top:200px;
+		animation:cc5x 8s linear infinite alternate both;
 	}
 	footer > p, footer > div {margin-bottom:30px;}
 	.contact {
@@ -169,23 +178,27 @@ body {padding-top:30px}
 		.visual {
 			display: inline-block;
 			width:22px;height:22px;
-			border-radius:50px 0 50px 0;
+			border-radius:15px 0 15px 0;
 			animation:cc5x 8s linear infinite alternate both
-		}
-		.visual:nth-child(2) {
-			position:absolute;left:60px;top:23px;
-			border-radius:0 50px 0 50px;
 		}
 	footer img {
 			width:45px;height:45px;
 			margin-right:10px;
 			vertical-align:middle
 		}
-	.mail {display: inline-block;margin-left:30px}
-		.gmail {display: inline}
-		.email_addr {}
-	.messenger {display: inline-block;margin-left:30px}
-	.copyright {display: inline-block;margin-left:30px}
+	.mail, .messenger, .copyright {
+		display: inline-block;
+		margin-left:20px;padding:5px 10px;
+		background:white;
+		border: 1px solid transparent;
+		border-radius:20px
+	}
+	.mail:hover, .messenger:hover, .copyright:hover {
+		background:#991111;
+		color:white;
+	}
+	.mail:hover a {color:white}
+		.email_addr {font-weight: bold}
 
 /*모바일*/
 @media (max-width:767px){
@@ -226,27 +239,15 @@ body {padding-top:30px}
 		transform: translateX(-50%);
 		transform-origin: 50% 50%;
 	}
-	46% {
-		transform: translateX(-70%) rotate(6deg)
-	}
-	48% {
-		transform: translateX(-30%) rotate(-6deg)
-	}
-	50% {
-		transform: translateX(-55%) rotate(3.6deg)
-	}
-	52% {
-		transform: translateX(-45%) rotate(-2.4deg)
-	}
-	54% {
-		transform: translateX(-53%) rotate(1.2deg)
-	}
+	46% {transform: translateX(-70%) rotate(6deg)}
+	48% {transform: translateX(-30%) rotate(-6deg)}
+	50% {transform: translateX(-55%) rotate(3.6deg)}
+	52% {transform: translateX(-45%) rotate(-2.4deg)}
+	54% {transform: translateX(-53%) rotate(1.2deg)}
 }
 
 @keyframes cc5x {
-	0% {background: black}
-	25% {background: #3bd80d}
+	0% {background: #333}
 	50% {background: white}
-	75% {background: #f5be10}
-	100% {background: #ea2222}
+	100% {background: #333}
 }
