@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2,h3,h4,h5,h6{visibility:hidden; height:0; font-size:0}
+h2,h4,h5,h6{visibility:hidden; height:0; font-size:0}
 
 /*기본설정*/
 html, body {background:white;font-family:'Noto Sans KR', sans-serif}
@@ -16,26 +16,34 @@ body {padding-top:30px}
 
 	/*헤더*/
 	#logo {
-		padding:30px 0 30px 30px;
+		position: absolute;
+		padding-left:50px;
+		margin:50px 0;
 		font-size:50px;font-weight: lighter;
 		white-space:nowrap;
+		overflow: hidden;
+		animation:logo_show 1s steps(50, end);
+		width:450px;
 	}
-	#logo a {display: inline-block;padding:30px}
+	#logo a {display: inline-block;padding:10px}
+	#logo:hover {background:red}
+	#logo:hover a {color:white}
 
 	/*컨텐츠 - 공지사항*/
 	.notice {
 		position:fixed;top:0;
-		width: 100%;height:30px;margin-left:-50px;
-		background:linear-gradient(to top, rgba(200,200,200,0.3), white);
+		width: 100%;height:30px;
+		background:rgba(230,230,230,0.3);
 		border-bottom:1px solid rgba(0,0,0,0.7);
 		line-height: 30px;
-		white-space:nowrap;		
+		white-space:nowrap;
+		z-index:100;
 	}
 	.noticebg {
 		position:absolute;bottom:0;
 		height:100%;width:100%;
 		background:white;
-		animation:left_to_right 3s infinite
+		animation:notice_bg_left_to_right 3s infinite
 	}
 	.noticeBox {
 		display: inline-block;
@@ -48,7 +56,7 @@ body {padding-top:30px}
 			padding:0 10px;
 			background:rgba(0,0,0,0.7);
 			font-weight: bold;color:white;
-			animation:blink 3s infinite;
+			animation:notice_blink 3s infinite;
 		}
 		.noticetext {
 			position: relative;
@@ -57,57 +65,127 @@ body {padding-top:30px}
 			display: inline;
 			position: relative;
 			font-size:13px;font-weight: bold;
+			color:red;
+		}
+		.btn_close_notice:hover a {
+			background:black;
+			color:white;
+			border-radius:5px
 		}
 	.btn_open_notice {
-		display: none;
-		position: fixed;top: 0;left:50%;
+		position: fixed;top:-5%;left:50%;
 		width:70px;height: 20px;
-		background:gray;
+		background:#777;
 		border-radius:0 0 10px 10px;
 		text-align: center;
 		font-weight: bold;
-		animation:wobble-hor-top 10s both infinite;
+		animation:wobble-hor-top 5s both infinite;
 	}
+	.btn_open_notice:hover {background:black}
 	.btn_open_notice a {color:white}
 
 	/*컨텐츠영역*/
-	#contents {padding-left:50px;box-sizing:border-box}
+	#contents {margin-top:170px;}
 
 	/*컨텐츠 - 소개문*/
-	#cont1 {margin-bottom:50px;}
-	#introduce {
-		display: inline-block;
-		margin-bottom:50px;
-		font-size:100px;
-		white-space:nowrap;
-	}
-	#introduce p:nth-child(2),#introduce p:nth-child(4) {
-		color:gray;
-	}
+	#cont1 {position: relative;background:gray;margin-bottom:200px;}
+		.vid_cont1 {
+			position: absolute;
+			height:700px;width: 100%;
+		}
+		.vid_cont1 video {height: 100%;width: 100%;object-fit:fill;}
+		.bg_cont1 {
+			position: absolute;z-index:10;left:-120px;
+			width: 700px;height:700px;
+			background:white;transform:skewX(-40deg);
+		}
+		#introduce {
+			display: inline-block;
+			position: relative;z-index:10;
+			height: 500px;width:470px;
+			margin-bottom:100px;margin-left:130px;margin-top:100px;
+			font-size:100px;
+			white-space:nowrap;
+
+		}
+		#introduce p:nth-child(2),#introduce p:nth-child(4) {
+			color:#777;
+		}
 
 	/*컨텐츠 - 본문*/
-	#showbox {
-		display: inline-block;float: right;
-		height:500px;width:60%;margin-right: 100px;
-		background:black;
-		vertical-align: top;
-	}
-	#cont2 {
-		background:#efefef;vertical-align: top
-	}
-	#pf_list {display: inline-block;}
-	#pf_list li {float: left;margin: 30px;}
-	#pf_list img {width:300px;}
+	#cont2 {}
+		#showbox {
+			float: left;
+			height:768px;width:60%;
+			background:#ededed;
+			vertical-align: top;
+		}
+		#pf_list {
+			float: left;
+			height: 768px;width:40%;
+			padding:30px;
+			background:red;
+			box-sizing:border-box;
+		}
+		#pf_list article{
+			width: 100%;height: 150px;
+			background:white
+		}
+		#pf_list article a {
+			display: block;
+			color:white;
+			text-shadow:1px 1px 5px black;
+			font-size: 30px;font-weight: bold;
+			box-sizing:border-box;
+		}
+			.pf_tit {
+				padding:10px;
+				background:rgba(0,0,0,0.7);
+				border:1px solid white;border-radius:10px
+			}
+			.pf_tit:before {content:"→ "}
+	#cont3 {}
+
 	/*푸터*/
 	footer {
-		padding:50px 0;margin-top:60px;
+		margin-top:150px;
 		background:#efefef;
 	}
-	footer > p {padding-left: 50px;margin-bottom: 10px;}
-	.contact {font-size:30px;font-weight: bold;margin-bottom: 30px;}
-	.gmail {display: inline}
-	.email_addr {}
-	.copyright {margin-bottom: 0}
+	footer > p, footer > div {margin-bottom:30px;}
+	.contact {
+		position: relative;
+		padding:10px 0 10px 50px;
+		background:#111;
+		color:white;
+		font-size:30px;font-weight: bold;
+	}
+		.visual_box {
+			display: inline-block;
+			padding:5px;
+			border:5px solid white;
+			border-radius:15px;
+			box-sizing:border-box;
+		}
+		.visual {
+			display: inline-block;
+			width:22px;height:22px;
+			border-radius:50px 0 50px 0;
+			animation:cc5x 8s linear infinite alternate both
+		}
+		.visual:nth-child(2) {
+			position:absolute;left:60px;top:23px;
+			border-radius:0 50px 0 50px;
+		}
+	footer img {
+			width:45px;height:45px;
+			margin-right:10px;
+			vertical-align:middle
+		}
+	.mail {display: inline-block;margin-left:30px}
+		.gmail {display: inline}
+		.email_addr {}
+	.messenger {display: inline-block;margin-left:30px}
+	.copyright {display: inline-block;margin-left:30px}
 
 /*모바일*/
 @media (max-width:767px){
@@ -123,7 +201,12 @@ body {padding-top:30px}
 }
 
 /*애니메이션*/
-@keyframes blink {
+@keyframes logo_show {
+	from {height:0}
+	to {height:70px}
+}
+
+@keyframes notice_blink {
 	0% {opacity:0}
 	25% {opacity:1}
 	50% {opacity:1}
@@ -131,7 +214,7 @@ body {padding-top:30px}
 	100% {opacity:0}
 }
 
-@keyframes left_to_right {
+@keyframes notice_bg_left_to_right {
 	0% {left:-100%}
 	25% {left: 0}
 	75% {left: 0}
@@ -139,23 +222,31 @@ body {padding-top:30px}
 }
 
 @keyframes wobble-hor-top {
-	0%,47%,53%, 100% {
+	0%,45%,55%, 100% {
 		transform: translateX(-50%);
 		transform-origin: 50% 50%;
 	}
-	48% {
+	46% {
 		transform: translateX(-70%) rotate(6deg)
 	}
-	49% {
+	48% {
 		transform: translateX(-30%) rotate(-6deg)
 	}
 	50% {
 		transform: translateX(-55%) rotate(3.6deg)
 	}
-	51% {
+	52% {
 		transform: translateX(-45%) rotate(-2.4deg)
 	}
-	52% {
+	54% {
 		transform: translateX(-53%) rotate(1.2deg)
 	}
+}
+
+@keyframes cc5x {
+	0% {background: black}
+	25% {background: #3bd80d}
+	50% {background: white}
+	75% {background: #f5be10}
+	100% {background: #ea2222}
 }

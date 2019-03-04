@@ -18,16 +18,19 @@
 </header>
 <section id="contents">
 	<h2>컨텐츠 영역</h2>
-		<div id="cont1" class="cfx">
+		<div id="cont1">
+			<figure class="vid_cont1">
+				<video loop="loop" autoplay="autoplay">
+					<source src="vid/network.mp4" type="video/mp4">
+				</video>
+			</figure>
+			<div class="bg_cont1"></div>
 			<div id="introduce">
 				<p class="bold">웹퍼블리셔</p>
 				<p>를꿈꾸는</p>
 				<p class="bold">임선구</p>
 				<p>입니</p>
 				<p class="bold">다</p>
-			</div>
-			<div id="showbox">
-				쇼박스 영역
 			</div>
 		</div>
 		<!-- 공지사항_플로트 -->
@@ -43,27 +46,47 @@
 		</div>
 		<div class="btn_open_notice"><a href="#" onclick="return false" title="공지사항 열기">Notice</a></div>
 		<!-- //공지사항_플로트 -->
-		<div id="cont2">
-			<ul id="pf_list">
-				<li class="pf1">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>
-				</li>
-				<li class="pf2">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>					
-				</li>
-				<li class="pf3">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>
-				</li>
-				<li class="pf4">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>
-				</li>
-				<li class="pf5">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>
-				</li>
-				<li class="pf6">
-					<a href="portfolio/nolenet/index.html"><img src="img/work1.png" alt="놀이넷"></a>
-				</li>
-			</ul>
+		<div id="cont2" class="cfx">			
+			<div id="showbox">
+			</div>
+			<div id="pf_list">
+				<article class="pf1" title="작품1 놀이넷">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">놀이넷</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+				<article class="pf2" title="작품2">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">가제1</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+				<article class="pf3" title="작품3">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">가제1</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+				<article class="pf4" title="작품4">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">가제1</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+				<article class="pf5" title="작품5">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">가제1</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+				<article class="pf6" title="작품6">
+					<a href="portfolio/nolenet/index.html">
+						<h3 class="pf_tit">가제1</h3>
+						<p class="pf_cont"></p>
+					</a>
+				</article>
+			</div>				
 		</div>
 		<div id="cont3">
 		</div>
@@ -72,9 +95,26 @@
 </section>
 <footer>
 	<h2>푸터 영역</h2>
-	<p class="contact">CONTACT</p>
-	<p><a href="mailto:ggomasungu@gmail.com" class="gmail">G-mail :</a><span class="email_addr"> ggomasungu@gmail.com</span></p>
-	<p class="copyright">&copy; Seon-Gu LIM All rights reserved.</p>
+	<div class="contact" title="연락처">
+		<div class="visual_box">
+			<span class="visual"></span><span class="visual"></span>
+		</div>
+		 CONTACT
+	</div>
+	<p class="mail">
+		<a href="mailto:ggomasungu@gmail.com" class="gmail">
+			<img src="img/icon_gmail.png" alt="이메일">
+		</a>
+		<span class="email_addr" title="이메일 주소">E-mail : ggomasungu@gmail.com</span>
+	</p>
+	<p class="messenger">
+		<img src="img/icon_kakaotalk.png" alt="카카오톡">
+		<span class="messenger_id" title="카카오톡 아이디">Kakao Talk ID : ggomasungu@gmail.com</span>
+	</p>
+	<p class="copyright">
+		<img src="img/icon_tools.png" alt="제작자">
+		<span title="저작권 정보">Created by &copy;2019 Seon-Gu LIM All rights reserved.</span>
+	</p>
 </footer>
 </body>
 </html>
