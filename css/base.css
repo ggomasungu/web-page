@@ -6,7 +6,6 @@ html, body {background:white;font-family:'Noto Sans KR', sans-serif}
 a {text-decoration:none;color:black;display:block}
 nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .cfx:after {content:'';display: block;clear: both}
-.bold {font-weight: bold}
 
 /*기본레이아웃*/
 header, nav, section#contents, footer {width:100%}
