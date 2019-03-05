@@ -1,4 +1,14 @@
 $(function() {
+	// 최상위로
+	$('#go_to_main').hover(function() {
+		$(this).css('animation', 'none');
+		$(this).animate({left: 0},200)
+	}, function() {
+		$(this).animate({left: '-90px'},200)
+		$(this).css('animation', 'gotomain 4s infinite');
+	});
+
+	// 변수선언
 	var $slidebox = $('#slideBox'),
 		 $slideimg = $('#slideBox').find('img');
 

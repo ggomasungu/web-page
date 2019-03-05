@@ -1,6 +1,24 @@
 /*폰트*/
 @import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic:400,700&subset=korean');
-body{font-family:'Nanum Gothic'}
+
+/*최상위로*/
+#go_to_main {
+	position:fixed;bottom: 0;left:-90px;z-index: 100;
+	padding:0 30px 0 10px;
+	background:black;
+	border:3px solid white;border-left:none;border-radius:0 10px 10px 0;
+	animation:gotomain 4s infinite
+}
+#go_to_main a {
+	padding:5px 0 10px 0;
+	color:white;font:bold 20px sans-serif;
+}
+
+@keyframes gotomain {
+	0% {background:black;border: 3px solid white;border-left:none}
+	30% {background:transparent;border: 3px solid transparent;border-left:none}
+	60% {background:white;border: 3px solid black;border-left:none}
+}
 
 /*숨김처리*/
 h2,h3,h4,h5,h6{display:none}
@@ -12,6 +30,7 @@ nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 
 /*공용레이아웃*/
 header, nav, footer {width:100%}
+body{font-family:'Nanum Gothic'}
 #wrap, header, nav, section#main, footer{display:block;margin:0 auto}
 .cfx:after {content:"";display:block;clear:both}
 .hidden {display: none}
@@ -105,7 +124,7 @@ header, nav, footer {width:100%}
 		#mMenuHeader > span {
 			display: inline-block;
 			text-align: center;
-			font-family:'Jua';color:white;line-height: 60px;font-size: 30px;
+			font-family:'Jua';color:white;line-height: 60px;font-size:20px;
 		}
 		#mMenuHeader > p {
 			display: inline-block;float: right;
