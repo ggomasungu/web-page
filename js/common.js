@@ -8,4 +8,15 @@ $(function() {
 		$(this).animate({top:'-5%'}, 500)
 		$('.notice').animate({top:0}, 500)
 	});
+
+	//한번 자동 새로고침
+	window.onload = function() {
+		if(!window.location.hash) {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+		}
+		else{
+
+		}
+	}
 });
