@@ -18,14 +18,13 @@ body {padding-top:30px}
 		width:450px;
 		padding-left:50px;
 		margin:50px 0;
+		background:#991111;
 		font-size:50px;font-weight: lighter;
 		white-space:nowrap;
 		overflow: hidden;
-		animation:logo_show 1s steps(50, end);
+		animation:logo_show 1.5s steps(50, end);
 	}
-	#logo a {display: inline-block;padding:10px}
-	#logo:hover {background:#991111}
-	#logo:hover a {color:white}
+	#logo a {display: inline-block;padding:10px;color:white}
 
 	/*컨텐츠 - 공지사항*/
 	.notice {
@@ -86,7 +85,7 @@ body {padding-top:30px}
 	#contents {margin-top:170px;}
 
 	/*컨텐츠 - 소개문*/
-	#cont1 {position: relative;background:gray;margin-bottom:200px;}
+	#cont1 {position: relative;background:#777;margin-bottom:200px;}
 		.vid_cont1 {
 			position: absolute;
 			height:700px;width: 100%;
@@ -162,7 +161,7 @@ body {padding-top:30px}
 	.contact {
 		position: relative;
 		padding:10px 0 10px 50px;
-		background:#111;
+		background:#991111;
 		color:white;
 		font-size:30px;font-weight: bold;
 	}
@@ -245,7 +244,8 @@ body {padding-top:30px}
 }
 
 @keyframes cc5x {
-	0% {background: #333}
-	50% {background: white}
-	100% {background: #333}
+	0% {background: white}
+	25% {background: orange}
+	50% {background: #991111}
+	100% {background: white}
 }
