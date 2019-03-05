@@ -198,8 +198,9 @@ header, nav, footer {width:100%}
 
 			/*일러스트*/
 			#logoillust {
-				height:70px;width:590px;
-				padding-right:40px;padding-top:5px;box-sizing:border-box;
+				height:70px;width:525px;
+				margin-left:65px;padding-right:40px;padding-top:5px;
+				box-sizing:border-box;
 				background:#1e2a78;
 				border-radius:30px 30px 0 0;
 				text-align:right;line-height: 70px;
@@ -358,8 +359,9 @@ header, nav, footer {width:100%}
 				}
 			/*일러스트*/
 			#logoillust {
-				height:70px;width:840px;
-				padding-right:40px;padding-top:5px;box-sizing:border-box;
+				height:70px;width:715px;
+				margin-left:125px;padding-right:40px;padding-top:5px;
+				box-sizing:border-box;
 				background:#1e2a78;
 				border-radius:30px 30px 0 0;
 				text-align:right;line-height: 70px;
