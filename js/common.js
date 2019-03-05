@@ -9,7 +9,7 @@ $(function() {
 		$('.notice').animate({top:0}, 500)
 	});
 
-	//한번 자동 새로고침
+	// 백그라운드 비디오의 원활한 재생을 위한 한번 자동 새로고침
 	window.onload = function() {
 		if(!window.location.hash) {
 			window.location = window.location + '#loaded';
