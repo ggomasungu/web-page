@@ -11,13 +11,15 @@ $(function() {
 
 	// 백그라운드 비디오의 원활한 재생을 위한 한번 자동 새로고침
 	// 페이지 로딩이 끝나지 않았으면 새로고침 한번 더
+	// 첫로딩 로고 안보이게, 새로고침 후 로고보임+애니메이션
 	window.onload = function() {
 		if(!window.location.hash) {
 			window.location = window.location + '#loaded';
 			window.location.reload();
 		}
 		else{
-
+			$('#logo').show();
+			$('#logo').css('animation','logo_show 1.5s steps(50, end)')
 		}
 	}
 });
