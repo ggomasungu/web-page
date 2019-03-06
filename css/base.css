@@ -22,6 +22,7 @@ body {padding-top:30px}
 }
 /*PC화면*/
 @media (min-width:1024px) {
+	body {overflow-x:hidden;}
 	/*헤더*/
 	#logo {
 		display: none;
@@ -103,7 +104,7 @@ body {padding-top:30px}
 			position: absolute;
 			height:700px;width: 100%;
 		}
-		.vid_cont1 video {height: 100%;width: 100%;object-fit:fill;}
+			.vid_cont1 video {min-height:700px}
 		.bg_cont1 {
 			position: absolute;z-index:10;left:-120px;
 			width: 700px;height:700px;
@@ -186,9 +187,9 @@ body {padding-top:30px}
 			border-radius:15px 0 15px 0;
 			animation:cc5x 8s linear infinite alternate both
 		}
-	.contact_cont {vertical-align: top;}
+/*	.contact_cont {background:yellow}
 		footer img {
-				display: inline-block;
+				display: inline-block;float: left;
 				width:45px;height:45px;
 				margin-right:10px;
 				vertical-align:middle
@@ -202,9 +203,8 @@ body {padding-top:30px}
 			border-radius:20px
 		}
 		.mail span, .messenger span, .copyright span {
-			display: inline-block;
-			width: 80%;height:45px;
-			background:red
+			display: inline-block;float:left;
+			width:60%;height:45px;
 		}
 		.mail:hover, .messenger:hover, .copyright:hover {
 			background:#991111;border-color:#991111;
@@ -213,7 +213,7 @@ body {padding-top:30px}
 		.mail:hover a {color:white}
 			.email_addr {font-weight: bold}
 	}
-
+*/
 /*애니메이션*/
 @keyframes logo_show {
 	0% {height:0}
