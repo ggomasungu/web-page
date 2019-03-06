@@ -12,19 +12,32 @@ header, nav, section#contents, footer {width:100%}
 h1, footer {font-family:'Roboto', sans-serif}
 body {padding-top:30px}
 
+/*모바일*/
+@media (max-width:767px){
+	body {min-width: 320px}	
+}
+/*태블릿*/
+@media (min-width:768px) (max-width:1023px) {
+	
+}
+/*PC화면*/
+@media (min-width:1024px) {
 	/*헤더*/
 	#logo {
 		display: none;
 		position: absolute;
-		width:450px;
-		padding-left:50px;
-		margin:50px 0;
+		width:1200px;padding-left:250px;box-sizing: border-box;
 		background:#991111;
 		font-size:50px;font-weight: lighter;
 		white-space:nowrap;
 		overflow: hidden;
 	}
-	#logo a {display: inline-block;padding:10px;color:white}
+	#logo a {display: block;padding:10px;color:white}
+	[data-bg] {
+		position:absolute;top: 0;left:852px;
+		width:700px;height:300px;background:white;
+		transform:rotate(-50deg);
+	}
 
 	/*컨텐츠 - 공지사항*/
 	.notice {
@@ -70,7 +83,7 @@ body {padding-top:30px}
 			border-radius:5px
 		}
 	.btn_open_notice {
-		position: fixed;top:-5%;left:50%;
+		position: fixed;top:-5%;left:50%;z-index: 100;
 		width:70px;height: 20px;
 		background:#777;
 		border-radius:0 0 10px 10px;
@@ -85,7 +98,7 @@ body {padding-top:30px}
 	#contents {margin-top:170px;}
 
 	/*컨텐츠 - 소개문*/
-	#cont1 {position: relative;background:#777;margin-bottom:200px;}
+	#cont1 {position: relative;background:#777;margin-bottom:200px;overflow: hidden}
 		.vid_cont1 {
 			position: absolute;
 			height:700px;width: 100%;
@@ -100,22 +113,20 @@ body {padding-top:30px}
 			display: inline-block;
 			position: relative;z-index:10;
 			height: 500px;width:470px;
-			margin-bottom:100px;margin-left:130px;margin-top:100px;
+			margin-bottom:100px;margin-left:150px;margin-top:100px;
 			font-size:100px;
 			white-space:nowrap;
-
 		}
 		#introduce p:nth-child(2),#introduce p:nth-child(4) {
 			color:#777;
 		}
 		.intro_text {
-			position: absolute;bottom:340px;left:330px;
+			position:absolute;bottom:330px;left:275px;z-index: 10;
+			width: 700px;height:50px;
 			transform:skew(50deg,-50deg);
-			z-index: 10;
-			letter-spacing:3px;color:white;
-			font-family:Roboto;font-weight: bold;
-			white-space:nowrap;
-			font-size:25px;
+			letter-spacing:-1px;color:white;background:#991111;
+			font-family:'Roboto';font-weight:lighter;font-size:35px;line-height:50px;
+			white-space:nowrap;text-align: center;
 		}
 
 	/*컨텐츠 - 본문*/
@@ -153,10 +164,7 @@ body {padding-top:30px}
 	#cont3 {}
 
 	/*푸터*/
-	footer {
-		margin-top:200px;
-		animation:cc5x 8s linear infinite alternate both;
-	}
+	footer {margin-top:200px;background:#efefef}
 	footer > p, footer > div {margin-bottom:30px;}
 	.contact {
 		position: relative;
@@ -178,37 +186,33 @@ body {padding-top:30px}
 			border-radius:15px 0 15px 0;
 			animation:cc5x 8s linear infinite alternate both
 		}
-	footer img {
-			width:45px;height:45px;
-			margin-right:10px;
-			vertical-align:middle
+	.contact_cont {vertical-align: top;}
+		footer img {
+				display: inline-block;
+				width:45px;height:45px;
+				margin-right:10px;
+				vertical-align:middle
+			}
+		.mail, .messenger, .copyright {
+			display: inline-block;
+			width:31.8%;
+			margin-left:10px;padding:5px 10px;
+			background:white;
+			border:3px inset orangered;box-sizing: border-box;
+			border-radius:20px
 		}
-	.mail, .messenger, .copyright {
-		display: inline-block;
-		margin-left:20px;padding:5px 10px;
-		background:white;
-		border: 1px solid transparent;
-		border-radius:20px
+		.mail span, .messenger span, .copyright span {
+			display: inline-block;
+			width: 80%;height:45px;
+			background:red
+		}
+		.mail:hover, .messenger:hover, .copyright:hover {
+			background:#991111;border-color:#991111;
+			color:white;
+		}
+		.mail:hover a {color:white}
+			.email_addr {font-weight: bold}
 	}
-	.mail:hover, .messenger:hover, .copyright:hover {
-		background:#991111;
-		color:white;
-	}
-	.mail:hover a {color:white}
-		.email_addr {font-weight: bold}
-
-/*모바일*/
-@media (max-width:767px){
-	
-}
-/*태블릿*/
-@media (min-width:768px) (max-width:1023px) {
-	
-}
-/*PC화면*/
-@media (min-width:1024px) {
-
-}
 
 /*애니메이션*/
 @keyframes logo_show {

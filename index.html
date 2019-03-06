@@ -5,6 +5,7 @@
 	<title>Web-Site Portfolio by Seon-Gu LIM</title>	
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/import.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" href="favicon.png">
@@ -13,7 +14,13 @@
 </head>
 <body>
 <header>
-	<h1 id="logo" title="웹페이지 포트폴리오"><a href=".">Web-Page Portfolio</a></h1>
+	<h1 id="logo" title="웹페이지 포트폴리오">
+		<a href=".">
+			<i class="fab fa-connectdevelop fa-spin"></i>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web-Page Portfolio
+		</a>
+	</h1>
+	<div data-bg></div>
 	<nav></nav>
 </header>
 <section id="contents">
@@ -32,7 +39,9 @@
 				<p>입니</p>
 				<p style="font-weight:bold">다</p>
 			</div>
-			<p class="intro_text" title="현재 보유 스킬">HTML5 / CSS3 / JavaScript(with Jquery)</p>
+			<p class="intro_text" title="현재 보유 스킬">
+				HTML5 / CSS3 / JS(with Jquery)
+			</p>
 		</div>
 		<!-- 공지사항_플로트 -->
 		<div class="notice">
@@ -102,20 +111,22 @@
 		</div>
 		 CONTACT
 	</div>
-	<p class="mail">
-		<a href="mailto:ggomasungu@gmail.com" class="gmail">
-			<img src="img/icon_gmail.png" alt="이메일">
-			<span class="email_addr" title="이메일 주소">E-mail : ggomasungu@gmail.com</span>
-		</a>		
-	</p>
-	<p class="messenger">
-		<img src="img/icon_kakaotalk.png" alt="카카오톡">
-		<span class="messenger_id" title="카카오톡 아이디">Kakao Talk ID : ggomasungu@gmail.com</span>
-	</p>
-	<p class="copyright">
-		<img src="img/icon_tools.png" alt="제작자">
-		<span title="저작권 정보">Created by &copy;2019 Seon-Gu LIM All rights reserved.</span>
-	</p>
+	<div id="contact_cont">
+		<p class="mail">
+			<a href="mailto:ggomasungu@gmail.com" class="gmail">
+				<img src="img/icon_gmail.png" alt="이메일">
+				<span class="email_addr" title="이메일 주소">[E-mail] ggomasungu@gmail.com</span>
+			</a>		
+		</p>
+		<p class="messenger">
+			<img src="img/icon_kakaotalk.png" alt="카카오톡">
+			<span class="messenger_id" title="카카오톡 아이디">[Kakao Talk] ggomasungu@gmail.com</span>
+		</p>
+		<p class="copyright">
+			<img src="img/icon_tools.png" alt="제작자">
+			<span title="저작권 정보">[Created by] &copy;2019 Seon-Gu LIM All rights reserved.</span>
+		</p>
+	</div>
 </footer>
 </body>
 </html>
