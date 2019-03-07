@@ -104,22 +104,37 @@ body {padding-top:30px}
 			position: absolute;
 			height:700px;width: 100%;
 		}
-			.vid_cont1 video {min-height:700px}
+		.vid_cont1 video {min-height:700px;min-width:2440px}
 		.bg_cont1 {
 			position: absolute;z-index:10;left:-120px;
 			width: 700px;height:700px;
 			background:white;transform:skewX(-40deg);
 		}
+		.border-svg {
+			position:absolute;z-index: 10;top:-50px;left:-99px;
+			width:650px;height:800px;
+			fill:none;
+			stroke:#119937;
+			stroke-dasharray:61%;
+			stroke-width:20;
+			transform:skewX(-40deg);
+			animation:5s bd_svg infinite
+		}
+
+		@keyframes bd_svg {
+			0% {stroke-dashoffset:400%}
+			30% {stroke-dashoffset:0}
+		}
 		#introduce {
 			display: inline-block;
 			position: relative;z-index:10;
 			height: 500px;width:470px;
-			margin-bottom:100px;margin-left:150px;margin-top:100px;
+			margin-bottom:100px;margin-left:160px;margin-top:100px;
 			font-size:100px;
 			white-space:nowrap;
 		}
 		#introduce p:nth-child(2),#introduce p:nth-child(4) {
-			color:#777;
+			color:#119937;
 		}
 		.intro_text {
 			position:absolute;bottom:330px;left:275px;z-index: 10;
@@ -138,6 +153,14 @@ body {padding-top:30px}
 			background:#efefef;
 			vertical-align: top;
 		}
+			.show_visual {
+				width:80%;height:10px;margin:50px auto 0;
+				background:linear-gradient(90deg,#777,#777,#bbb,#777,#777) no-repeat;
+				background-size:3000px;
+				border-radius:30px;
+				animation:bpl 1s alternate infinite;
+			}
+			.show_cont {}
 		#pf_list {
 			float: left;
 			height: 768px;width:40%;
@@ -165,8 +188,10 @@ body {padding-top:30px}
 	#cont3 {}
 
 	/*푸터*/
-	footer {margin-top:200px;background:#efefef}
-	footer > p, footer > div {margin-bottom:30px;}
+	footer {
+		margin-top:200px;
+		background:#991111
+	}
 	.contact {
 		position: relative;
 		padding:10px 0 10px 50px;
@@ -185,35 +210,58 @@ body {padding-top:30px}
 			display: inline-block;
 			width:22px;height:22px;
 			border-radius:15px 0 15px 0;
-			animation:cc5x 8s linear infinite alternate both
+			border:2px inset white;
+			box-sizing:border-box;
+			animation:bg_rainbow 8s linear infinite alternate both
 		}
-/*	.contact_cont {background:yellow}
-		footer img {
-				display: inline-block;float: left;
-				width:45px;height:45px;
-				margin-right:10px;
-				vertical-align:middle
-			}
-		.mail, .messenger, .copyright {
+	.contact_cont {
+		position: relative
+		height: 100%;
+		padding-top:50px;
+		text-align: center
+	}
+		.contact_cont div.bg_cc {
+			position: absolute;z-index:20;top: 0;right: 0;
+			width:96px;height:50px;
+			background:#ccc;
+		}
+		.contact_cont div.bg_cc2 {
+			position: absolute;z-index: 30;top:-18px;right:-45px;
+			width:140px;height: 50px;
+			background:#991111;
+			transform:rotate(26deg);
+		}
+		.mail, .messenger, .copyright {vertical-align: bottom;
+			position: relative;bottom: 0;
 			display: inline-block;
-			width:31.8%;
-			margin-left:10px;padding:5px 10px;
+			width:25%;height:200px;
+			padding:40px 0;
+			margin-left:3%;
 			background:white;
-			border:3px inset orangered;box-sizing: border-box;
-			border-radius:20px
-		}
-		.mail span, .messenger span, .copyright span {
-			display: inline-block;float:left;
-			width:60%;height:45px;
-		}
-		.mail:hover, .messenger:hover, .copyright:hover {
-			background:#991111;border-color:#991111;
+			border-radius:100px 0 0 0;
 			color:white;
 		}
-		.mail:hover a {color:white}
-			.email_addr {font-weight: bold}
-	}
-*/
+		.mail > a {color:white}
+		div.mail {margin-left:0;height:350px;font-weight: bold;}
+		div.messenger {height:280px;}
+		div.copyright {height:200px;}
+		.contact_cont img {height: 100px;width: 100px;margin-bottom:20px;}
+		.contact_cont span {
+			display:block;
+			margin:0 auto;padding:10px;box-sizing:border-box;
+			font-size:15px;
+			background:black;
+		}
+		span.context {
+			height:100%;width:100%;
+			padding: 0;margin-top:10px;
+			box-sizing:border-box;
+			border-right:10px solid white;
+			border-left:10px solid white;
+			transition:1s;
+		}
+		.contact_cont div:hover span.context {background:white;color:#991111}
+}
 /*애니메이션*/
 @keyframes logo_show {
 	0% {height:0}
@@ -247,9 +295,19 @@ body {padding-top:30px}
 	54% {transform: translateX(-53%) rotate(1.2deg)}
 }
 
-@keyframes cc5x {
+@keyframes bg_rainbow {
 	0% {background: white}
-	25% {background: orange}
-	50% {background: #991111}
-	100% {background: white}
+	10% {background: red}
+	20% {background: orange}
+	30% {background: yellow}
+	40% {background: green}
+	50% {background: blue}
+	60% {background: navy}
+	70% {background: purple}
+	80% {background: white}
+}
+
+@keyframes bpl {
+	0% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
 }
