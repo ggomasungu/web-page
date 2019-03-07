@@ -27,8 +27,9 @@ body {padding-top:30px}
 	#logo {
 		display: none;
 		position: absolute;
-		width:1200px;padding-left:250px;box-sizing: border-box;
+		width:1200px;padding-left:220px;box-sizing: border-box;
 		background:#991111;
+		border-left:30px solid #EBEB55;
 		font-size:50px;font-weight: lighter;
 		white-space:nowrap;
 		overflow: hidden;
@@ -99,7 +100,7 @@ body {padding-top:30px}
 	#contents {margin-top:170px;}
 
 	/*컨텐츠 - 소개문*/
-	#cont1 {position: relative;background:#777;margin-bottom:200px;overflow: hidden}
+	#cont1 {position: relative;background:#777;overflow: hidden}
 		.vid_cont1 {
 			position: absolute;
 			height:700px;width: 100%;
@@ -114,24 +115,11 @@ body {padding-top:30px}
 			position:absolute;z-index: 10;top:-50px;left:-99px;
 			width:650px;height:800px;
 			fill:none;
-			stroke:#119937;
+			stroke:#119933;
 			stroke-dasharray:61%;
 			stroke-width:20;
 			transform:skewX(-40deg);
 			animation:5s bd_svg infinite
-		}
-
-		@keyframes bd_svg {
-			0% {
-				-webkit-stroke-dashoffset:400%;
-				-moz-stroke-dashoffset:400%;
-				stroke-dashoffset:400%;
-			}
-			30% {
-				-webkit-stroke-dashoffset:400%;
-				-moz-stroke-dashoffset:0;
-				stroke-dashoffset:0;
-			}
 		}
 		#introduce {
 			display: inline-block;
@@ -142,7 +130,7 @@ body {padding-top:30px}
 			white-space:nowrap;
 		}
 		#introduce p:nth-child(2),#introduce p:nth-child(4) {
-			color:#119937;
+			color:#119933;
 		}
 		.intro_text {
 			position:absolute;bottom:330px;left:275px;z-index: 10;
@@ -157,21 +145,21 @@ body {padding-top:30px}
 	#cont2 {}
 		#showbox {
 			position: relative;
-			height:768px;width: 80%;
-			margin: 0 auto;
-			border: 1px solid #000;box-sizing: border-box;
+			height:768px;width:100%;
+			margin: 0 auto;padding:50px 0;box-sizing:border-box;
+			background:#991111
 		}
 			.show_visual {
-				width:80%;height:5px;margin:50px auto 10px;
-				background:linear-gradient(90deg,#119937,#119937,white,white,white,#119937,#119937) no-repeat;
+				width:70%;height:8px;margin:0 auto 15px;
+				background:linear-gradient(90deg,white 0,white 30%,#991111 30%,#991111 70%, white 70%) no-repeat;
 				background-size:5000px;
-				border-radius:30px;
-				animation:bpl 3s infinite;
+				transform:skewX(45deg);
+				animation:bpl 5s infinite;
 			}
 			.show_cont {
-				width:90%;height:50%;
+				width:90%;height:93%;
 				margin: 0 auto;
-				background: red
+				background:#efefef;
 			}
 		#pf_list {
 			float: left;
@@ -206,8 +194,9 @@ body {padding-top:30px}
 	}
 	.contact {
 		position: relative;
-		padding:10px 0 10px 50px;
+		padding:20px 0 20px 50px;
 		background:#991111;
+		border-bottom:20px dashed #EBEB54;
 		color:white;
 		font-size:30px;font-weight: bold;
 	}
@@ -222,11 +211,12 @@ body {padding-top:30px}
 			display: inline-block;
 			width:22px;height:22px;
 			border-radius:15px 0 15px 0;
-			border:2px inset white;
+			border:3px inset white;
 			box-sizing:border-box;
 			animation:bg_rainbow 8s linear infinite alternate both
 		}
 	.contact_cont {
+		background:#EBEB55;
 		position: relative
 		height: 100%;
 		padding-top:50px;
@@ -235,12 +225,12 @@ body {padding-top:30px}
 		.contact_cont div.bg_cc {
 			position: absolute;z-index:20;top: 0;right: 0;
 			width:96px;height:50px;
-			background:#119937;
+			background:#119933;
 		}
 		.contact_cont div.bg_cc2 {
 			position: absolute;z-index: 30;top:-18px;right:-45px;
 			width:140px;height: 50px;
-			background:#991111;
+			background:#EBEB55;
 			transform:rotate(26deg);
 		}
 		.mail, .messenger, .copyright {vertical-align: bottom;
@@ -308,19 +298,29 @@ body {padding-top:30px}
 	54% {transform: translateX(-53%) rotate(1.2deg)}
 }
 
-@keyframes bg_rainbow {
-	0% {background: white}
-	10% {background: red}
-	20% {background: orange}
-	30% {background: yellow}
-	40% {background: green}
-	50% {background: blue}
-	60% {background: navy}
-	70% {background: purple}
-	80% {background: white}
+@keyframes bd_svg {
+	0% {
+		-webkit-stroke-dashoffset:400%;
+		-moz-stroke-dashoffset:400%;
+		stroke-dashoffset:400%;
+	}
+	30% {
+		-webkit-stroke-dashoffset:400%;
+		-moz-stroke-dashoffset:0;
+		stroke-dashoffset:0;
+	}
 }
 
 @keyframes bpl {
 	0% {background-position: 100% 50%}
-	100% {background-position: 0% 50%}
+	30% {background-position: 0% 50%}
+}
+
+@keyframes bg_rainbow {
+	0% {background: white}
+	20% {background: red}
+	40% {background: orange}
+	60% {background: yellow}
+	80% {background: #119933}
+	100% {background: white}
 }
