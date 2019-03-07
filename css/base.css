@@ -122,8 +122,16 @@ body {padding-top:30px}
 		}
 
 		@keyframes bd_svg {
-			0% {stroke-dashoffset:400%}
-			30% {stroke-dashoffset:0}
+			0% {
+				-webkit-stroke-dashoffset:400%;
+				-moz-stroke-dashoffset:400%;
+				stroke-dashoffset:400%;
+			}
+			30% {
+				-webkit-stroke-dashoffset:400%;
+				-moz-stroke-dashoffset:0;
+				stroke-dashoffset:0;
+			}
 		}
 		#introduce {
 			display: inline-block;
@@ -148,19 +156,23 @@ body {padding-top:30px}
 	/*컨텐츠 - 본문*/
 	#cont2 {}
 		#showbox {
-			float: left;
-			height:768px;width:60%;
-			background:#efefef;
-			vertical-align: top;
+			position: relative;
+			height:768px;width: 80%;
+			margin: 0 auto;
+			border: 1px solid #000;box-sizing: border-box;
 		}
 			.show_visual {
-				width:80%;height:10px;margin:50px auto 0;
-				background:linear-gradient(90deg,#777,#777,#bbb,#777,#777) no-repeat;
-				background-size:3000px;
+				width:80%;height:5px;margin:50px auto 10px;
+				background:linear-gradient(90deg,#119937,#119937,white,white,white,#119937,#119937) no-repeat;
+				background-size:5000px;
 				border-radius:30px;
-				animation:bpl 1s alternate infinite;
+				animation:bpl 3s infinite;
 			}
-			.show_cont {}
+			.show_cont {
+				width:90%;height:50%;
+				margin: 0 auto;
+				background: red
+			}
 		#pf_list {
 			float: left;
 			height: 768px;width:40%;
@@ -223,7 +235,7 @@ body {padding-top:30px}
 		.contact_cont div.bg_cc {
 			position: absolute;z-index:20;top: 0;right: 0;
 			width:96px;height:50px;
-			background:#ccc;
+			background:#119937;
 		}
 		.contact_cont div.bg_cc2 {
 			position: absolute;z-index: 30;top:-18px;right:-45px;
@@ -251,14 +263,15 @@ body {padding-top:30px}
 			margin:0 auto;padding:10px;box-sizing:border-box;
 			font-size:15px;
 			background:black;
+			border-right:20px solid white;
+			border-left:20px solid white;
 		}
 		span.context {
 			height:100%;width:100%;
 			padding: 0;margin-top:10px;
-			box-sizing:border-box;
 			border-right:10px solid white;
 			border-left:10px solid white;
-			transition:1s;
+			transition:background 1s;
 		}
 		.contact_cont div:hover span.context {background:white;color:#991111}
 }
