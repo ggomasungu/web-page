@@ -15,12 +15,12 @@
 <body>
 <header>
 	<h1 id="logo" title="웹페이지 포트폴리오">
-		<a href=".">
+		<a href="." onclick="return false">
 			<i class="fab fa-connectdevelop fa-spin"></i>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web-Page Portfolio
 		</a>
 	</h1>
-	<div data-bg></div>
+	<div data-skew-bg></div>
 	<nav></nav>
 </header>
 <section id="contents">
@@ -32,8 +32,6 @@
 				</video>
 			</figure>
 			<div class="bg_cont1"></div>
-			<!--[]>
-			<[endif]-->
 			<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
 							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
 						</svg>
@@ -65,46 +63,46 @@
 			<div id="showbox">
 				<div class="show_visual"></div>
 				<div class="show_cont"></div>
+				<div id="pf_list">
+					<article class="pf1" title="작품1 놀이넷">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">놀이넷</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+					<article class="pf2" title="작품2">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">가제1</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+					<article class="pf3" title="작품3">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">가제1</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+					<article class="pf4" title="작품4">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">가제1</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+					<article class="pf5" title="작품5">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">가제1</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+					<article class="pf6" title="작품6">
+						<a href="portfolio/nolenet/index.html">
+							<h3 class="pf_tit">가제1</h3>
+							<p class="pf_cont"></p>
+						</a>
+					</article>
+				</div>				
 			</div>
-			<div id="pf_list">
-				<article class="pf1" title="작품1 놀이넷">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">놀이넷</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-				<article class="pf2" title="작품2">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">가제1</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-				<article class="pf3" title="작품3">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">가제1</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-				<article class="pf4" title="작품4">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">가제1</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-				<article class="pf5" title="작품5">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">가제1</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-				<article class="pf6" title="작품6">
-					<a href="portfolio/nolenet/index.html">
-						<h3 class="pf_tit">가제1</h3>
-						<p class="pf_cont"></p>
-					</a>
-				</article>
-			</div>				
-		</div>
+			</div>
 		<div id="cont3">
 		</div>
 		<div id="cont4">
@@ -119,29 +117,29 @@
 		 CONTACT ▒
 	</div>
 	<div class="contact_cont">
-		<div class="mail">
+		<div class="mail" title="이메일 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
 			<a href="mailto:ggomasungu@gmail.com" class="gmail">
 				<img src="img/icon_gmail.png" alt="이메일">
-				<span class="email_addr" title="이메일 주소">[E-mail] 
+				<span class="contact_tit" title="이메일 주소">[E-mail] 
 					<span class="context">ggomasungu@gmail.com</span>
 				</span>
 			</a>		
 		</div>
-		<div class="messenger">
+		<div class="messenger" title="카카오톡 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
 			<img src="img/icon_kakaotalk.png" alt="카카오톡">
-			<span title="카카오톡 아이디">[Kakao Talk] 
+			<span class="contact_tit" title="카카오톡 아이디">[Kakao Talk] 
 				<span class="context">ggomasungu@gmail.com</span>
 			</span>
 		</div>
-		<div class="copyright">
+		<div class="copyright" title="저작권 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
 			<img src="img/icon_tools.png" alt="제작자">
-			<span title="저작권 정보">[Created by] 
+			<span class="contact_tit" title="저작권에 관해">[Created by] 
 				<span class="context">&copy;2019 Seon-Gu LIM<br> All rights reserved.</span>
 			</span>
 		</div>
