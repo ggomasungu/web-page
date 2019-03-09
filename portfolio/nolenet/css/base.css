@@ -128,8 +128,8 @@ body{font-family:'Nanum Gothic'}
 		}
 		#mMenuHeader > p {
 			display: inline-block;float: right;
-			height:100%;text-align: right;padding:17px 22px 0 0;
-			font-size:30px;color:white;text-shadow:2px 2px 2px black;
+			height:100%;text-align: right;padding:0 22px 0 0;
+			font-size:60px;color:white;text-shadow:1px 1px 1px black;
 			background:#414ea5;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;

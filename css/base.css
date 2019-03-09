@@ -141,7 +141,7 @@ body {overflow-x:hidden;}
 	}
 
 /*컨텐츠 - 본문*/
-#cont2 {}
+#cont2 {margin-top: 100px;}
 	#showbox {
 		position: relative;
 		height:768px;width:100%;
@@ -279,10 +279,8 @@ footer {
 }
 /*애니메이션*/
 @keyframes logo_show {
-	0% {width:0;padding-left:0;background:#119933}
-	20% {transform:scale(1);padding-left:880px;transform:skewY(5deg);}
-	40% {background:#119933;}
-	50% {transform:scale(2);margin-top:80px;}
+	0% {padding-left:0;width: 0;}
+	50% {padding-left:600px;}
 	100% {width:1200px;}
 }
 
