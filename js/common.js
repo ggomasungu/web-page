@@ -29,6 +29,7 @@ $(function() {
 		$('[data-skew-bg]').css('background', 'black');
 		$('.bg_cont1').css('background', 'black');
 		$('.introduce').css('color', 'white');
+		$('#pf_list').css('background', 'black');
 		$('.contact_cont > div').css('background', 'black');
 		$('.contact').css('border-bottom', '20px dashed #1b1b1b');
 		$('.contact_cont').css('background', '#1b1b1b');
@@ -39,6 +40,7 @@ $(function() {
 		$('[data-skew-bg]').css('background', 'white');
 		$('.bg_cont1').css('background', 'white');
 		$('.introduce').css('color', 'black');
+		$('#pf_list').css('background', 'white');
 		$('.contact_cont > div').css('background', 'white');
 		$('.contact').css('border-bottom', '20px dashed #EBEB90');
 		$('.contact_cont').css('background', '#EBEB90');
