@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2,h4,h5,h6{visibility:hidden; height:0; font-size:0}
+h2,h3,h5,h6{visibility:hidden; height:0; font-size:0}
 
 /*기본설정*/
 html, body {background:white;font-family:'Noto Sans KR', sans-serif}
@@ -27,12 +27,13 @@ body {overflow-x:hidden;}
 #logo {
 	display: none;
 	position: absolute;top:95px;
-	width: 1200px;height: 70px;padding-left:200px;box-sizing: border-box;
+	width: 1200px;height: 70px;padding-left:250px;box-sizing: border-box;
 	background:#991111;
 	font-size:50px;font-weight: lighter;
 	white-space:nowrap;
 }
 #logo a {display: block;padding:10px;color:white}
+#logo a i {margin-right:60px;}
 [data-skew-bg] {
 	position:absolute;top: 0;left:824px;
 	width:700px;height:300px;background:white;
@@ -97,7 +98,7 @@ body {overflow-x:hidden;}
 /*컨텐츠영역*/
 #contents {margin-top:135px;}
 
-/*컨텐츠 - 소개문*/
+/*컨텐츠1 - 소개문*/
 #cont1 {position: relative;background:#777;overflow: hidden}
 	.vid_cont1 {
 		position: absolute;
@@ -139,7 +140,7 @@ body {overflow-x:hidden;}
 		white-space:nowrap;text-align: center;
 	}
 
-/*컨텐츠 - 본문*/
+/*컨텐츠2 - 본문*/
 #cont2 {}
 	#showbox {
 		position: relative;

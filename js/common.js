@@ -7,7 +7,7 @@ $(function() {
 		}
 		else{
 			$('#logo').show();
-			$('#logo').css('animation','logo_show 1.5s steps(200, end)')
+			$('#logo').css('animation','logo_show 1.3s steps(200, end)')
 		}
 	}
 
