@@ -6,8 +6,10 @@ $(function() {
 			window.location.reload();
 		}
 		else{
-			$('#logo').show();
-			$('#logo').css('animation','logo_show 1.3s steps(200, end)')
+			$('#logo').css({
+				animation: 'logo_show 1.3s steps(200, end)',
+				visibility: 'visible'
+			});
 		}
 	}
 
@@ -19,5 +21,37 @@ $(function() {
 	$('.btn_open_notice').click(function() {
 		$(this).animate({top:'-5%'}, 500)
 		$('.notice').animate({top:0}, 500)
+	});
+
+	// 테마변경
+	$('.theme_black').click(function() {
+		$('body').css('background', 'black');
+		$('[data-skew-bg]').css('background', 'black');
+		$('.bg_cont1').css('background', 'black');
+		$('.introduce').css('color', 'white');
+		$('.contact_cont > div').css('background', 'black');
+		$('.contact').css('border-bottom', '20px dashed #1b1b1b');
+		$('.contact_cont').css('background', '#1b1b1b');
+		$('.bg_cc2').css('background', '#1b1b1b');
+	});	
+	$('.theme_white').click(function() {
+		$('body').css('background', 'white');
+		$('[data-skew-bg]').css('background', 'white');
+		$('.bg_cont1').css('background', 'white');
+		$('.introduce').css('color', 'black');
+		$('.contact_cont > div').css('background', 'white');
+		$('.contact').css('border-bottom', '20px dashed #EBEB90');
+		$('.contact_cont').css('background', '#EBEB90');
+		$('.bg_cc2').css('background', '#EBEB90');
+	});
+
+	// 푸터 애니메이션
+	$('.contact_cont>div').each(function() {
+		$(this).hover(function() {
+			$(this).find('.bg_hover').animate({top: 0},500)
+		}, function() {
+			$('.bg_hover').stop(true,true);
+			$(this).find('.bg_hover').animate({top:'430px'},500)
+		});
 	});
 });
