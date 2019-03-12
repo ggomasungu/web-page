@@ -166,7 +166,7 @@ header {width: 100%;height: 100%;}
 	font-weight: bold;
 	animation:wobble-hor-top 5s both infinite;
 }
-.btn_open_notice:hover {background:green}
+.btn_open_notice:hover {background:orange}
 .btn_open_notice a {color:white}
 
 /*컨텐츠1_소개문*/
@@ -175,7 +175,10 @@ header {width: 100%;height: 100%;}
 	position: absolute;
 	height:700px;width: 100%;
 }
-#cont1 .vid_cont1 video {min-height:700px;min-width:2440px}
+#cont1 .vid_cont1 video {
+	min-height:700px;
+	min-width:2440px
+}
 #cont1 .bg_cont1 {
 	position: absolute;z-index:10;left:-120px;
 	width: 700px;height:700px;
@@ -185,13 +188,15 @@ header {width: 100%;height: 100%;}
 	position:absolute;z-index:10;top:-50px;left:-99px;
 	width:650px;height:800px;
 	fill:none;
-	stroke:#119933;
+	stroke:orange;
 	stroke-dasharray:61%;
-	stroke-width:20;
+	stroke-dashoffset:0;
+	stroke-width:2.8%;
 	transform:skewX(-40deg);
 	animation:5s bd_svg infinite
 }
 #cont1 .introduce {
+	visibility:hidden;
 	display: inline-block;
 	position: relative;z-index:10;
 	height: 500px;width:470px;
@@ -226,32 +231,64 @@ header {width: 100%;height: 100%;}
 }	
 /*작품리스트*/
 #cont2 #pf_list {
-	margin: 0 auto;padding:70px 0 30px 0;
+	width: 100%;height: 100%;
+	margin: 0 auto;padding:5% 0 4% 0;
 	text-align: center;
 	background:white;
 }
 #cont2 #pf_list .pf {
 	display: inline-block;
-	width: 30%;height:300px;
-	margin:0 0 2% 2%;
+	position: relative;
+	width: 30%;height:100%;
+	margin:0 0 1.2% 2%;padding:5%;
 	border-radius:20px;
-	border:20px solid #119933;
+	border:10px solid orange;
 	box-sizing:border-box;
-	background:white
+	background:gray;
+	overflow: hidden;
+	cursor:pointer;
+	transform:scale(1);
+	transition:.5s;
 }
-#cont2 #pf_list .pf:nth-child(1) {margin-left: 0;}
-#cont2 #pf_list .pf:nth-child(4) {margin-left: 0;}
+#cont2 #pf_list .pf:nth-child(1) {margin-left:0}
+#cont2 #pf_list .pf:nth-child(4) {margin-left:0}
+#cont2 #pf_list .pf:nth-child(7) {margin-left:0}
+#cont2 #pf_list .pf:hover {
+	border:10px solid white;
+	transform:scale(1.15);
+}
+#cont2 #pf_list .pf .pf_bg {
+	position: absolute;top:-100%;left:0;
+	width: 100%;height: 100%;
+	background:orange
+}
 #cont2 #pf_list .pf .pf_tit {
+	position: relative;z-index: 10;
+	padding:9% 0 10% 0;
+	margin-bottom:20px;
+	background:rgba(255,255,255,.6);
+	border-radius:50px;
+	font-size:35px;color:white;font-weight: bold;
+	text-shadow:1px 1px 10px orange;
 }
 #cont2 #pf_list .pf .pf_cont {
-	display:inline-block;
-	width: 90%;height: 70%;
+	position: absolute;bottom:0;left:0;
+	width:100%;
+	padding:3% 0;
+	background:rgba(0,0,0,.7);
+	border-radius:0 0 10px 10px;
+	color:white;
 	white-space:nowrap;
-	background:yellow
 }
+#cont2 #pf_list .pf .pf_cont em {
+	display: block;margin-bottom:5px;
+	font-weight: bold;
+}
+
 #cont2 #pf_list .pf.pf1 {
 	background:url(../img/work1.png) no-repeat;
 	background-size:100% 100%;
+	background-position:center
 }
 #cont2 #pf_list .pf.pf2 {
 	background:url(../img/work2.png) no-repeat;
@@ -273,14 +310,47 @@ header {width: 100%;height: 100%;}
 	background:url(../img/work6.png) no-repeat;
 	background-size:100% 100%;
 }
+#cont2 #pf_list .pf.pf7 {
+	background:url(../img/work7.png) no-repeat;
+	background-size:100% 100%;
+}
+#cont2 #pf_list .pf.pf8 {
+	background:url(../img/work8.png) no-repeat;
+	background-size:100% 100%;
+}
+#cont2 #pf_list .pf.pf9 {
+	background:url(../img/work9.png) no-repeat;
+	background-size:100% 100%;
+}
 
 /*컨텐츠3*/
-#cont3 {}
-/*컨텐츠4*/
-#cont4 {}
+#cont3 {
+	height:900px;
+	background:black;
+	margin-bottom:200px;
+}
 
 /*푸터*/
-footer {background:#991111}
+footer {overflow: hidden;}
+/*푸터_배경*/
+#footer_bg {
+	position: relative;
+	padding:5%;margin-top:10%;
+	background:linear-gradient(to right, #f5af19, #f12711,#991111,black,#991111,#f12711, #f5af19);
+	background-size:400%;
+	animation:bpl2 8s alternate infinite both;
+}
+#footer_bg .footer_bg_circle{
+	position: absolute;
+	left: 50%;top:0;
+	transform:translate(-50%,-20%);
+	width:40%;
+	margin:0 auto;padding:20% 0;
+	background:linear-gradient(to right, #f5af19, orange,gold,#EBE181,#EBE181,gold,orange, #f5af19);
+	background-size:800%;
+	border-radius:100%;
+	animation:bpr 8s alternate infinite both;
+}
 /*푸터_제목*/
 .contact {
 	position: relative;
@@ -290,37 +360,37 @@ footer {background:#991111}
 	color:white;
 	font-size:30px;font-weight: bold;
 }
-.contact	.visual {
+.contact .visual {
 	display: inline-block;
 	width:22px;height:22px;margin-right:10px;
 	border-radius:10px 0 10px 0;
-	border:5px outset white;
 	box-sizing:border-box;
-	animation:bg_rainbow 8s linear infinite alternate both
+	animation:bg_rainbow 8s infinite
 }
 /*푸터_내용*/
 .contact_cont {
 	background:#EBEB90;
-	position: relative
+	position: relative;
+	padding-top:5%;
 	height: 100%;
-	padding-top:50px;
 	text-align: center;
 	overflow-y: hidden;
 }
 .contact_cont > div {vertical-align: bottom;
 	position:relative;bottom: 0;
 	display: inline-block;
-	width:25%;height:200px;
+	width:30%;height: 100%;
 	padding:40px 0;
-	margin-left:3%;
+	margin-left:1%;
 	background:white;
 	border-radius:100px 0 0 0;
 	color:white;
 }
+
 .contact_cont > div .bg_cc {
 	position:absolute;z-index:20;top: 0;right: 0;
 	width:96px;height:50px;
-	background:#119933;
+	background:orange;
 }
 .contact_cont > div .bg_cc2 {
 	position:absolute;z-index: 30;top:-18px;right:-45px;
@@ -397,17 +467,18 @@ footer {background:#991111}
 	54% {transform: translateX(-53%) rotate(1.2deg)}
 }
 
-@keyframes bd_svg {
+@keyframes intro_ani {
 	0% {
-		-webkit-stroke-dashoffset:400%;
-		-moz-stroke-dashoffset:400%;
-		stroke-dashoffset:400%;
+		letter-spacing: -2em;
+		opacity: 0;
 	}
-	30% {
-		-webkit-stroke-dashoffset:400%;
-		-moz-stroke-dashoffset:0;
-		stroke-dashoffset:0;
-	}
+	40% {opacity: 0.6}
+	100% {opacity: 1}
+}
+
+@keyframes bd_svg {
+	0% {stroke-dashoffset:400%}
+	30% {stroke-dashoffset:0}
 }
 
 @keyframes bpl {
@@ -415,11 +486,40 @@ footer {background:#991111}
 	30% {background-position: 0% 50%}
 }
 
+
+@keyframes bpl2 {
+	0% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+@keyframes bpr {
+	0% {
+		background-position: 0% 50%;
+		transform:translate(-50%,30%);
+	}
+	50% {transform:translate(-50%,-20%);}
+	90% {transform:translate(-50%,-10%);}
+	100% {
+		background-position: 100% 50%;
+		transform:translate(-50%,30%);
+	}
+}
+
 @keyframes bg_rainbow {
 	0% {background: white}
-	20% {background: red}
-	40% {background: orange}
-	60% {background: yellow}
-	80% {background: #119933}
+	20% {background: orange}
+	40% {background: yellow}
+	60% {background: green}
+	80% {background: blue}
 	100% {background: white}
+}
+
+@keyframes jello-vertical {
+	0% {transform: scale3d(1, 1, 1)}
+	30% {transform: scale3d(0.75, 1.25, 1)}
+	40% {transform: scale3d(1.1, 0.75, 1)}
+	50% {transform: scale3d(0.85, 1.15, 1)}
+	65% {transform: scale3d(1.05, 0.95, 1)}
+	75% {transform: scale3d(0.95, 1.05, 1)}
+	100% {transform: scale3d(1, 1, 1)}
 }

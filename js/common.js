@@ -1,5 +1,5 @@
 $(function() {
-	//백그라운드 비디오를 위해 페이지 로딩 두번 후 로고 애니메이션
+	//백그라운드 비디오를 위해 페이지 로딩 두번 후 애니메이션
 	window.onload = function () {
 		if(!window.location.hash) {
 			window.location = window.location + '#loaded';
@@ -8,6 +8,10 @@ $(function() {
 		else{
 			$('#logo').css({
 				animation: 'logo_show 1.3s steps(200, end)',
+				visibility: 'visible'
+			});
+			$('.introduce').css({
+				animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
 				visibility: 'visible'
 			});
 		}
@@ -53,12 +57,13 @@ $(function() {
 		$('.btn_close_theme').css('color', 'white');
 		$('.bg_cont1').css('background', 'black');
 		$('.introduce').css('color', 'white');
+		$('.vid_cont1').css('border', '40px solid black');
 		$('#pf_list').css('background', 'black');
 		$('.contact_cont > div').css('background', 'black');
 		$('.contact').css('border-bottom', '20px dashed #333');
 		$('.contact_cont').css('background', '#333');
 		$('.bg_cc2').css('background', '#333');
-	});	
+	});
 	$('.theme_white').click(function() {
 		$('body').css('background', 'white');
 		$('[data-skew-bg]').css('background', 'white');
@@ -66,6 +71,7 @@ $(function() {
 		$('.btn_close_theme').css('color', 'black');
 		$('.bg_cont1').css('background', 'white');
 		$('.introduce').css('color', 'black');
+		$('.vid_cont1').css('border', '40px solid white');
 		$('#pf_list').css('background', 'white');
 		$('.contact_cont > div').css('background', 'white');
 		$('.contact').css('border-bottom', '20px dashed #EBEB90');
@@ -73,12 +79,35 @@ $(function() {
 		$('.bg_cc2').css('background', '#EBEB90');
 	});
 
+	//작품리스트 영역 왔을때
+
+	var $scroll = $(window).scrollTop(),
+		 $cont2scroll = $('#cont2').scrollTop(); //이거 0인데?
+	if($scroll >= $cont2scroll) {
+		$('#pf_list').css({background:'white'})
+	}
+	else if($scroll < $cont2scroll) {
+		$('#pf_list').css({background:'black'})
+	};
+
+	//작품리스트 오버배경
+	$('.pf').each(function() {
+		$(this).hover(function() {
+			$(this).find('.pf_bg').animate({top: 0},500)
+		}, function() {
+			$('.pf_bg').stop(true,true);
+			$(this).find('.pf_bg').animate({top: '-100%'},500)
+		});
+	});
+
 	// 푸터 애니메이션
 	$('.contact_cont>div').each(function() {
 		$(this).hover(function() {
 			$(this).find('.bg_hover').animate({top: 0},500)
+			$(this).find('.contact_tit').css('animation', 'jello-vertical 0.9s both');
 		}, function() {
 			$('.bg_hover').stop(true,true);
+			$('.contact_tit').css('animation', 'none');
 			$(this).find('.bg_hover').animate({top:'430px'},500)
 		});
 	});
