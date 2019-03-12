@@ -57,7 +57,6 @@ $(function() {
 		$('.btn_close_theme').css('color', 'white');
 		$('.bg_cont1').css('background', 'black');
 		$('.introduce').css('color', 'white');
-		$('.vid_cont1').css('border', '40px solid black');
 		$('#pf_list').css('background', 'black');
 		$('.contact_cont > div').css('background', 'black');
 		$('.contact').css('border-bottom', '20px dashed #333');
@@ -71,7 +70,6 @@ $(function() {
 		$('.btn_close_theme').css('color', 'black');
 		$('.bg_cont1').css('background', 'white');
 		$('.introduce').css('color', 'black');
-		$('.vid_cont1').css('border', '40px solid white');
 		$('#pf_list').css('background', 'white');
 		$('.contact_cont > div').css('background', 'white');
 		$('.contact').css('border-bottom', '20px dashed #EBEB90');
@@ -80,23 +78,39 @@ $(function() {
 	});
 
 	//작품리스트 영역 왔을때
-
-	var $scroll = $(window).scrollTop(),
-		 $cont2scroll = $('#cont2').scrollTop(); //이거 0인데?
-	if($scroll >= $cont2scroll) {
-		$('#pf_list').css({background:'white'})
-	}
-	else if($scroll < $cont2scroll) {
-		$('#pf_list').css({background:'black'})
-	};
+	$(window).scroll(function() {
+		var $scroll = $(window).scrollTop(),
+			 $cont2scroll = $('#cont2').offset().top;
+			 $cont3scroll = $('#cont3').offset().top;
+		if ($scroll <= $cont2scroll-300) {
+			$('.pf').css('opacity', 0);
+			$('.pf_list_bg').stop(true,true);
+			$('.pf_list_bg').css({left:'100%'}	)
+		}
+		else if($scroll >= $cont2scroll-300&&$scroll <= $cont2scroll) {
+			$('.pf').css('opacity', 1);
+			
+			$('.pf_list_bg').css({left:0}	)
+		}
+		else if ($scroll >= $cont2scroll && $scroll <= $cont3scroll-400) {
+			$('.pf').css('opacity', 1);
+			
+			$('.pf_list_bg').css({left:0}	)
+		}
+		else if ($scroll >= $cont3scroll-400&&$scroll <= $cont3scroll) {
+			$('.pf').css('opacity', 0);
+			$('.pf_list_bg').stop(true,true);
+			$('.pf_list_bg').css({left:'100%'}	)
+		};
+	});	
 
 	//작품리스트 오버배경
 	$('.pf').each(function() {
 		$(this).hover(function() {
-			$(this).find('.pf_bg').animate({top: 0},500)
+			$(this).find('.pf_bg').animate({top: 0},300)
 		}, function() {
 			$('.pf_bg').stop(true,true);
-			$(this).find('.pf_bg').animate({top: '-100%'},500)
+			$(this).find('.pf_bg').animate({top: '-100%'},300)
 		});
 	});
 
