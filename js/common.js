@@ -58,7 +58,7 @@ $(function() {
 		clearInterval(notice_count)
 		$('.notice').animate({top:'-5%'}, 500)
 		$('.btn_open_notice').animate({top:0}, 500);
-		$('.btn_open_notice').css('transition', '.5s');
+		$('.btn_open_notice').css('transition', '.3s');
 	}
 	$('.btn_close_notice').click($close_notice_func); //클릭 시 공지닫기
 	$('.btn_open_notice').click(function() { //클릭 시 공지열기
@@ -95,6 +95,7 @@ $(function() {
 	$('.theme_black').click(function() {
 		$('body').css('background', 'black');
 		$('[data-skew-bg]').css('background', 'black');
+		$('#btn_open_theme').css({'color':'white','border-color':'white'});
 		$('#theme_box').css('background', '#444');
 		$('.btn_close_theme').css('color', 'white');
 		$('.bg_cont1').css('background', 'black');
@@ -108,6 +109,7 @@ $(function() {
 	$('.theme_white').click(function() {
 		$('body').css('background', 'white');
 		$('[data-skew-bg]').css('background', 'white');
+		$('#btn_open_theme').css({'color':'black','border-color':'black'});
 		$('#theme_box').css('background', '#aaa');
 		$('.btn_close_theme').css('color', 'black');
 		$('.bg_cont1').css('background', 'white');
@@ -122,10 +124,12 @@ $(function() {
 	//작품리스트 호버배경
 	$('.pf').each(function() {
 		$(this).hover(function() {
-			$(this).find('.pf_bg').animate({top: 0},300)
+			$(this).find('.pf_bg').animate({top:0},300)
+			$(this).find('.pf_tit_text').css('animation','pf_tit_flow 4s linear infinite');
 		}, function() {
 			$('.pf_bg').stop(true,true);
-			$(this).find('.pf_bg').animate({top: '-100%'},300)
+			$(this).find('.pf_bg').animate({top:'-100%'},300)
+			$(this).find('.pf_tit_text').css('animation','none')
 		});
 	});
 

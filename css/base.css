@@ -35,12 +35,13 @@ body {overflow-x:hidden;transition:1s}
 	border:5px solid #000;
 	border-radius:30px;
 	font-size:30px;
+	color:black;
 	cursor: pointer;
 	transform:scale(1);
 	transition:.5s
 }
 #btn_open_theme:hover {
-	transform:scale(1.2);
+	transform:scale(1.2)
 }
 #theme_box {
 	position:fixed;z-index:110;top:30px;left:30px;
@@ -62,7 +63,7 @@ body {overflow-x:hidden;transition:1s}
 	transition:.5s
 }
 #theme_box .btn_close_theme:hover {
-	transform:scale(1.2);
+	transform:scale(1.2)
 }
 #theme_box .theme_white {
 	display: inline-block;
@@ -77,6 +78,7 @@ body {overflow-x:hidden;transition:1s}
 }
 #theme_box .theme_white:hover {
 	transform:scale(1.15);
+	background:white;
 }
 #theme_box .theme_black {
 	display: inline-block;
@@ -91,6 +93,7 @@ body {overflow-x:hidden;transition:1s}
 }
 #theme_box .theme_black:hover {
 	transform:scale(1.15);
+	background:black;
 }
 /*헤더*/
 header {width: 100%;height: 100%;}
@@ -157,11 +160,6 @@ header {width: 100%;height: 100%;}
 	animation:notice_count_ani .5s alternate infinite
 }
 
-@keyframes notice_count_ani {
-	0% {width: 0;font-size:0;height: 0;}
-	100% {font-size:280%}
-}
-
 .notice .noticeBox .btn_close_notice {
 	display:inline-block;
 	margin-left:5px;
@@ -182,7 +180,7 @@ header {width: 100%;height: 100%;}
 	text-align: center;
 	font-weight: bold;
 	transform:translate(-50%,0);
-	transition:.5s
+	transition:.3s
 }
 .btn_open_notice:hover {
 	background:orange;
@@ -293,7 +291,7 @@ header {width: 100%;height: 100%;}
 #cont2 #pf_list .pf .pf_bg {
 	position: absolute;top:-100%;left:0;
 	width: 100%;height: 100%;
-	background:orange
+	background:rgba(255,165,0,0.9);
 }
 #cont2 #pf_list .pf .pf_tit {
 	position: relative;z-index: 10;
@@ -304,10 +302,14 @@ header {width: 100%;height: 100%;}
 	border:5px solid white;
 	font-size:35px;color:white;font-weight: bold;
 	text-shadow:1px 1px 10px orange;
-	white-space:nowrap;
-	text-overflow:ellipsis;
 	overflow:hidden;
 }
+#cont2 #pf_list .pf .pf_tit .pf_tit_text {
+	display:inline-block;
+	position: relative;top:0;left:0;
+	white-space:nowrap;
+}
+
 #cont2 #pf_list .pf .pf_cont {
 	position: absolute;bottom:0;left:0;
 	width:100%;
@@ -370,8 +372,33 @@ header {width: 100%;height: 100%;}
 
 /*컨텐츠3*/
 #cont3 {
-	height:900px;
-	background:#119933;
+	position: relative;
+	height:1600px;
+	width: 100%;
+	background:#991111
+}
+#cont3 .cont3_float {
+	position: absolute;top:50%;left:50%;z-index: 10;
+	width:100%;height:10%;
+	transform:translate(-50%,-50%);
+	border:3px solid white;
+	background:black
+}
+#cont3 .cont3_bg1 {
+	position: relative;
+	width:100%;height:50%;
+	background:url(../img/bg1.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:center;
+}
+#cont3 .cont3_bg2 {
+	position: relative;
+	width:100%;height:50%;
+	background:url(../img/bg2.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:center;
 }
 
 /*푸터*/
@@ -501,6 +528,11 @@ footer {overflow: hidden}
 	100% {left:100%}
 }
 
+@keyframes notice_count_ani {
+	0% {font-size:100%}
+	100% {font-size:250%}
+}
+
 @keyframes intro_ani {
 	0% {
 		letter-spacing: -2em;
@@ -513,6 +545,12 @@ footer {overflow: hidden}
 @keyframes bd_svg {
 	0% {stroke-dashoffset:400%}
 	30% {stroke-dashoffset:0}
+}
+
+@keyframes pf_tit_flow {
+	0% {left:100%}
+	50% {left:0}
+	100% {left:-100%}
 }
 
 @keyframes bpl {
