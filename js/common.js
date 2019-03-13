@@ -15,7 +15,6 @@ $(function() {
 				animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
 				visibility: 'visible'
 			});
-			$auto_close = setTimeout($close_notice_func,5000) // 공지 자동닫기
 		}
 	}
 
@@ -25,12 +24,13 @@ $(function() {
 			 $cont2scroll = $('#cont2').offset().top, // 865
 			 $cont3scroll = $('#cont3').offset().top; // 약2088.7
 
-		if ($scroll < $cont2scroll-300) {
+		if ($scroll < $cont2scroll-450) {
 			$('.pf_list_bg').stop(true,true);
 			$('.pf').css('opacity', 0);
-			$('.pf_list_bg').css('left','100%')
+			$('.pf_list_bg').css('left','100%');
+			$('.pf_bg').css('top', '-100%');
 		}
-		else if($scroll >= $cont2scroll-300 && $scroll < $cont3scroll-400) {
+		else if($scroll >= $cont2scroll-450 && $scroll < $cont3scroll-400) {
 			$('.pf').css('opacity', 1);
 			$('.pf_list_bg').css('left',0)
 		}
@@ -38,12 +38,24 @@ $(function() {
 			$('.pf_list_bg').stop(true,true);
 			$('.pf').css('opacity', 0);
 			$('.pf_list_bg').css('left','100%');
+			$('.pf_bg').css('top', '-100%');
 		}
 	});
 
+	// 공지 카운트다운 & 자동닫기
+	var count = 5; //기본 5초로 설정
+	notice_count = setInterval(function () {
+		$('.countdown').html('<em>'+(count-1)+'</em>');
+		if (count==1) {
+			clearInterval(notice_count);
+			$close_notice_func();
+		}
+		count--;
+	}, 1000);
+
 	// 공지 여닫기
 	var $close_notice_func = function () { //공지닫기
-		clearTimeout($auto_close);
+		clearInterval(notice_count)
 		$('.notice').animate({top:'-5%'}, 500)
 		$('.btn_open_notice').animate({top:0}, 500);
 		$('.btn_open_notice').css('transition', '.5s');
