@@ -154,10 +154,7 @@ header {width: 100%;height: 100%;}
 	color:#991111;	
 }
 .notice .noticeBox .auto_close .countdown {
-	display: inline-block;
-	position:absolute;top:0;
-	font-size:18px;
-	animation:notice_count_ani .5s alternate infinite
+	font-size:140%;
 }
 
 .notice .noticeBox .btn_close_notice {
@@ -295,7 +292,7 @@ header {width: 100%;height: 100%;}
 }
 #cont2 #pf_list .pf .pf_tit {
 	position: relative;z-index: 10;
-	padding:9% 0 10% 0;
+	padding:10% 0;
 	margin-bottom:20px;
 	background:rgba(0,0,0,.7);
 	border-radius:50px;
@@ -526,11 +523,6 @@ footer {overflow: hidden}
 	25% {left: 0}
 	75% {left: 0}
 	100% {left:100%}
-}
-
-@keyframes notice_count_ani {
-	0% {font-size:100%}
-	100% {font-size:250%}
 }
 
 @keyframes intro_ani {
