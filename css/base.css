@@ -241,11 +241,10 @@ header {width: 100%;height: 100%;}
 }
 /*포트폴리오 모달*/
 #cont2 .pf_modal {
-	display: none;
-	position: absolute;z-index:500;
-	width:100%;
-	height:100%;
-	background:rgba(255,255,255,0.6);
+	position: absolute;z-index:200;
+	width: 0;
+	background:rgba(0,0,0,0.7);
+	cursor: pointer;
 }
 /*비주얼*/
 #cont2 .show_visual {
@@ -409,7 +408,7 @@ header {width: 100%;height: 100%;}
 }
 
 /*푸터*/
-footer {overflow: hidden}
+footer {overflow-y:hidden}
 /*푸터_배경*/
 #footer_bg {
 	position: relative;

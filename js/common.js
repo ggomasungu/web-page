@@ -25,28 +25,28 @@ $(window).scroll(function() {
 		 $cont3sT = $('#cont3').offset().top,
 		 $foot_sT = $('footer').offset().top;
 
-	if ($wsT < $cont2sT-450) {
+	if ($wsT < $cont2sT-500) {
 		$('.pf_list_bg').stop(true,true);
 		$('.pf').css('opacity', 0);
 		$('.pf_list_bg').css('left','100%');
 		$('.pf_bg').css('top', '-100%');
 	}
-	else if($wsT >= $cont2sT-450 && $wsT < $cont3sT-400) {
+	else if($wsT >= $cont2sT-500 && $wsT < $cont3sT-200) {
 		$('.pf').css('opacity', 1);
 		$('.pf_list_bg').css('left',0)
 	}
-	else if ($wsT >= $cont3sT-400 && $wsT < $cont3sT) {
+	else if ($wsT >= $cont3sT-200 && $wsT < $cont3sT) {
 		$('.pf_list_bg').stop(true,true);
 		$('.pf').css('opacity', 0);
 		$('.pf_list_bg').css('left','100%');
 		$('.pf_bg').css('top', '-100%');
-		$('.cont3_float').css({'height':0,'border':'100px solid white'});
+		$('.cont3_float').css({'height':0,'border-width':'100px'});
 	}
 	else if ($wsT >= $cont3sT && $wsT < $cont3sT+400) {
-		$('.cont3_float').css({'height':'50%','border':'10px solid #777'});
+		$('.cont3_float').css({'height':'50%','border-width':'10px'});
 	}
 	else if ($wsT >= $cont3sT+400 && $wsT < $foot_sT) {
-		$('.cont3_float').css({'height':0,'border':'100px solid white'});
+		$('.cont3_float').css({'height':0,'border-width':'100px'});
 	}
 });
 
@@ -97,9 +97,6 @@ $(document).click(function(e) {
 		$('#theme_box').animate({'width':0,'height':0,'padding':0}, 500);
 		$('#theme_box').find('i').css('font-size',0);
 	}
-	else if (!$('.pf_modal').is(e.target)&&$('.pf_modal').has(e.target).length===0) {
-		$('.pf_modal').css('display','none')
-	}
 });
 
 // 테마변경
@@ -112,6 +109,7 @@ $('.theme_black').click(function() {
 	$('.bg_cont1').css('background', 'black');
 	$('.introduce').css('color', 'white');
 	$('#pf_list').css('background', 'black');
+	$('.cont3_float').css('border-color', 'black');
 	$('.contact_cont > div').css('background', 'black');
 	$('.contact').css('border-bottom', '20px dashed #333');
 	$('.contact_cont').css('background', '#333');
@@ -126,6 +124,7 @@ $('.theme_white').click(function() {
 	$('.bg_cont1').css('background', 'white');
 	$('.introduce').css('color', 'black');
 	$('#pf_list').css('background', 'white');
+	$('.cont3_float').css('border-color', 'white');
 	$('.contact_cont > div').css('background', 'white');
 	$('.contact').css('border-bottom', '20px dashed #EBEB90');
 	$('.contact_cont').css('background', '#EBEB90');
@@ -144,11 +143,21 @@ $('.pf').hover(
 	}
 );
 
-// 포트폴리오 모달 팝업
-var left = ($(window).scrollLeft()+($(window).width()-$('.pf_modal').width())/2),
-	 top = ($(window).scrollTop()+($(window).height()-$('.pf_modal').height()));
+// 포트폴리오 모달 팝업 여닫기
 $('.pf').click(function() {
-	$('.pf_modal').css({'left':left,'top':top,'display':'block'})
+	$('body').css('overflow-y', 'hidden');
+	$modal_width = $(window).width();
+	$modal_height = $(window).height();
+	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
+	$('.pf_modal').css({'top':$modal_top,'height':$modal_height});
+	$('.pf_modal').animate({'width':$modal_width},500)
+});
+$('.pf_modal').click(function() {
+	$('body').css('overflow-y', 'visible');
+	$modal_width = $(window).width();
+	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
+	$(this).css({'top':$modal_top});
+	$(this).animate({'width':0},500)
 });
 
 // 푸터 애니메이션
