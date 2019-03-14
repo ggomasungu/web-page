@@ -1,5 +1,5 @@
 $(function() {
-//백그라운드 비디오를 위해 페이지 로딩 두번 후 애니메이션 & 공지닫기
+// 백그라운드 비디오를 위해 페이지 로딩 두번 후 애니메이션 & 공지닫기
 var $auto_close;
 window.onload = function () {
 	if(!window.location.hash) {
@@ -18,27 +18,35 @@ window.onload = function () {
 	}
 }
 
-//스크롤 이벤트 (cont2/footer)
+// 스크롤 이벤트 (cont2/footer)
 $(window).scroll(function() {
-	var $scroll = $(window).scrollTop(),
-		 $cont2scroll = $('#cont2').offset().top, // 865
-		 $cont3scroll = $('#cont3').offset().top; // 약2088.7
+	var $wsT = $(window).scrollTop(),
+		 $cont2sT = $('#cont2').offset().top,
+		 $cont3sT = $('#cont3').offset().top,
+		 $foot_sT = $('footer').offset().top;
 
-	if ($scroll < $cont2scroll-450) {
+	if ($wsT < $cont2sT-450) {
 		$('.pf_list_bg').stop(true,true);
 		$('.pf').css('opacity', 0);
 		$('.pf_list_bg').css('left','100%');
 		$('.pf_bg').css('top', '-100%');
 	}
-	else if($scroll >= $cont2scroll-450 && $scroll < $cont3scroll-400) {
+	else if($wsT >= $cont2sT-450 && $wsT < $cont3sT-400) {
 		$('.pf').css('opacity', 1);
 		$('.pf_list_bg').css('left',0)
 	}
-	else if ($scroll >= $cont3scroll-400 && $scroll < $cont3scroll) {
+	else if ($wsT >= $cont3sT-400 && $wsT < $cont3sT) {
 		$('.pf_list_bg').stop(true,true);
 		$('.pf').css('opacity', 0);
 		$('.pf_list_bg').css('left','100%');
 		$('.pf_bg').css('top', '-100%');
+		$('.cont3_float').css({'height':0,'border':'100px solid white'});
+	}
+	else if ($wsT >= $cont3sT && $wsT < $cont3sT+400) {
+		$('.cont3_float').css({'height':'50%','border':'10px solid #777'});
+	}
+	else if ($wsT >= $cont3sT+400 && $wsT < $foot_sT) {
+		$('.cont3_float').css({'height':0,'border':'100px solid white'});
 	}
 });
 
@@ -82,12 +90,15 @@ $('.btn_close_theme').click(function() {
 	$('#theme_box').find('i').css('font-size',0)
 });
 
-//바깥 영역 눌러도 닫히게
+// 바깥 영역 눌러도 닫히게
 $(document).click(function(e) {
 	if (!$('#btn_open_theme').is(e.target)&&$('#btn_open_theme').has(e.target).length===0) {
 		$('#theme_box').css('overflow', 'hidden');
-		$('#theme_box').animate({width:0,height:0,padding:0}, 500)
-		$('#theme_box').find('i').css('font-size',0)
+		$('#theme_box').animate({'width':0,'height':0,'padding':0}, 500);
+		$('#theme_box').find('i').css('font-size',0);
+	}
+	else if (!$('.pf_modal').is(e.target)&&$('.pf_modal').has(e.target).length===0) {
+		$('.pf_modal').css('display','none')
 	}
 });
 
@@ -121,7 +132,7 @@ $('.theme_white').click(function() {
 	$('.bg_cc2').css('background', '#EBEB90');
 });
 
-//작품리스트 호버배경
+// 작품리스트 호버배경
 $('.pf').hover(
 	function() {
 		$(this).find('.pf_bg').animate({top:0},300)
@@ -132,6 +143,13 @@ $('.pf').hover(
 		$(this).find('.pf_tit_text').css('animation','none')
 	}
 );
+
+// 포트폴리오 모달 팝업
+var left = ($(window).scrollLeft()+($(window).width()-$('.pf_modal').width())/2),
+	 top = ($(window).scrollTop()+($(window).height()-$('.pf_modal').height()));
+$('.pf').click(function() {
+	$('.pf_modal').css({'left':left,'top':top,'display':'block'})
+});
 
 // 푸터 애니메이션
 $('.contact_cont>div').hover(
