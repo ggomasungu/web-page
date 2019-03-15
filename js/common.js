@@ -149,16 +149,32 @@ $('.pf').click(function() {
 	$modal_width = $(window).width();
 	$modal_height = $(window).height();
 	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
-	$('.pf_modal').css({'top':$modal_top,'height':$modal_height});
-	$('.pf_modal').animate({'width':$modal_width},500)
+	$('.pf_modal').css({'top':$modal_top,'width':$modal_width,'height':$modal_height});
+	$('.pf_modal').fadeIn(500);
+	pf_bg = $(this).css('background-image');
+	$('.modal_bg').css({'background-image':pf_bg});
+	$('.modal_bg').fadeIn(1000)
 });
 $('.pf_modal').click(function() {
 	$('body').css('overflow-y', 'visible');
-	$modal_width = $(window).width();
 	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
-	$(this).css({'top':$modal_top});
-	$(this).animate({'width':0},500)
+	$(this).fadeOut(500);
+	$('.modal_bg').fadeOut(1000)
 });
+
+// 모달 팝업 배경에서 마우스 따라다니는 팝업
+$('.modal_bg').hover(
+	function() {
+		$(this).mousemove(function(e) {
+			mmX = e.pageX-$('.modal_bg').offset().left+15;
+			mmY = e.pageY-$('.modal_bg').offset().top+15;
+			$('.mouse_move').css({'top':mmY,'left':mmX});
+			$('.mouse_move').show();
+		});
+	}, function() {
+		$('.mouse_move').hide();
+	}
+);
 
 // 푸터 애니메이션
 $('.contact_cont>div').hover(

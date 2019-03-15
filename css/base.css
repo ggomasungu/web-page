@@ -239,20 +239,51 @@ header {width: 100%;height: 100%;}
 	padding:50px 0 0 0;
 	background:#991111;
 }
-/*포트폴리오 모달*/
-#cont2 .pf_modal {
-	position: absolute;z-index:200;
-	width: 0;
-	background:rgba(0,0,0,0.7);
-	cursor: pointer;
-}
-/*비주얼*/
+/* 비주얼 */
 #cont2 .show_visual {
 	width:70%;height:7px;margin:0 auto 15px;
 	background:linear-gradient(90deg,white 25%,#991111 25%,#991111 40%, white 40%,white 60%,#991111 60%, #991111 90%, white 90%) no-repeat;
 	background-size:5000px;
 	transform:skewX(45deg);
 	animation:bpl 5s infinite;
+}
+/*포트폴리오 모달*/
+#cont2 .pf_modal {
+	display: none;
+	position: absolute;z-index:200;
+	background:rgba(0,0,0,0.7);
+	cursor: pointer;
+}
+#cont2 .pf_modal .modal_bg {
+	display: none;
+	position:absolute;top:7%;left: 50%;z-index:10;
+	width:80%;height:60%;
+	background-repeat:no-repeat;
+	background-position:top;
+	background-size:contain;
+	transform:translateX(-50%);
+	cursor:help;
+}
+#cont2 .pf_modal .modal_bg .mouse_move {
+	display: none;
+	position: absolute;
+	width: 20%;height:15%;
+	padding:1%;
+	background:#999;
+	border-radius:20px;
+	border:10px outset #777;
+	box-shadow:5px 5px 0 #000,10px 10px 0 #000,15px 15px 0 #000,20px 20px 0 #000,25px 25px 0 #000;
+	color:white;
+	font-weight: bold;
+	font-size:150%;line-height: 120%;
+	text-shadow:1px 1px 0 #000,2px 2px 0 #000,3px 3px 0 #000,4px 4px 0 #000,5px 5px 0 #000,6px 6px 0 #000
+}
+
+#cont2 .pf_modal .modal_cont {
+	position:absolute;bottom:0;left: 50%;
+	width: 80%;height: 30%;
+	background:red;
+	transform:translateX(-50%);
 }
 /*작품리스트*/
 #cont2 #pf_list {
@@ -485,8 +516,8 @@ footer {overflow-y:hidden}
 }
 .contact_cont .mail > a {color:white}
 .contact_cont .mail {margin-left:0;height:300px;font-weight: bold;}
-.contact_cont .messenger {height:250px;}
-.contact_cont .copyright {height:200px;}
+.contact_cont .messenger {height:250px;cursor:help}
+.contact_cont .copyright {height:200px;cursor:help}
 .contact_cont img {
 	position: relative;z-index:10;
 	height: 100px;width: 100px;
