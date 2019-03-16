@@ -6,7 +6,7 @@
 	position:fixed;bottom: 0;left:-90px;z-index: 100;
 	padding:0 30px 0 10px;
 	background:black;
-	border:3px solid white;border-left:none;border-radius:0 10px 10px 0;
+	border-radius:0 10px 10px 0;
 	animation:gotomain 4s infinite
 }
 #go_to_main a {
@@ -15,9 +15,8 @@
 }
 
 @keyframes gotomain {
-	0% {background:black;border: 3px solid white;border-left:none}
-	30% {background:transparent;border: 3px solid transparent;border-left:none}
-	60% {background:white;border: 3px solid black;border-left:none}
+	0% {background:black}
+	50% {background:gray}
 }
 
 /*숨김처리*/

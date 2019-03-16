@@ -224,6 +224,14 @@ header {width: 100%;height: 100%;}
 }
 #cont1 .introduce p:nth-child(2),
 #cont1 .introduce p:nth-child(4) {color:#119933}
+#cont1 .introduce p:nth-child(3) {position: relative;cursor: pointer;}
+#cont1 .introduce p:nth-child(3):before {
+	content:'▶';
+	position: absolute;top:30%;left:-15%;
+	font-size: 50%;
+	animation:notice_blink 3s infinite
+
+}
 #cont1 .intro_text {
 	position:absolute;bottom:330px;left:275px;z-index:10;
 	width: 700px;height:50px;
@@ -251,8 +259,34 @@ header {width: 100%;height: 100%;}
 #cont2 .pf_modal {
 	display: none;
 	position: absolute;z-index:200;
-	background:rgba(0,0,0,0.7);
+	background:rgba(0,0,0,0.9);
 	cursor: pointer;
+}
+#cont2 .pf_modal .btn_modal_close {
+	position: absolute;top:30px;left:45px;
+	color:white;
+	font-size:300%
+}
+#cont2 .pf_modal .modal_ani1 {
+	position: absolute;top:0;left:-100%;
+	height:1%;width:100%;
+	background:rgba(255,255,255,0.1);
+	animation:modal_bg_ani alternate 7s infinite both;
+}
+#cont2 .pf_modal .modal_ani2 {
+	position: absolute;top:50%;left:-100%;
+	height:1%;width:100%;
+	background:rgba(255,255,255,0.1);
+	transform:translateY(-50%);
+	animation:modal_bg_ani alternate 7s infinite both;
+	animation-delay:.3s
+}
+#cont2 .pf_modal .modal_ani3 {
+	position: absolute;bottom: 0;left:-100%;
+	height:1%;width:100%;
+	background:rgba(255,255,255,0.1);
+	animation:modal_bg_ani alternate 7s infinite both;
+	animation-delay:.6s
 }
 #cont2 .pf_modal .modal_bg {
 	display: none;
@@ -262,28 +296,71 @@ header {width: 100%;height: 100%;}
 	background-position:top;
 	background-size:contain;
 	transform:translateX(-50%);
-	cursor:help;
 }
-#cont2 .pf_modal .modal_bg .mouse_move {
+
+#cont2 .pf_modal .mouse_move {
 	display: none;
-	position: absolute;
-	width: 20%;height:15%;
-	padding:1%;
-	background:#999;
-	border-radius:20px;
-	border:10px outset #777;
-	box-shadow:5px 5px 0 #000,10px 10px 0 #000,15px 15px 0 #000,20px 20px 0 #000,25px 25px 0 #000;
+	position: absolute;z-index: 20;
+	padding:0.3% 1% 0.7% 0.8%;
+	background:orange;
+	box-shadow:1px 1px 0 #cc7000,2px 2px 0 #cc7000,3px 3px 0 #cc7000,4px 4px 0 #cc7000,5px 5px 0 #cc7000,6px 6px 0 #cc7000,7px 7px 0 #cc7000,8px 8px 0 #cc7000,9px 9px 0 #cc7000,10px 10px 0 #cc7000;
 	color:white;
 	font-weight: bold;
 	font-size:150%;line-height: 120%;
-	text-shadow:1px 1px 0 #000,2px 2px 0 #000,3px 3px 0 #000,4px 4px 0 #000,5px 5px 0 #000,6px 6px 0 #000
+	text-shadow:1px 1px 0 #000,2px 2px 0 #000,3px 3px 0 #000,4px 4px 0 #000,5px 5px 0 #000,6px 6px 0 #000;
+	overflow: hidden;
+}
+#cont2 .pf_modal .mouse_move2 {
+	display: none;
+	position: absolute;z-index:30;
+	width:30px;height: 30px;
+	padding:8px 10px 13px;
+	background:#555;
+	border-radius:30px;
+	color:white;
+
+}
+
+#cont2 .pf_modal .mouse_move .mouse_move_bg {
+	position: absolute;top: 0;left: 0;
+	width:100%;height: 100%;
+	background:rgba(0,0,0,0.6);
+	box-sizing:border-box;
+	border-bottom:1px dashed white;
+	animation:pf_tit_flow 5s infinite;
+}
+
+#cont2 .pf_modal .mouse_move .mouse_move_tit {
+	position: relative;z-index: 10;
 }
 
 #cont2 .pf_modal .modal_cont {
-	position:absolute;bottom:0;left: 50%;
-	width: 80%;height: 30%;
-	background:red;
+	position:absolute;bottom:5%;left: 50%;
+	width:78%;
+	padding:1%;
+	color:white;
+	border:10px solid #555;
+	border-radius:20px;
 	transform:translateX(-50%);
+	cursor:help;
+}
+#cont2 .pf_modal .modal_cont .pf_cont_detail_tit {
+	display: block;
+	margin-bottom:2%;
+	font-size:200%
+}
+#cont2 .pf_modal .modal_cont .pf_cont_detail_tit i {margin-left:50px}
+#cont2 .pf_modal .modal_cont .pf_cont_detail_subtit {
+	display:block;
+	margin-bottom:2%;
+	font-size:150%
+}
+#cont2 .pf_modal .modal_cont .pf_cont_detail_subtit .concept_color {
+	margin-left: 30px;
+}
+#cont2 .pf_modal .modal_cont .pf_cont_detail_text {
+	display: block;
+	font-size:130%
 }
 /*작품리스트*/
 #cont2 #pf_list {
@@ -358,7 +435,9 @@ header {width: 100%;height: 100%;}
 	display: block;margin-bottom:5px;
 	font-weight: bold;
 }
-
+#cont2 #pf_list .pf .pf_cont_detail {
+	display: none;
+}
 #cont2 #pf_list .pf.pf1 {
 	background:url(../img/work1.jpg) no-repeat;
 	background-size:100% 100%;
@@ -473,7 +552,7 @@ footer {overflow-y:hidden}
 	width:22px;height:22px;margin-right:10px;
 	border-radius:10px 0 10px 0;
 	box-sizing:border-box;
-	animation:bg_rainbow 8s infinite
+	animation:symbol_color 8s infinite
 }
 /*푸터_내용*/
 .contact_cont {
@@ -590,6 +669,13 @@ footer {overflow-y:hidden}
 	30% {background-position: 0% 50%}
 }
 
+@keyframes modal_bg_ani{
+	0% {left: -100%}
+	30%,70% {left: 0;}
+	31%, 69% {height: 1%}
+	50% {height:90%}
+	100% {left: 100%}
+}
 
 @keyframes bpl2 {
 	0% {background-position: 100% 50%}
@@ -613,12 +699,12 @@ footer {overflow-y:hidden}
 	}
 }
 
-@keyframes bg_rainbow {
+@keyframes symbol_color {
 	0% {background: white}
 	20% {background: orange}
 	40% {background: yellow}
 	60% {background: green}
-	80% {background: blue}
+	80% {background: red}
 	100% {background: white}
 }
 

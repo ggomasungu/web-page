@@ -144,6 +144,7 @@ $('.pf').hover(
 );
 
 // 포트폴리오 모달 팝업 여닫기
+var $data_pf_link;
 $('.pf').click(function() {
 	$('body').css('overflow-y', 'hidden');
 	$modal_width = $(window).width();
@@ -151,23 +152,33 @@ $('.pf').click(function() {
 	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
 	$('.pf_modal').css({'top':$modal_top,'width':$modal_width,'height':$modal_height});
 	$('.pf_modal').fadeIn(500);
-	pf_bg = $(this).css('background-image');
-	$('.modal_bg').css({'background-image':pf_bg});
-	$('.modal_bg').fadeIn(1000)
+	$('.modal_bg').css({'background-image':$(this).css('background-image')});
+	$('.modal_bg').fadeIn(500);
+	$('.mouse_move_tit').html($(this).find('.pf_tit_text').text()+'&nbsp;<i class="fas fa-question-circle"></i>');
+	$('.modal_cont').html($(this).find('.pf_cont_detail').html());
+	$('.modal_cont').find('.concept_color').css('color',$(this).find('.concept_color').data('concept-color'));
+	$('.modal_cont').find('.hex_code').text($(this).find('.concept_color').data('concept-color'))
+	$data_pf_link=$(this).find('.pf_tit_text').data('pf-link')
 });
 $('.pf_modal').click(function() {
 	$('body').css('overflow-y', 'visible');
-	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
 	$(this).fadeOut(500);
-	$('.modal_bg').fadeOut(1000)
+	$('.modal_bg').fadeOut(500)
 });
 
+// 모달 팝업 닫기버튼
+$('.btn_modal_close').click(function() {
+	$('body').css('overflow-y', 'visible');
+	$('.modal_bg').fadeOut(500)
+});
+
+
 // 모달 팝업 배경에서 마우스 따라다니는 팝업
-$('.modal_bg').hover(
+$('.pf_modal').hover(
 	function() {
 		$(this).mousemove(function(e) {
-			mmX = e.pageX-$('.modal_bg').offset().left+15;
-			mmY = e.pageY-$('.modal_bg').offset().top+15;
+			mmX = e.pageX-$('.pf_modal').offset().left+30;
+			mmY = e.pageY-$('.pf_modal').offset().top;
 			$('.mouse_move').css({'top':mmY,'left':mmX});
 			$('.mouse_move').show();
 		});
@@ -175,6 +186,25 @@ $('.modal_bg').hover(
 		$('.mouse_move').hide();
 	}
 );
+
+// 모달 팝업 배경에서 마우스 따라다니는 팝업2
+$('.modal_bg').hover(
+	function() {
+		$(this).mousemove(function(e) {
+			mmX = e.pageX-$('.pf_modal').offset().left;
+			mmY = e.pageY-$('.pf_modal').offset().top+20;
+			$('.mouse_move2').css({'top':mmY,'left':mmX});
+			$('.mouse_move2').show();
+		});
+	}, function() {
+		$('.mouse_move2').hide();
+	}
+);
+
+// 모달 팝업 배경누르면 페이지이동
+$('.modal_bg').click(function() {
+	location.href=$data_pf_link
+});
 
 // 푸터 애니메이션
 $('.contact_cont>div').hover(
