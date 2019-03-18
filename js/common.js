@@ -152,12 +152,15 @@ $('.pf').click(function() {
 	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
 	$('.pf_modal').css({'top':$modal_top,'width':$modal_width,'height':$modal_height});
 	$('.pf_modal').fadeIn(500);
-	$('.modal_bg').css({'background-image':$(this).css('background-image')});
+	$('.modal_bg').css({'background-image':$(this).find('.pf_tit_text').data('pf-bg')});
 	$('.modal_bg').fadeIn(500);
 	$('.mouse_move_tit').html($(this).find('.pf_tit_text').text()+'&nbsp;<i class="fas fa-question-circle"></i>');
 	$('.modal_cont').html($(this).find('.pf_cont_detail').html());
-	$('.modal_cont').find('.concept_color').css('color',$(this).find('.concept_color').data('concept-color'));
-	$('.modal_cont').find('.hex_code').text($(this).find('.concept_color').data('concept-color'))
+	cc = $(this).find('.concept_color').data('concept-color');
+	ctc = $(this).find('.concept_color').data('concept-color-text');
+	$('.modal_cont').find('.concept_color').css('color',cc);
+	$('.modal_cont').find('.hex_code').text(cc);
+	$('.hex_code').css({'background':cc,'color':ctc,'padding':'0 5px'});
 	$data_pf_link=$(this).find('.pf_tit_text').data('pf-link')
 });
 $('.pf_modal').click(function() {
@@ -188,22 +191,32 @@ $('.pf_modal').hover(
 );
 
 // 모달 팝업 배경에서 마우스 따라다니는 팝업2
+function popup2(e) {
+	mmX = e.pageX-$('.pf_modal').offset().left+30;
+	mmY = e.pageY-$('.pf_modal').offset().top+65;
+	$('.mouse_move2').css({'top':mmY,'left':mmX});
+	$('.mouse_move2').show();
+}
 $('.modal_bg').hover(
 	function() {
-		$(this).mousemove(function(e) {
-			mmX = e.pageX-$('.pf_modal').offset().left;
-			mmY = e.pageY-$('.pf_modal').offset().top+20;
-			$('.mouse_move2').css({'top':mmY,'left':mmX});
-			$('.mouse_move2').show();
-		});
+		$(this).mousemove(popup2);
+		$('.mouse_move2').text('사진 클릭 시, 새 페이지로 연결됩니다.')
 	}, function() {
 		$('.mouse_move2').hide();
 	}
 );
+$('.modal_cont').hover(
+	function() {
+		$(this).mousemove(popup2);
+		$('.mouse_move2').text('웹페이지 제작 설명 및 후기입니다.')
+	}, function() {
+		$('.mouse_move2').hide();
+	}
+)
 
-// 모달 팝업 배경누르면 페이지이동
+// 모달 팝업 배경누르면 새페이지 띄우기
 $('.modal_bg').click(function() {
-	location.href=$data_pf_link
+	window.open($data_pf_link)
 });
 
 // 푸터 애니메이션
