@@ -154,7 +154,8 @@ $('.pf').click(function() {
 	$('.pf_modal').fadeIn(500);
 	$('.modal_bg').css({'background-image':$(this).find('.pf_tit_text').data('pf-bg')});
 	$('.modal_bg').fadeIn(500);
-	$('.mouse_move_tit').html($(this).find('.pf_tit_text').text()+'&nbsp;<i class="fas fa-question-circle"></i>');
+	pftit = $(this).find('.pf_tit_text').text();
+	$('.mouse_move_tit').html(pftit+'&nbsp;<i class="fas fa-question-circle"></i>');
 	$('.modal_cont').html($(this).find('.pf_cont_detail').html());
 	cc = $(this).find('.concept_color').data('concept-color');
 	ctc = $(this).find('.concept_color').data('concept-color-text');

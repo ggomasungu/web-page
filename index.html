@@ -11,6 +11,20 @@
 	<link rel="icon" href="favicon.png">
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="script/common.js"></script>
+	<style>
+		/*IE 스크롤바*/
+		body {
+			scrollbar-face-color: orange;
+			scrollbar-track-color: #fff;
+			scrollbar-arrow-color: orange;
+		}
+		/*크롬, 사파리 스크롤바*/
+		body::-webkit-scrollbar {width:10px}
+		body::-webkit-scrollbar-track {background-color:#fff}
+		body::-webkit-scrollbar-thumb {background-color:orange;border-radius:20px}
+		.modal_cont::-webkit-scrollbar {width:10px}
+		.modal_cont::-webkit-scrollbar-thumb {background-color:orange;border-radius:20px}
+	</style>
 </head>
 <body>
 <div id="btn_open_theme" class="btn_theme">
@@ -72,11 +86,15 @@
 		<section id="cont2">
 			<div class="show_visual"></div>
 			<div class="pf_modal">
-				<div class="btn_modal_close" title="모달 닫기"><i class="fas fa-window-close"></i></div>
+				<div class="btn_modal_close" title="모달 닫기">
+					<a href="#" onclick="return false"><i class="fas fa-window-close"></i></a>
+				</div>
 				<div class="modal_ani1"></div>
 				<div class="modal_ani2"></div>
 				<div class="modal_ani3"></div>
 				<div class="modal_bg"></div>
+				<div class="modal_bg_typo1">웹퍼블리싱</div>
+				<div class="modal_bg_typo2">포트폴리오</div>
 				<div class="mouse_move">
 					<div class="mouse_move_bg"></div>
 					<span class="mouse_move_tit"></span>
@@ -84,9 +102,11 @@
 				<div class="mouse_move2"></div>
 				<div class="modal_cont"></div>
 			</div>
-			<h3>작품목록</h3>			
+			<h3>작품목록</h3>
 			<div id="pf_list">
 				<article class="pf pf1" title="작품1 포트폴리오 모음 페이지">
+					<a href="#" onclick="return false">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="https://ggomasungu.github.io/web-page" data-pf-bg="url(img/work1.jpg)">포트폴리오 모음 페이지</em>
@@ -109,11 +129,35 @@
 						</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam modi consectetur qui veniam possimus reprehenderit nisi quas facilis, quam blanditiis! Maiores exercitationem repellat nisi rem, possimus, provident vel dignissimos! Ab!
+						<span class="text_line"></span>
+						<br><span class="first_char">두번째</span> 작품
+						<br>미디어 쿼리를 통한 분기별 반응형 웹.
+						<br>크롬 브라우저와 1920x1080 해상도에 최적화.
+						<br>순서상으론 두번째지만 가장 중요한 페이지므로 첫번째에 두었다.
+						<span class="text_line"></span>
+						<br><span class="first_char">최</span>대한 플러그인이나 라이브러리는 배제하면서도 욕심 그득그득하게 이것저것 효과만 잔뜩 넣다보니 난잡해져 버렸다.
+						<br>디자인 작업은 최소화하여 포트폴리오 화면별 이미지정도만 캡쳐하거나 수정했고 그 외에는 죄다 코딩과 딩벳폰트 위주로 구현.
+						<br>그러다 보니 단순한 도형이나 텍스트 위주가 돼버렸다.
+						<span class="text_line"></span>
+						<br><span class="first_char">사</span>실 처음에는 단순하고 깔끔하게 서체와, 폰트 사이즈, 두께정도만 조절해가면서 제목과 작품목록 정리한 것만 넣을 생각이었는데, 갑자기 애니메이션 효과에 꽂혀서 쓰잘데기 없이 많이 집어 넣었다.<span class="small_text">포트폴리오 만들때 아니면, 언제 이렇게 꾸며보겠습니까ㅠ</span>
+						<br>keyframes와 Jquery, animation, transition을 활용한 애니메이션과 svg를 활용한 벡터그리기 효과 등등, 알고있으면서 직접 코드를 쓸 수 있는 선에서만 섞어봤다.
+						<br>정작 이렇게 꾸미기 위주로 하다보니 시맨틱구조와 아웃라인은 그렇다치고 웹 접근성(Accessibility) 측면에선 미흡해진 것 같다.<span class="small_text">개인적인 생각에</span>
+						<span class="text_line"></span>
+						<br><span class="first_char">이</span> 쯤부터 웹호환성(크로스브라우징), 웹표준, 웹접근성 등을 위시하여 CSS 네이밍 방법론<span class="small_text">BEM,SMACSS,OOCSS 등</span>에 관심을 가졌지만 현실적인 생각<span class="small_text">포트폴리오에서 굳이? 내지 아이폰의 부재 등)</span>에 그냥 개념정도로만 잡고 작업에 적용하진 않았다.
+						<br>어차피 클래스 네이밍같은 것은 회사자체 규정이 따로 있는 경우가 많다고 하기도 하고. 아직은 그냥 '이런것이 있다'정도만 알아도 되겠다 싶어서 보류.
+						<br>퍼블리싱 스킬부터 갈고 닦자!
+						<span class="text_line"></span>
+						<br><span class="first_char">대</span>신 기존에 주로 사용하던 CSS속성선택자는 거의 제외하고 웬만하면 id나 class선택자로 변경했으며, 보통 해당 클래스만 선택해서 앞에 탭을 띄워주는 것으로 구조를 파악할 수 있게 하던 방식에서 앞에 부모 요소를 잔뜩 붙여주는 방식으로 변경했다.나름 각각의 장단점이 있는 듯 싶다.
+						<br>물론 진정한 웹 퍼블리셔가 되려면 퍼블리싱 스킬, 웹호환성, 웹표준, 웹접근성부터 챙겨야 겠지만 아직은 미숙하다보니...
+						<span class="text_line"></span>
+						<br><span class="first_char">솔</span>직히 ui디자인같은 것은 일일이 짜는 것보다는 jquery UI같은 플러그인이나 부트스트랩 같은 오픈소스 프레임워크를 다루는 것이 낫다고는 하는데 아직 저런 것들을 이용하기 보다는 공부도 하면서 숙달도 할겸, 모두 날코딩하는 것이 좋아보여서 계속 이렇게 작업할 예정.
+						<br><br>물론 디자인적인 작업은 지양하고 추후 작업 부터는 무료배포하는 psd나 웹디자인 템플릿, 혹은 기존에 존재하는 다른 사이트의 이미지 소스만 가져와서 마크업 위주로 해봐야겠다.
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf2" title="작품2 놀이넷">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="https://ggomasungu.github.io/web-page/portfolio/nolenet" data-pf-bg="url(img/work2_frame.png)">놀이넷</em>
@@ -135,16 +179,25 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						미디어쿼리를 통한 분기별 반응형으로 만든 첫 작품.
-						<br>단순 예제나 원페이지가 아니라 처음부터 끝까지<span class="small_text">(스토리보드 스케치, 로고&아이콘 디자인, 플로우차트, 스타일 가이드, 등등)</span> 학원에서 배운 실무의 흐름대로 차근차근 과정을 밟아 제작한 웹페이지.
-						<br>	이 사이트를 만들면서 기획과 디자인의 중요성을 톡톡히 알았다. 사이트에 들어갈 컨텐츠를 짜내는 것과 디자인을 고민하는 게 너무 어려웠다.<span class="small_text">(특별할 디자인은 없지만...)</span>
-						<br>디자인은 어렵고 관심도 그냥저냥이지만 코딩은 재밌었다. 물론 자바스크립트 부분이래봐야 기본적인 부분을 제외하면 간편한 라이브러리인 제이쿼리만 사용했으며, 그마저도 GNB는 죄다 :hover로 처리해서 주된 기능은 슬라이드 뿐이지만...
-						<br>그래도 정말 단순하게 이동만 시키는 코딩에서 좀더 논리적으로 구성할 수 있을까 고민하는 과정에서 많이 부족하다는 걸 느낄 수 있었다. 배울 것이 너무나도 많고 멀리 있다는 생각을 했다.
-						<br>사실 구상은 잔뜩 해놨는데 중간에 김이 새서<span class="small_text">(디자인 작업만 잔뜩이라... & 주제가 별로 마음에 안듬.)</span> 겉표지 정도 수준으로만 만듬.
+						<span class="text_line"></span>
+						<br><span class="first_char">첫번째</span> 작품
+						<br>미디어쿼리를 통한 분기별 반응형으로 만들었다.
+						<span class="text_line"></span>
+						<br><span class="first_char">단</span>순 예제나 원페이지가 아니라 처음부터 끝까지<span class="small_text">스토리보드 스케치, 로고&아이콘 디자인, 플로우차트, 스타일 가이드, 등등</span> 학원에서 배운 실무의 흐름대로 차근차근 과정을 밟아 제작하려 했으나...
+						<span class="text_line"></span>
+						<br><span class="first_char">사</span>실 구상은 잔뜩 해놨는데 중간에 김이 새서<span class="small_text">디자인 작업만 잔뜩 & 주제가 별로 마음에 안듬</span> 정말 기초적인 수준으로만 제작했다. 그래도 이 사이트를 만들면서 기획과 디자인의 중요성을 톡톡히 알았다. 사이트에 들어갈 컨텐츠를 짜내는 것과 디자인을 고민하는 게 힘든 일라는 걸 깨닫는 계기가 되었다.
+						<span class="text_line"></span>
+						<br><span class="first_char">포</span>괄적으로 배우면서, 디자인은 어렵고 관심도 그냥저냥이지만 코딩은 재밌었다.
+						<br>물론 자바스크립트 부분이래봐야 기본적인 부분을 제외하면 간편한 라이브러리인 제이쿼리만 사용했으며, 그마저도 GNB는 죄다 :hover로 처리해서 주된 기능은 슬라이드 뿐이긴 하다.
+						<br><br>그래도 정말 단순하게 이동만 시키는 코딩에서 좀더 논리적으로 구성할 수 있을까 고민하는 과정에서 많이 부족하다는 걸 느낄 수 있었다. 배울 것이 너무나도 많고 멀리 있다는 생각을 가질 수 있었다.
+						<span class="text_line"></span>
+						<br><span class="first_char">여</span>담으로 디자인이라든지 마크업한 내용도 적어서 넣지 말까 생각했지만 나름 첫 작업물인 만큼 기념으로 장식해봤다.
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf3" title="작품3">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -166,11 +219,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi placeat optio, asperiores expedita architecto dignissimos, tenetur soluta voluptatem. Placeat earum dolor blanditiis corporis incidunt ad obcaecati maxime dolore doloribus a!
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi placeat optio, asperiores expedita architecto dignissimos, tenetur soluta voluptatem. Placeat earum dolor blanditiis corporis incidunt ad obcaecati maxime dolore doloribus a!
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf4" title="작품4">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -192,11 +248,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, alias quas amet cum repellendus aut, impedit repellat, nam rerum adipisci fuga, atque dolorum non ab nobis ipsam. Unde, eaque, in?
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, alias quas amet cum repellendus aut, impedit repellat, nam rerum adipisci fuga, atque dolorum non ab nobis ipsam. Unde, eaque, in?
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf5" title="작품5">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -218,11 +277,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ratione nostrum officiis vel facere suscipit ullam consectetur odit qui ut fugit pariatur est, tempora deleniti dolore iste soluta similique. Voluptates.
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ratione nostrum officiis vel facere suscipit ullam consectetur odit qui ut fugit pariatur est, tempora deleniti dolore iste soluta similique. Voluptates.
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf6" title="작품6">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -244,11 +306,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aliquam, alias rerum dignissimos possimus, blanditiis quo magnam, adipisci at expedita commodi architecto hic dolores enim, temporibus officia odit numquam atque?
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aliquam, alias rerum dignissimos possimus, blanditiis quo magnam, adipisci at expedita commodi architecto hic dolores enim, temporibus officia odit numquam atque?
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf7" title="작품7">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -270,11 +335,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo maiores fuga ut porro commodi assumenda, nemo molestias placeat! Minus odio quae consequatur dolor doloremque sequi repellendus, ab unde, officiis quos!
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo maiores fuga ut porro commodi assumenda, nemo molestias placeat! Minus odio quae consequatur dolor doloremque sequi repellendus, ab unde, officiis quos!
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf8" title="작품8">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -296,11 +364,14 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta possimus beatae numquam, provident aperiam consequatur quis reiciendis, facere ex quibusdam ratione expedita culpa autem laborum explicabo, quod tenetur temporibus.
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta possimus beatae numquam, provident aperiam consequatur quis reiciendis, facere ex quibusdam ratione expedita culpa autem laborum explicabo, quod tenetur temporibus.
 						</span>
 					</p>
+					</a>
 				</article>
 				<article class="pf pf9" title="작품9">
+					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -322,9 +393,11 @@
 							</span>
 						</span>
 						<span class="pf_cont_detail_text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate doloremque optio aspernatur distinctio reprehenderit possimus eum explicabo nihil voluptate provident accusantium facere officiis officia, ad beatae voluptas libero fuga fugiat!
+						<span class="text_line"></span>
+						<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate doloremque optio aspernatur distinctio reprehenderit possimus eum explicabo nihil voluptate provident accusantium facere officiis officia, ad beatae voluptas libero fuga fugiat!
 						</span>
 					</p>
+					</a>
 				</article>
 				<div class="pf_list_bg"></div>
 			</div>
