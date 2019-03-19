@@ -35,7 +35,7 @@ $(window).scroll(function() {
 		$('.pf').css('opacity', 1);
 		$('.pf_list_bg').css('left',0)
 	}
-	else if ($wsT >= $cont3sT-300 && $wsT < $cont3sT-150) {
+	else if ($wsT >= $cont3sT-300 && $wsT < $cont3sT-100) {
 		$('.pf_list_bg').stop(true,true);
 		$('.pf').css('opacity', 0);
 		$('.pf_list_bg').css('left','100%');
@@ -43,7 +43,7 @@ $(window).scroll(function() {
 		$('.cont3_float').css({'height':0,'border-width':'100px'});
 		$('.float_bg').css({'letter-spacing':'20px','color':'white','font-size':'500%'});
 	}
-	else if ($wsT >= $cont3sT-150 && $wsT < $cont3sT+450) {
+	else if ($wsT >= $cont3sT-100 && $wsT < $cont3sT+450) {
 		$('.cont3_float').css({'height':'50%','border-width':'10px'});
 		$('.float_bg').css({'letter-spacing':0,'color':'#777','font-size':'100%'});
 	}
