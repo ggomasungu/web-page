@@ -82,23 +82,16 @@ $('.btn_open_notice').click(function() { //클릭 시 공지열기
 
 // 테마변경 여닫기
 $('#btn_open_theme').click(function() {
-	$('#theme_box').css('overflow', 'visible');
-	$('#theme_box').animate({width:'300px',height:'120px',padding:'20px'}, 500)
-	$('#theme_box').find('i').css('font-size','5rem')
-	$('.btn_close_theme').css('font-size', '3.3rem');
+	$('#theme_box').fadeIn()
 });
 $('.btn_close_theme').click(function() {
-	$('#theme_box').css('overflow', 'hidden');
-	$('#theme_box').animate({width:0,height:0,padding:0}, 500)
-	$('#theme_box').find('i').css('font-size',0)
+	$('#theme_box').fadeOut()
 });
 
 // 바깥 영역 눌러도 닫히게
 $(document).click(function(e) {
 	if (!$('#btn_open_theme').is(e.target)&&$('#btn_open_theme').has(e.target).length===0) {
-		$('#theme_box').css('overflow', 'hidden');
-		$('#theme_box').animate({'width':0,'height':0,'padding':0}, 500);
-		$('#theme_box').find('i').css('font-size',0);
+		$('#theme_box').fadeOut()
 	}
 });
 
