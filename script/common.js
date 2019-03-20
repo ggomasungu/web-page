@@ -6,15 +6,27 @@ window.onload = function () {
 		window.location = window.location + '#loaded';
 		window.location.reload();
 	}
-	else{
-		$('#logo').css({
-			animation: 'logo_show 1.3s steps(200, end)',
-			visibility: 'visible'
-		});
-		$('.introduce').css({
-			animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
-			visibility: 'visible'
-		});
+	else {
+		if ($(window).width()<=767) {
+			$('#logo').css({
+				animation: 'logo_show_mobile 1.3s steps(200, end)',
+				visibility: 'visible'
+			});
+			$('.introduce').css({
+				animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
+				visibility: 'visible'
+			});
+		}
+		else {
+			$('#logo').css({
+				animation: 'logo_show 1.3s steps(200, end)',
+				visibility: 'visible'
+			});
+			$('.introduce').css({
+				animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
+				visibility: 'visible'
+			});
+		}
 	}
 }
 
@@ -67,7 +79,7 @@ notice_count = setInterval(function () {
 // 공지 여닫기
 var $close_notice_func = function () { //공지닫기
 	clearInterval(notice_count)
-	$('.notice').animate({top:'-5%'}, 500)
+	$('.notice').animate({top:'-10%'}, 500)
 	$('.btn_open_notice').animate({top:0}, 500);
 	$('.btn_open_notice').css('transition', '.3s');
 }
@@ -76,7 +88,7 @@ $('.btn_open_notice').click(function() { //클릭 시 공지열기
 	$('.auto_close').empty();
 	$('.btn_close_notice').html('<i class="fas fa-window-close"></i>');
 	$('.btn_open_notice').css('transition', 'none');
-	$(this).animate({top:'-5%'}, 500);
+	$(this).animate({top:'-10%'}, 500);
 	$('.notice').animate({top:0}, 500)
 });
 
@@ -176,12 +188,16 @@ $('.btn_modal_close').click(function() {
 // 모달 팝업 배경에서 마우스 따라다니는 팝업
 $('.pf_modal').hover(
 	function() {
-		$(this).mousemove(function(e) {
-			mmX = e.pageX-$('.pf_modal').offset().left+30;
-			mmY = e.pageY-$('.pf_modal').offset().top;
-			$('.mouse_move').css({'top':mmY,'left':mmX});
-			$('.mouse_move').show();
-		});
+		if ($(window).width()<=767) {
+		}
+		else {
+			$(this).mousemove(function(e) {
+				mmX = e.pageX-$('.pf_modal').offset().left+30;
+				mmY = e.pageY-$('.pf_modal').offset().top;
+				$('.mouse_move').css({'top':mmY,'left':mmX});
+				$('.mouse_move').show();
+			});
+		}		
 	}, function() {
 		$('.mouse_move').hide();
 	}
@@ -196,16 +212,24 @@ function popup2(e) {
 }
 $('.modal_bg').hover(
 	function() {
-		$(this).mousemove(popup2);
-		$('.mouse_move2').text('사진 클릭 시, 새 페이지로 연결됩니다.')
+		if ($(window).width()<=767) {
+		}
+		else {
+			$(this).mousemove(popup2);
+			$('.mouse_move2').text('사진 클릭 시, 새 페이지로 연결됩니다.')			
+		}
 	}, function() {
 		$('.mouse_move2').hide();
 	}
 );
 $('.modal_cont').hover(
 	function() {
-		$(this).mousemove(popup2);
-		$('.mouse_move2').text('웹페이지 제작 설명 및 후기입니다.')
+		if ($(window).width()<=767) {
+		}
+		else {
+			$(this).mousemove(popup2);
+			$('.mouse_move2').text('웹페이지 제작 설명 및 후기입니다.')	
+		}
 	}, function() {
 		$('.mouse_move2').hide();
 	}
