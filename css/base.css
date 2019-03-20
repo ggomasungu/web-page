@@ -472,7 +472,7 @@ header {width: 100%;height: 100%;}
 	display: none;
 }
 #cont2 #pf_list .pf.pf1 {
-	background:url(../img/work1.jpg) no-repeat;
+	background:url(../img/work1.png) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
@@ -674,8 +674,6 @@ footer {overflow-y:hidden}
 	height:100%;width:100%;
 	padding:10px 0;margin-top:10px;
 	background:white;
-	border-right:10px solid white;
-	border-left:10px solid white;
 	border-radius:20px;
 	font-size:14px;color:black
 }
@@ -1018,8 +1016,6 @@ footer {overflow-y:hidden}
 		height:100%;width:100%;
 		padding:10px 0;margin-top:10px;
 		background:white;
-		border-right:10px solid white;
-		border-left:10px solid white;
 		border-radius:20px;
 		font-size:14px;color:black
 	}
@@ -1288,8 +1284,6 @@ footer {overflow-y:hidden}
 		height:100%;width:100%;
 		padding:10px 0;margin-top:10px;
 		background:white;
-		border-right:10px solid white;
-		border-left:10px solid white;
 		border-radius:20px;
 		font-size:12px;color:black
 	}
@@ -1515,93 +1509,92 @@ footer {overflow-y:hidden}
 
 	/*푸터*/
 	footer {overflow-y:hidden}
-	
+
 	/*푸터_배경*/
 	#footer_bg {display: none}
 
 	/*푸터_제목*/
 	.contact {
-		position: relative;
-		padding:20px 0 20px 50px;
-		background:#991111;
+		padding:20px 0 20px 20px;
 		border-bottom:13px dashed #EBEB90;
-		color:white;
-		font-size:25px;font-weight: bold;
-		transition:1s
+		font-size:20px;
 	}
 	.contact .visual {
-		display: inline-block;
-		width:22px;height:22px;margin-right:10px;
-		border-radius:10px 0 10px 0;
-		box-sizing:border-box;
-		animation:symbol_color 8s infinite
+		width:17px;
+		height:15px;
+		border-radius:8px 0 8px 0;
 	}
 	/*푸터_내용*/
 	.contact_cont {
-		background:#EBEB90;
 		position: relative;
 		padding-top:5%;
-		text-align: center;
-		transition:1s
+		padding-bottom:5%;
+		text-align:center;
 	}
 	.contact_cont > div {
-		vertical-align: bottom;
 		position:relative;bottom: 0;
-		display: inline-block;
-		width:30%;height: 100%;
-		padding:40px 0;
-		margin-left:1%;
-		background:white;
-		border-radius:60px 0 0 0;
-		color:white;
-		transition:background 1s
+		display:inline-block;
+		width:50%;height:100px;
+		padding:20px;
+		margin-left:0;margin-top: 20px;
+		border-radius:50px;
+		vertical-align: bottom;
+		box-sizing: border-box;
 	}
 
-	.contact_cont > div .bg_cc {
-		position:absolute;z-index:20;top: 0;right: 0;
-		width:56px;height:30px;
-		background:orange;
-	}
-	.contact_cont > div .bg_cc2 {
-		position:absolute;z-index: 30;top:-4px;right:-21px;
-		width:70px;height:25px;
-		background:#EBEB90;
-		transform:rotate(26deg) skewX(-45deg);
-		transition:background 1s
-	}
-	.contact_cont > div .bg_hover {
+	.contact_cont > div .bg_cc {display: none}
+	.contact_cont > div .bg_cc2 {display: none}
+	.contact_cont > div .bg_hover {display: none;
 		position:absolute;top:100%;
 		height: 100%;width: 100%;
 		border-radius:60px 0 0 0;
 		background:#991111
 	}
+
 	.contact_cont .mail > a {color:white}
-	.contact_cont .mail {margin-left:0;height:300px;font-weight: bold;}
-	.contact_cont .messenger {height:250px;cursor:help}
-	.contact_cont .copyright {height:200px;cursor:help}
+	.contact_cont .mail {height:70px;right:-40px}
+	.contact_cont .messenger {height:70px;left:-40px}
+	.contact_cont .copyright {height:70px;right:-40px}
 	.contact_cont img {
-		position: relative;z-index:10;
-		height:70px;width: 70px;
+		position:absolute;z-index:30;
+		height:70px;width:70px;
 		margin-bottom:20px
 	}
+	.contact_cont .mail .gmail .mail_img {top:-10px;left:-20px;height:90px}
+	.contact_cont .messenger .kakao_img {top: 0;right:-20px}
+	.contact_cont .copyright .copy_img {top: 0;left:-20px}
+
 	.contact_cont span {
-		display:block;
 		margin:0 auto;box-sizing:border-box;
 	}
 	.contact_cont .contact_tit {
-		position: relative;z-index: 20;
-		background:#119933;margin:0 20px;padding: 10px;
+		position:absolute;z-index:20;top:10px;
+		background:#119933;margin:0;padding:5px;
 		border-radius:20px;
-		font-size:14px;
+		font-size:12px;
 	}
+	.contact_cont .mail .contact_tit {right:0}
+	.contact_cont .messenger .contact_tit {left:0}
+	.contact_cont .copyright .contact_tit {right:0}
 	.contact_cont .contact_tit .context {
-		height:100%;width:100%;
-		padding:10px 0;margin-top:10px;
-		background:white;
-		border-right:10px solid white;
-		border-left:10px solid white;
+		position:absolute;top:30px;
+		height:100%;width:150px;
+		padding:5px;margin-top:0;
+		background:#991111;
 		border-radius:20px;
-		font-size:12px;color:black
+		font-size:11px;
+		color:white;
+		white-space:nowrap;
+	}
+	.contact_cont .mail .contact_tit .context {
+		left:-30px
+	}
+	.contact_cont .messenger .contact_tit .context {
+		right:-10px;
+	}
+	.contact_cont .copyright .contact_tit .context {
+		left:-10px;
+		height:140%;
 	}
 }
 
