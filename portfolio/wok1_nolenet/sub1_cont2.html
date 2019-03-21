@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<base href="https://ggomasungu.github.io/web-page/portfolio/nolenet/">
+	<base href="https://ggomasungu.github.io/web-page/portfolio/work1_nolenet/">
 	<title>놀이넷</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/import.css">
-	<link rel="stylesheet" href="css/layout_sub1.css">
 	<link rel="shortcut icon" href="img/common/favicon.ico">
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="script/all_mobile_menu.js"></script>
+	<style>
+		/*인디케이터 메인*/
+		nav > ul > li:first-child {background:rgba(65,78,165,0.6)}
+		nav > ul > li:first-child > a {color:white;text-shadow:2px 2px 3px black}
+		nav > ul > li:first-child:hover {background:#1e2a78}
+		nav > ul > li:first-child:hover > a {color:white;text-shadow:-1px -1px 30px #ffe285}
+		/*인디케이터 서브*/
+		nav > ul > li:first-child > ul > li:nth-child(2) {background:#ffe285;border-left:10px solid white;box-sizing:border-box}
+		nav > ul > li:first-child > ul > li:nth-child(2) a{color:white;text-shadow:3px 3px 1px black}	
+		nav > ul > li:first-child:hover > ul > li:nth-child(2):hover {background:#414ea5 url(img/common/nav_indicator2.png) no-repeat;border-left:10px solid white;box-sizing:border-box}
+		nav > ul > li:first-child > ul > li:nth-child(2) a{color:white;text-shadow:3px 3px 1px black}
+		/*컨텐츠영역*/
+		section#main div#contents {background:url(img/sub1/sub1_cont2/sub1_cont2_bg.jpg);height: 700px;width:60%;margin:0 auto}
+	</style>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -165,22 +178,8 @@
 		</div>
 	</nav>
 	<!-- 콘텐츠영역 -->
-	<section id="main" class="cfx">
-		<h2>테마파크란?</h2>
-		<ul id="themepark">
-			<li class="define">
-				<a href="sub1_cont1.html"><span class="textbg">테마파크의<br><span class="highlight">정</span>의</span><br><span class="eng_hl">▶ Definition</span></a>
-			</li>
-			<li class="history">
-				<a href="sub1_cont2.html"><span class="textbg">테마파크의<br><span class="highlight">역</span>사<br></span><span class="eng_hl">▶ History</span></a>
-			</li>
-			<li class="variety">
-				<a href="sub1_cont3.html"><span class="textbg">테마파크의<br><span class="highlight">종</span>류<br></span><span class="eng_hl">▶ Variety</span></a>
-			</li>
-			<li class="enjoy">
-				<a href="sub1_cont4.html"><span class="textbg">테마파크의<br><span class="highlight">즐</span>거움<br></span><span class="eng_hl">▶ Enjoyment</span></a>
-			</li>
-		</ul>
+	<section id="main">
+			<h2>콘텐츠영역</h2>
 	</section>
 	<!-- 푸터 -->
 	<footer>

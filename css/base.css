@@ -105,7 +105,7 @@ header {width: 100%;height: 100%;}
 	transition:background 1s
 }
 /*컨텐츠영역*/
-#contents {transition:1s}
+#contents {}
 
 /*컨텐츠_공지사항*/
 .notice {
@@ -409,7 +409,7 @@ header {width: 100%;height: 100%;}
 	top: 0;left:100%;
 	width: 100%;height: 100%;
 	background:#991111;
-	transition:1s;
+	transition:.5s;
 }
 #cont2 #pf_list .pf {
 	opacity: 0;
@@ -1310,7 +1310,7 @@ footer {overflow-y:hidden}
 	[data-skew-bg] {display: none}
 
 	/*컨텐츠영역*/
-	#contents {transition:1s}
+	#contents {}
 
 	/*컨텐츠_공지사항*/
 	.notice {
@@ -1445,7 +1445,10 @@ footer {overflow-y:hidden}
 		margin-bottom:0;
 		font-size:90%
 	}
-
+	#cont2 .pf_modal .modal_cont .pf_cont_detail_subtit .subtit2 {
+		margin-top: 10px;
+		display: block;
+	}
 	#cont2 .pf_modal .modal_cont .pf_cont_detail_subtit .concept_color {
 		padding-left:3.5px;
 		border-radius:7px;

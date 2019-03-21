@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<base href="https://ggomasungu.github.io/web-page/portfolio/nolenet/">
+	<base href="https://ggomasungu.github.io/web-page/portfolio/work1_nolenet/">
 	<title>놀이넷</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/import.css">
+	<link rel="stylesheet" href="css/layout_index.css">
 	<link rel="shortcut icon" href="img/common/favicon.ico">
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="script/all_mobile_menu.js"></script>
-	<style>
-		/*인디케이터 메인*/
-		nav > ul > li:first-child {background:rgba(65,78,165,0.6)}
-		nav > ul > li:first-child > a {color:white;text-shadow:2px 2px 3px black}
-		nav > ul > li:first-child:hover {background:#1e2a78}
-		nav > ul > li:first-child:hover > a {color:white;text-shadow:-1px -1px 30px #ffe285}
-		/*인디케이터 서브*/
-		nav > ul > li:first-child > ul > li:first-child {background:#ffe285;border-left:10px solid white;box-sizing:border-box}
-		nav > ul > li:first-child > ul > li:first-child a{color:white;text-shadow:3px 3px 1px black}	
-		nav > ul > li:first-child:hover > ul > li:first-child:hover {background:#414ea5 url(img/common/nav_indicator2.png) no-repeat;border-left:10px solid white;box-sizing:border-box}
-		nav > ul > li:first-child > ul > li:first-child a{color:white;text-shadow:3px 3px 1px black}
-		/*컨텐츠영역*/
-		section#main div#contents {background:url(img/sub1/sub1_cont1/sub1_cont1_bg.jpg);height: 700px;width:60%;margin:0 auto}
-	</style>
+	<script src="script/index_main_slide.js"></script>	
 </head>
 <body>
 	<!-- 헤더 -->
@@ -141,7 +129,8 @@
 		</div>
 		<div id="mMenu">
 			<div id="mMenuHeader">
-				<p>X</p>
+				<span>테마파크에 대해 알아봅시다</span>
+				<p>&times;</p>
 			</div>
 			<ul class="mMul">
 				<li class="mMli">
@@ -171,7 +160,7 @@
 				<li class="mMli">
 					<p class="mMlip">만든이 소개</p>
 					<ul class="mSubul">
-						<li class="mSubli"><a href="/sub4.html">만든이 소개</a></li>
+						<li class="mSubli"><a href="sub4.html">만든이 소개</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -179,7 +168,20 @@
 	</nav>
 	<!-- 콘텐츠영역 -->
 	<section id="main">
-			<h2>콘텐츠영역</h2>
+		<h2>테마파크 사진 슬라이드 쇼</h2>
+		<div id="slideArea">
+			<div id="slideBox">
+				<img src="img/main/mainBn_img1.jpg" alt="놀이기구사진1">
+				<img src="img/main/mainBn_img2.jpg" alt="놀이기구사진2">
+				<img src="img/main/mainBn_img3.jpg" alt="놀이기구사진3">
+				<img src="img/main/mainBn_img4.jpg" alt="놀이기구사진4">
+			</div>
+		</div>
+		<ul id="slidebtns"> <!-- 하위 버튼은 이미지 개수에 따라 생성됨(js에서) -->
+			<li class="btnslide0"><i class="fas fa-pause-circle"></i></li>
+		</ul>
+		<p class="nextpre btnPre"><i class="fas fa-chevron-circle-left"></i></p> 
+		<p class="nextpre btnNext"><i class="fas fa-chevron-circle-right"></i></p> 
 	</section>
 	<!-- 푸터 -->
 	<footer>
@@ -188,28 +190,28 @@
 			<ul class="corp_info">
 				<li>
 					<a href="info1.html" class="borderani">회사소개
-						<svg class="border-svg" height="100%" xmlns="https://www.w3.org/2000/svg" width="100%">
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
 							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
 						</svg>
 					</a>
 				</li>
 				<li>
 					<a href="info2.html" class="borderani">이용약관
-						<svg class="border-svg" height="100%" xmlns="https://www.w3.org/2000/svg" width="100%">
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
 							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
 						</svg>
 					</a>
 				</li>
 				<li>
 					<a href="info3.html" class="borderani"><span>개인정보취급방침</span>
-						<svg class="border-svg" height="100%" xmlns="https://www.w3.org/2000/svg" width="100%">
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
 							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
 						</svg>
 					</a>
 				</li>
 				<li>
 					<a href="info4.html" class="borderani">사이트맵
-						<svg class="border-svg" height="100%" xmlns="https://www.w3.org/2000/svg" width="100%">
+						<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
 							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
 						</svg>
 					</a>
@@ -220,10 +222,10 @@
 				사업자등록번호:214-51-99999<span>|</span>전화:032-412-1231~4<span>|</span>FAX:032-412-1230<br>
 				전자우편주소:ThemeNoLE@nole.net<span>|</span>Copyright &copy; 2018 NoLE-Net. All Rights Reserved.
 			</address>
-	</div>
-	<div id="go_to_main">
-		<a href="https://ggomasungu.github.io/web-page/" title="포트폴리오 메인 사이트로">메인으로</a>
-	</div>
-</footer>
+		</div>
+		<div id="go_to_main">
+			<a href="https://ggomasungu.github.io/web-page/" title="포트폴리오 메인 사이트로">메인으로</a>
+		</div>
+	</footer>
 </body>
 </html>
