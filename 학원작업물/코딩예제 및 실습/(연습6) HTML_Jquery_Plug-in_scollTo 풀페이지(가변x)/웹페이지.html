@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>제목</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"  type="text/css" href=" " />
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("nav ul li a").click(	
+		function(){
+			$.scrollTo(this.hash||0,1500);
+	}
+);
+});
+
+</script>
+<style>
+header {position:fixed; top:0; z-index:10000;}
+body {font-size:150%; font-weight:bold}
+*{margin:0;padding:0} ul {border:2px solid black; text-align:center; height:50px; }
+ul li {list-style:none; float:left; padding:0 50px}
+section{ position:relative; height:500px;}
+section a{display:block; width:100px; height:30px;
+				position:absolute; right:0; bottom:0; background:red; color:white;}
+section#s1{width:1920px;height:937px; background:url("polar-bears-1665367_1920.jpg") no-repeat;display:inline-block; color:white}
+section#s2{width:1920px;height:937px; background:url("amurtiger-1975790_1920.jpg") no-repeat;}
+section#s3{width:1920px;height:937px; background:url("wolf-2826741_1920.jpg") no-repeat;}
+section#s4{width:1920px;height:937px; background:url("adler-2872995_1920.jpg") no-repeat;}
+
+
+</style>
+</head>
+<body id="top_nav">
+  
+
+<header>
+<nav >
+<ul>
+	<li><a href="#s1">북극곰</a></li>
+	<li><a href="#s2">호랑이</a></li>
+	<li><a href="#s3">늑대</a></li>
+	<li><a href="#s4">독수리</a></li>
+	
+</ul>
+</nav>
+</header>
+<section id="s1"><br><br>북극곰<br/>백곰이라고도 한다. 몸길이 수컷 190~250cm, 암컷 170~250cm, 꼬리길이 8~10cm,<br> 어깨높이 120~140cm, 뒷발길이 30~37cm, 귀길이 9~15cm, 몸무게 수컷 300~800kg, 암컷 150~500kg이다. <br>암컷은 수컷보다 몸이 작다. 다른 곰보다 머리가 작고 목이 길며 귀는 작고 둥글다. 발바닥에는 털이 있으며 척구(蹠球)는 작아서 얼음 위를 걸어 다니기에 알맞다.<br> 몸빛은 털갈이 직후에는 흰색이나 차츰 황백색으로 변한다. 어린 것은 어미보다 희끗희끗하다. 눈·코·척구는 검은색이다. 이빨은 38~42개이다.
+<a href="#top_nav">top</a></section>
+
+<section id="s2">콘텐츠<a href="#top_nav">top</a></section>
+<section id="s3">콘텐츠<a href="#top_nav">top</a></section>
+<section id="s4">콘텐츠<a href="#top_nav">top</a></section>
+
+
+
+
+
+
+
+</body>
+</html>

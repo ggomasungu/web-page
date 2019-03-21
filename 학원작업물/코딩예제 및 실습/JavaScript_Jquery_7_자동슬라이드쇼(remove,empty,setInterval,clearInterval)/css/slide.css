@@ -1,0 +1,44 @@
+/*공통스타일*/
+* {margin: 0;padding: 0;}
+ul, dl, li {list-style: none}
+body {font-size: 100%;line-height: 1;}
+.cfx:after {content:"";display:block;clear: both}
+
+
+
+/*자바스크립트용*/
+.playstop .slideon {background:black;color:white}
+.indicator .vis_img {background:black}
+/*자바스크립트용*/
+
+
+
+/*슬라이드영역*/
+#main {}
+.slidecontents {width:640px;margin: 0 auto;overflow: hidden;position: relative;}
+.slidebox {width:2560px;border: 1px solid red;font-size: 0;position: relative;left: 0;}
+.slidebox img {}
+
+.indicator {float: left;margin:10px 0 0 10px;}
+.indicator li {float: left;width:20px;height:20px;background:#ccc;border-radius:10px;margin-right: 10px;cursor:pointer}
+
+.playstop {float: right;margin:8px 0 10px 0;}
+.playstop li {float: left;margin-left: 10px;background:#ccc;font-weight: bold;padding: 1px 5px;letter-spacing:-1px;cursor:pointer}
+
+.prenext {position: absolute;top:35%;width: 640px;}
+.btn_pre {
+	float: left;
+	background:rgba(255,255,255,.3);
+	padding:10px 20px 20px 20px;margin-left:20px;
+	color:white;font-weight: bold;font-size:50px;
+	border-radius:50px;cursor:pointer
+}
+.btn_next {
+	float: right;
+	background:rgba(255,255,255,.3);
+	padding:10px 20px 20px 20px;margin-right: 20px;
+	color:white;font-weight: bold;font-size:50px;
+	border-radius:50px;cursor:pointer
+}
+
+.btn_pre:hover, .btn_next:hover {background:rgba(0,0,0,.5)}

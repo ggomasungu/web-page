@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>ICOX publish</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<style>
+	* {margin: 0;padding: 0;}
+	body {background:none}
+	.cf:after {content:"";display: block;clear: both}
+
+	section#recomm_book {width: 1003px;border: 10px solid #000;margin: 0 auto;margin-top: 5em;position:relative;overflow: hidden;}
+	#book_frame {width: 2006px}
+	.bookcon {float: left;width: 50%;}
+	#book_frame h3 {float:right;margin:30px 40px 30px 0;}
+	.book {float: left}
+	.smr, .detail_view {float: right;}
+	.smr {margin:0 40px 30px 0;}
+	.detail_view {margin: 30px 270px 0 0;}
+
+	#slidebtn a {}
+	#slidebtn .next {position: absolute;right: 0;top:120px}
+	#slidebtn .prev {position: absolute;left: 0;top:120px}
+	ul.rolling {text-align:center}
+	ul.rolling li {display:inline-block}
+
+	#book_frame {animation:slide_temp;transform:translate(-3,-3);}
+
+	@keyframes slide_temp {
+		from{}
+		to{}
+	}
+</style>
+</head>
+<body>
+	<!-- 슬라이드영역 -->
+	<section id="recomm_book" class="cf">
+		<h2>신간서적</h2>
+		<div id="book_frame" class="cf">
+			<!-- 북콘1 -->
+			<div class="bookcon">
+				<h3><a href="#"><img src="images/newbook1_tit.gif" alt="안드로이드로 용돈벌기"></a></h3>
+				<ul>
+					<li class="book"><a href="#"><img src="images/new_book1.jpg" alt="안드로이드로 용돈벌기 책이미지"></a></li>
+					<li class="smr"><img src="images/newbook1_exp.gif" alt="안드로이드로 용돈벌기"></li>
+					<li class="detail_view"><img src="images/detile_view.gif" alt="자세히 알아보기"></li>
+				</ul>
+			</div>
+			<!-- 북콘2 -->
+			<div class="bookcon">
+				<h3><a href="#"><img src="images/newbook2_tit.gif" alt="아이폰으로 용돈벌기"></a></h3>
+				<ul>
+					<li class="book"><a href="#"><img src="images/new_book2.jpg" alt="아이폰으로 용돈벌기 책이미지"></a></li>
+					<li class="smr"><img src="images/newbook2_exp.gif" alt="아이폰으로 용돈벌기"></li>
+					<li class="detail_view"><img src="images/detile_view.gif" alt="자세히 알아보기"></li>
+				</ul>
+			</div>
+		</div>
+		<div id="slidebtn">
+			<!-- 다음 -->
+			<a href="#" class="next"><img src="images/btn_next.gif" alt="다음"></a>
+			<!-- 이전 -->
+			<a href="#" class="prev"><img src="images/btn_prev.gif" alt="이전"></a>
+		</div>
+		<ul class="rolling"> <!-- 안드로이드 활성/비활성 -->
+			<li><a href="#"><img src="images/state_over.png" alt="활성표시"></a></li>
+			<li><a href="#"><img src="images/state_out.png" alt="비활성표시"></a></li>
+		</ul>
+	</section>
+</body>
+</html>

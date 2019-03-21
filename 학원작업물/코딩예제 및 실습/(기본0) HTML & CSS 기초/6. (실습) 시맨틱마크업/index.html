@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/" />
+	<script type="text/javascript" src="/">
+	</script>
+	<style>
+		a {font-style:none;text-decoration:none}
+		h2,h3,h4,legend,label {display:none}
+		ul {
+			display:inline;
+			list-style:none;
+			position:relative;
+		}
+		ul#nav > li:hover {
+			background-image:url(images/btn_allmenu.png); background-repeat:no-repeat; background-position:top;"
+		}
+		ul.right {
+			display: inline;
+			float:right;
+			position: relative;
+			margin:0;			
+		}
+		ul.right > li {list-style:none;float:left;position:relative;left:-46%;margin-right:20px}
+		ul.ac {
+			display: inline;
+			float:right;
+			position: relative;
+			left:-50%;
+			margin:0;
+		}
+		ul.ac > li {list-style:none;float:left;position: relative;left: 50%;margin-right:1px}
+		ul li,a,address {
+			color:#999999;
+			font-size:8pt
+		}
+			ul.ac li ul {
+				display:none;
+			}
+			ul.ac li:hover ul {
+				display:block;
+				position:relative;
+				left:-40px;
+			}
+			ul.ac li:hover ul li{
+				background-color:#f1f1f1;				
+				float:left
+			}
+			ul.ac li:hover ul li a{
+				color:black;
+				font-weight:bold;
+				font-size:12px;
+			}
+		#wrapper {
+			margin:0 auto;
+			padding:0;
+		}
+		header{
+			margin:0 auto;
+			margin-top:20px;
+			margin-bottom:70px;
+			width:1600px; height:100px;
+		}		
+			nav {
+				width:1600px;
+				display:inline-block;
+				background-color:#028dd0
+			}
+			nav li{
+				background-color:#3da7db;
+				width:270px;
+				height:50px;
+				text-align:center;
+				vertical-align:middle;
+				line-height:50px
+			}
+			nav a{
+				color:white;
+				font-weight:bold;
+				font-size:15px;
+			}
+		#mainBn{
+			margin:0 auto;
+			width:1600px; height: 350px;
+		}
+		#contents{
+			margin:0 auto;
+			width:1600px; height: 480px;
+			background-color:black
+		}
+			.cont1{
+				width:220px;
+				margin-left:130px;
+				display:inline-block;
+				background-color:red
+			}
+			.cont2{
+				width:650px;
+				margin-right:70px;
+				display:inline-block;
+				background-color:blue
+			}
+			.cont3{
+				width:300px;
+				display:inline-block;
+				background-color:green
+			}
+		footer{
+			margin:0 auto;
+			width:1600px; height: 100px;
+			background-color:#f7f7f7;
+		}
+	</style>
+</head>
+<body>
+	<!-- 랩퍼 -->
+	<div id="wrapper">
+		<!-- 헤더 -->
+		<header>
+			<!-- 로고 -->
+			<h1 style="display:inline"><a href=""><img src="images/logo.svg" alt="메인로고" style="position:relative;left:8%"></a></h1>
+			<!-- 최상단메뉴 -->
+			<ul class="right" style="font-weight:bold; display:inline-block;">
+				<li><a href="">Home</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+			<!-- 검색창 -->
+			<form action="/" style="display:inline-block; position:relative; right:-1032px">
+				<fieldset style="border:0">
+					<legend>도서검색</legend>
+					<label for="search">도서검색</label><input type="text" id="search" title="도서검색 입력란입니다" size="35" maxlength="20" style="vertical-align:bottom">
+					<label>검색</label><a href=""><img src="images/search.gif" alt="검색버튼" style="vertical-align:middle"></a>
+				</fieldset>
+			</form>
+			<!-- 네비게이션 -->
+			<nav>
+				<h2>메인메뉴</h2>
+				<ul id="nav" class="ac">
+					<li><a href="">아이콕스</a>
+						<ul>
+							<li><a href="">브랜드 스토리</a></li>
+							<li><a href="">오시는 길</a></li>						
+						</ul>
+					</li>
+					<li><a href="">도서소개</a>
+						<ul>
+							<li><a href="">더테이블</a></li>
+							<li><a href="">컴퓨터/IT</a></li>
+							<li><a href="">수험서</a></li>
+							<li><a href="">어학</a></li>
+							<li><a href="">취미실용</a></li>
+						</ul>
+					</li>
+					<li><a href="">iCox커뮤니티</a>
+						<ul>
+							<li><a href="">자유게시판</a></li>
+							<li><a href="">도서추천</a></li>
+							<li><a href="">Q/A</a></li>
+						</ul>
+					</li>
+					<li><a href="">iCox자료실</a>
+						<ul>
+							<li><a href="">도서 자료실</a></li>
+							<li><a href="">참고 자료실</a></li>
+						</ul>
+					</li>
+					<li><a href="">전체메뉴</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- 배너 -->
+		<div id="mainBn">
+			<h2>메인배너</h2>
+			<table style="width:1370px;margin:0 auto;margin-top:30px">
+				<tr>
+					<td rowspan="4"><img src="images/btn_prev.gif" alt="배너왼쪽버튼"></td>
+					<td rowspan="4"><img src="images/new_book1.jpg" alt="메인배너책"></td>
+					<td><img src="images/newbook1_tit.gif" alt="메인배너책제목"></td>
+					<td rowspan="4"><img src="images/btn_next.gif" alt="배너오른쪽버튼"></td>
+				</tr>
+				<tr>
+					<td><img src="images/newbook1_exp.gif" alt="메인배너책소개"></td>
+				</tr>
+				<tr>
+					<td><img src="images/detile_view.gif" alt="자세히 알아보기"></td>
+				</tr>
+				<tr>
+					<td><img src="images/state_over.png" alt="메인배너마우스오버"><img src="images/state_out.png" alt="메인배너마우스오버"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><hr></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 메인콘텐츠 -->
+		<div id="contents">
+			<!-- 1단 -->
+			<div class="cont1">
+				<!-- 로그인메뉴 -->
+				<h3>로그인영역</h3>
+				<img src="images/userlogin.gif" alt="로그인영역">
+				<form action="/" style="width:200px;">
+					<fieldset style="border:0">
+						<legend>로그인</legend>
+						<p style="">
+						<label>아이디 입력칸</label><input type="text" style="background-image:url(images/id_bg.jpg);background-repeat:no-repeat;width:100px">
+						</p>
+						<p>
+						<label>비밀번호 입력칸</label><input type="text" style="background-image:url(images/pw_bg.jpg);background-repeat:no-repeat;width:100px">
+						</p>
+						<p>
+						<label>로그인 버튼</label><a href=""><img src="images/btn_login.gif" alt="로그인버튼"></a>
+						</p>
+					</fieldset>
+				</form>
+				<a href="/">아이디 / 비밀번호 찾기</a>
+				<a href="">회원가입</a>
+				<!-- 보조메뉴 -->
+				<h3>보조메뉴</h3>
+				<ul>
+					<li><a href=""><img src="images/banner1.gif" alt="독자문의"></a></li>
+					<li><a href=""><img src="images/banner2.gif" alt="자격증 시험일정"></a></li>
+					<li><a href=""><img src="images/banner3.gif" alt="도서목록 다운로드"></a></li>
+					<li><a href=""><img src="images/banner4.gif" alt="저자모집"></a></li>
+				</ul>
+			</div>
+			<!-- 2단 -->
+			<div class="cont2">
+				<!-- 새로나온 책, 새로나온 소식 -->
+				<h3>새로나온 책</h3>
+				<img src="images/tit_newbook_over.gif" alt="새로나온 책">				
+				<h3>새로나온 소식</h3>
+				<img src="images/tit_news.gif" alt="새로나온 소식">
+					<img src="images/newbook1.gif" alt="썸네일1">
+					<ul>
+						<li>PHP/JSP/ASP와 같은 스크립트 언어...</li>
+						<li>가히 아이폰, 안드로이드 앱이 "문화를 바꾸었다"고 할 수 있을 정도로, 이제 휴대폰과 앱은 따로 분리해서 생각하기 어려워졌으며 스마트폰의 유저는 본인이 원하는...</li>
+						<li>작성자 : 한혜진님 <img src="images/star.gif" alt="별점">5점</li>
+					</ul>
+					<img src="images/newbook2.gif" alt="썸네일2">
+					<ul>
+						<li>iOS의 다양한 오픈소스를 활용하는 방...</li>
+						<li>iOS 개발이 개발자들 사이에서 인기를 얻기 시작하면서 시중에 많은 책들이 등장했지만, 막상 실제 앱을 개발하려고 하면 어려운 점이 많습니다. 일례로 개발지식만 다...</li>
+						<li>작성자 : 김승민님 <img src="images/star.gif" alt="별점">5점</li>
+					</ul>
+			</div>
+			<!-- 3단 -->
+			<div class="cont3">
+				<!-- 다운로드 -->
+				<h3>도서 자료 및 부록 다운로드</h3>
+				<a href=""><img src="images/down.gif" alt="도서 자료 및 부록 다운로드"></a>
+				<!-- 이달의 저자 -->
+				<h3>이달의 저자 칼럼</h3>
+				<ul>
+					<li><img src="images/autor_column.gif" alt="이달의 저자 칼럼"></li>
+					<li><iframe width="350" height="200" src="https://www.youtube.com/embed/UOxkGD8qRB4" style="border:0"></iframe></li>
+					<li>N-Screen 시대란?</li>
+					<li>최근 다양한 디바이스가 보급되면서 기기마다 서로 다른 해상도를 고려하지 않을 수 없게 되었습니다. 우리 주변만 보더라도 모바일 폰에서부터 태블릿, 데스크톱PC, 스마트TV등...</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 푸터 -->
+		<footer>
+			<hr>
+			<!-- 주소 -->
+			<div style="margin-left:120px;display:inline-block;width:500px;margin-top:10px">
+				<h3>사업자 정보</h3>
+				<address style="font-style:normal;">(주)ICOX 158-718 서울시 양천구 목1동 923-4 현대드림타워<br>
+													대표이사:이기택 사업자 등록번호:000-000<br>
+													<a href="" style="font-weight:bold">Copyright &copy; 2011 Icox Education</a>
+				</address>
+			</div>
+			<!-- 공유버튼 -->
+			<div style="display:inline-block;width:500px;margin-top:10px;position:relative;right:-530px;top:-10px">
+				<h3>SNS페이지로 이동</h3>
+				<ul class="right">
+					<li><a href=""><img src="images/facebook.gif" alt="ICOX 페이스북으로 이동"></a></li>
+					<li><a href=""><img src="images/twitter.gif" alt="ICOX 트위터로 이동"></a></li>
+				</ul>		
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+	<title>버튼 만들기</title>
+        <style type="text/css">
+          #img {
+              border:0 none;
+              background:transparent;
+          }
+        </style>
+</head>
+<body>
+	<h1>버튼 만들기</h1>
+	<form method="post" action="">
+	  <fieldset>
+	    <legend>여러 가지 버튼</legend>
+	    <p><label for="ok">전송 버튼</label>
+		<button type="submit" id="ok" value="전송">전송</button></p>
+            <p><label for="cancel">취소 버튼</label>
+			<button type="reset" id="cancel" value="취소">취소</button></p>
+            <p><label for="textBtn">일반 텍스트 버튼</label>
+			<button type="button" id="textBtn" value="텍스트 버튼">
+			텍스트 버튼</button></p>
+            <p>이미지 버튼
+			<button type="image" id="imgBtn" value="이미지 버튼">
+			<img src="images/btnImg.gif" alt="자세히 보기" /></button></p>
+	  </fieldset>
+	</form>
+</body>
+</html>

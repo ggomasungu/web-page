@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="#">
+	<script src="jquery-3.3.1.min.js"></script>
+	<style>
+		* {margin: 0;padding: 0}
+		ul li {list-style: none}
+
+		div {background:yellow}
+
+		#slidebox {width: 300px;height: 100px}
+		.slidearea {position:relative;}
+		#slidebox .slidearea img {position:absolute;width: 300px;height: 100px;transition:1s}
+		.slideimg2,.slideimg3 {margin-left: -300px;}
+
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			var img = 2;//전역변수
+			var now = 0;//전역변수
+			var stay;
+
+			function start() {
+				stay = setInterval(function (){slideshow()},2000)
+			}
+
+			function stop() {
+				clearInterval(stay);
+				$('.slidearea').stop(true,true)
+			}
+
+			// 큐 중지버튼
+			// $('button').click(function() {
+			// 	$('#aniq').stop(clearQueue);
+			// });
+
+			// // 애니메이션 큐
+			// $('#aniq').animate({opacity:0},1000)
+			// .animate({opacity:1},1000);
+
+			// 슬라이드동작함수
+			function slideshow() {
+				now = now==img?0:now+=1;
+				$('.slidearea img').eq(now-1).css('margin-left','-300px');
+				$('.slidearea img').eq(now).css('margin-left','0');
+			};
+
+			$('.play').click(function() {
+				start();
+			});
+			$('.stop').click(function() {
+				stop();
+			});
+
+
+		});
+	</script>
+</head>
+<body>
+	<button>중지</button>
+	<div id="aniq">~애니메이션 과 큐~</div>
+	<br><br><br>
+
+	<div id="slidebox">
+		<div class="slidearea">
+			<img src="img/images1.jpg" alt="슬라이드 이미지1" class="slideimg1">
+			<img src="img/images2.jpg" alt="슬라이드 이미지2" class="slideimg2">
+			<img src="img/images3.jpg" alt="슬라이드 이미지3" class="slideimg3">
+		</div>
+	</div>
+	<button class="play">play</button>
+	<button class="stop">stop</button>
+</body>
+</html>

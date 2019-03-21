@@ -1,0 +1,29 @@
+/*게시판영역*/
+p.bbsinform {border: 1px solid #000;margin-bottom: 10px;padding-left: 12px;color:#3c6b05;background:url(../images/board/icon_list.gif) no-repeat 0 2px;}
+.boardList caption {display: none}
+.boardList td, .boardList th{padding:8px 4px 6px;border-bottom:1px solid #e8e8e8;}
+.boardList th{color:#fff;text-align: center;font-weight: bold;background: url(../images/board/bg_board_title.gif) -3px}
+.boardList th.first {background:url(../images/board/bg_board_title.gif)}
+.boardList th.end {background:url(../images/board/bg_board_title.gif) right}
+.boardList {width:100%}
+.boardList .num, .boardList .date, .boardList .view {font-size: 0.92em;text-align: center;color:#626262;}
+.boardList .num {width:35px}
+.boardList .date {width:55px}
+.boardList .view {width:45px}
+.boardList .replynum {margin-left: 10px;color:#ff5300;}
+.boardList .replynum strong {font-weight: bold}
+.btnArea {margin-top: 12px;text-align: right}
+.bbsSearch {margin-top: 17px;padding: 5px;text-align: center;background:#f6f6ee}
+
+
+
+
+
+
+
+/*페이징영역*/
+.paging {clear:left;text-align:center;margin-top:5px}
+.paging .num a, .paging .num strong{padding:0 6px 0 9px;text-decoration:none;color:#707070;line-height: 1.2em;background:url(../images/board/paging_bar.gif) no-repeat;}
+.paging .num a:hover,.paging .num a:focus{color:#336666}
+.paging .num strong{font-weight: bold;color:#336666}
+.paging .num .firstItem{background:none}

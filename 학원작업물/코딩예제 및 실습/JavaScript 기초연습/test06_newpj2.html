@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="#">
+	<script type="text/javascript">
+		var mncar=prompt('교통비를 입력하세요 (단위:원)',);
+		var mnfood=prompt('식비를 입력하세요 (단위:원)',);
+		var mncookie=prompt('간식비를 입력하세요 (단위:원)',);
+		var totalmn=Number(mncar)+Number(mnfood)+Number(mncookie);
+
+		if (isNaN(totalmn)) {
+			alert("숫자만 입력해주세요!");
+			location.reload()
+		}
+		else {
+			var result=totalmn>10000?totalmn-10000+"원 초과했습니다. 아껴쓰세요!!":totalmn+"원 쓰셨네요. 돈관리 잘했어요";
+			alert(result);
+			document.writeln(result)
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

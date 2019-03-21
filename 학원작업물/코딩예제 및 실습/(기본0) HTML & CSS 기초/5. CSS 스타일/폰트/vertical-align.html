@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" >
+<head>
+	<title>vertical-align 속성을 이용한 수직 위치 지정</title>
+	<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+	<style type="text/css">
+		h1 { background:silver; }
+		.super {
+			vertical-align:super;
+			font-size:0.7em;
+			background:yellow;
+			}
+		.sub {
+			vertical-align:sub;
+			font-size:0.7em;
+			background:aqua;
+			}
+		.top { vertical-align:top; }
+		.middle { vertical-align:middle; }
+		.bottom { vertical-align:bottom; }
+	</style>
+</head>
+<body>
+	<h1>인라인 요소의 수직 위치 지정</h1>
+	X<sup>2</sup>
+	H<sub>2</sub>0
+	<p>X<span class="super">2</span>와 같이 윗첨자가 적용된 모습</p>
+	<p>H<span class="sub">2</span>O와 같이 아랫첨자가 적용된 모습</p>
+	<p><img class="top" src="images/verticalAlign01.jpg" width="90" height="70" alt="영국 리즈캐슬의 잔디 정원" />이미지 요소에 vertical-align:top이 적용된 모습</p>
+	<p><img class="middle" src="images/verticalAlign02.jpg" width="90" height="70" alt="영국 리즈캐슬의 호수와 나무"  />이미지 요소에 vertical-align:middle이 적용된 모습</p>
+	<p><img class="bottom" src="images/verticalAlign03.jpg" width="90" height="70" alt="영국 리즈캐슬의 호수 풍경" />이미지 요소에 vertical-align:bottom이 적용된 모습</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>thead, tbody, tfoot 요소</title>
+	</head>
+	<body>
+		<section>
+			<h1>행 그룹 관련 요소</h1>
+			<table border="1">
+				<caption>
+					최강 음원 다운로드 (단위:백만)
+				</caption>
+				<colgroup class="title"></colgroup>
+				<colgroup class="singer"></colgroup>
+				<colgroup class="download"></colgroup>
+				<thead>
+					<tr>
+						<th scope="col">곡명</th>
+						<th scope="col">가수</th>
+						<th scope="col">다운로드</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="2">다운로드 합계</td>
+						<td>25,221</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>나와 같다면</td>
+						<td>김연우</td>
+						<td>5,896</td>
+					</tr>
+					<tr>
+						<td>여러분</td>
+						<td>임재범</td>
+						<td>7,895</td>
+					</tr>
+					<tr>
+						<td>편지</td>
+						<td>BMK</td>
+						<td>6,032</td>
+					</tr>
+					<tr>
+						<td>늪</td>
+						<td>김범수</td>
+						<td>5,398</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</body>
+</html>

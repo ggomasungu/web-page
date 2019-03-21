@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>제목</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="  " />
+  <script src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// $("#box1").css("background","red");
+	var box1 = $("#box1");
+	box1.css("background","blue");
+	box1.css("border","3px solid black");
+	box1.fadeOut(2000);
+})
+
+</script>
+<style type="text/css">
+div.box1 {width:100px;height:100px;
+background:yellow}	
+</style>
+ </head>
+<body>
+  <div id="box1" class="box1"></div>
+</body>
+</html>

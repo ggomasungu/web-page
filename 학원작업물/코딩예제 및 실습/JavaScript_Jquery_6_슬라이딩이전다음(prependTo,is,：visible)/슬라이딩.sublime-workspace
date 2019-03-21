@@ -1,0 +1,897 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"thumbmain",
+				"images/thumb_main_02.png"
+			],
+			[
+				"top",
+				"images/btn_bot_top.png"
+			],
+			[
+				"btn",
+				"images/btn_down_search.png"
+			],
+			[
+				"btndown",
+				"images/btn_down_search.png"
+			],
+			[
+				"btnse",
+				"images/btn_down_searchx2.png"
+			],
+			[
+				"btns",
+				"images/btn_search.png"
+			],
+			[
+				"arry",
+				"Array\t( params_..?: any ): Array Array"
+			],
+			[
+				"this",
+				"this\t$(this)"
+			],
+			[
+				"read",
+				"ready\tdocument.ready - $(function(){})"
+			],
+			[
+				"ready",
+				"ready\tjQuery(document).ready"
+			],
+			[
+				"css",
+				"css\t.css() - single"
+			],
+			[
+				"if",
+				"ife\tif … else"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"setin",
+				"setInterval\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"stop",
+				"stop\t.stop()"
+			],
+			[
+				"function",
+				"function"
+			],
+			[
+				"func",
+				"Function\t( paramsAndBody_..: string ): Function Function"
+			],
+			[
+				"funtion",
+				"function_without_name"
+			],
+			[
+				"animate",
+				"animate\t.animate()"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"cli",
+				"click\t.click()"
+			],
+			[
+				"boxsiz",
+				"boxSizing\t = 'border-box' Style CSS"
+			],
+			[
+				"animat",
+				"animate\t.animate()"
+			],
+			[
+				"each",
+				"each\t.each()"
+			],
+			[
+				"margint",
+				"marginTop\t = '' Style CSS"
+			],
+			[
+				"ani",
+				"animate\t.animate()"
+			],
+			[
+				"box",
+				"content-box\tbox-sizing"
+			],
+			[
+				"indica",
+				"img/common/nav_indicator2.png"
+			],
+			[
+				"fuc",
+				"function"
+			],
+			[
+				"wid",
+				"widows\t = 'inherit' Style CSS"
+			],
+			[
+				"get",
+				"get\t.get()"
+			],
+			[
+				"onclick",
+				"onclick\t: EventHandler Window"
+			],
+			[
+				"attr",
+				"attr\t.attr() - single"
+			],
+			[
+				"getel",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"docu",
+				"document\t: Document Window"
+			],
+			[
+				"repla",
+				"replace\t( searchValue: string, replaceValue: string ): string String"
+			],
+			[
+				"att",
+				"attr\t.attr() - single"
+			],
+			[
+				"rea",
+				"ready\tdocument.ready - $(function(){})"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"position",
+				"position\t = 'absolute' Style CSS"
+			],
+			[
+				"inli",
+				"inline\tdisplay"
+			],
+			[
+				"overflo",
+				"overflow-x\tproperty"
+			],
+			[
+				"ov",
+				"overflow\tproperty"
+			],
+			[
+				"el",
+				"else_if"
+			],
+			[
+				"funcion",
+				"Function\t( paramsAndBody_..: string ): Function Function"
+			],
+			[
+				"fucntion",
+				"function_without_name"
+			],
+			[
+				"i",
+				"inline\tdisplay"
+			],
+			[
+				"wri",
+				"writeln\t( text_..: DOMString ): void Document"
+			],
+			[
+				"write",
+				"write\t( text_..: DOMString ): void Document"
+			],
+			[
+				"for",
+				"for"
+			],
+			[
+				"array",
+				"Array\t( params_..?: any ): Array Array"
+			],
+			[
+				"op",
+				"opacity\tproperty"
+			],
+			[
+				"tra",
+				"transition-delay\tproperty"
+			],
+			[
+				"tras",
+				"transition\tproperty"
+			],
+			[
+				"bx",
+				"bxsh\tbox-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"bz",
+				"bgsz\tbackground-size"
+			],
+			[
+				"bd",
+				"bd+\tborder: ${1:1px} ${2:solid} ${3:#000};"
+			],
+			[
+				"bg",
+				"img/sub1/sub1_cont1_bg.jpg"
+			],
+			[
+				"borderradi",
+				"border-top-right-radius\tproperty"
+			],
+			[
+				"bordtopr",
+				"border-top-left-radius\tproperty"
+			],
+			[
+				"radiu",
+				"border-radius\tproperty"
+			],
+			[
+				"icon1what",
+				"img/common/icon_1what.png"
+			],
+			[
+				"number",
+				"Number\t( value: any ): Number Number"
+			],
+			[
+				"Numb",
+				"Number\t( value: any ): Number Number"
+			],
+			[
+				"menu",
+				"btn_allmenu.gif\tw:113 h:36"
+			],
+			[
+				"inlien",
+				"inline-block\tdisplay"
+			],
+			[
+				"else",
+				"if_else"
+			],
+			[
+				"propt",
+				"prompt\t( message?: DOMString, default?: DOMString ): DOMString Window"
+			],
+			[
+				"inlie",
+				"inline-block\tdisplay"
+			],
+			[
+				"ma",
+				"mainBn_img2.jpg\tw:2000 h:1188"
+			],
+			[
+				"footbg",
+				"footerbg.gif\tw:3 h:121"
+			],
+			[
+				"stan",
+				"img_standards.gif\tw:61 h:68"
+			],
+			[
+				"bull",
+				"bullet_list_ov.gif\tw:7 h:6"
+			],
+			[
+				"shadow",
+				"box-shadow\tproperty"
+			],
+			[
+				"login",
+				"login_box.gif\tw:239 h:138"
+			],
+			[
+				"lo",
+				"h3_login.gif\tw:44 h:18"
+			],
+			[
+				"foo",
+				"footerbg.gif\tw:3 h:121"
+			],
+			[
+				"footer",
+				"footer_bar.gif\tw:1 h:8"
+			],
+			[
+				"btnsear",
+				"btn_search_sub.gif\tw:34 h:20"
+			],
+			[
+				"height",
+				"height\tproperty"
+			],
+			[
+				"sear",
+				"icon_searcgh.gif\tw:18 h:18"
+			],
+			[
+				"bul",
+				"bullet_list_ov.gif\tw:7 h:6"
+			],
+			[
+				"list-",
+				"list-ur\tlist-style-type: upper-roman;"
+			],
+			[
+				"list",
+				"list-dc\tlist-style-type: decimal;"
+			],
+			[
+				"image",
+				"background-image\tproperty"
+			],
+			[
+				"fl",
+				"float\tproperty"
+			],
+			[
+				"boder",
+				"border\tproperty"
+			],
+			[
+				"inlin",
+				"inline\tdisplay"
+			],
+			[
+				"numbe",
+				"Number\t( value: any ): Number Number"
+			],
+			[
+				"strin",
+				"string"
+			],
+			[
+				"margin",
+				"margin\tproperty"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"bac",
+				"background\tproperty"
+			],
+			[
+				"dis",
+				"display\tproperty"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"inle",
+				"inline-block\tdisplay"
+			],
+			[
+				"main",
+				"main2_nav"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"border-sty",
+				"border-bottom-style\tproperty"
+			],
+			[
+				"raidu",
+				"border-top-right-radius\tproperty"
+			],
+			[
+				"bor",
+				"border\tproperty"
+			],
+			[
+				"line",
+				"overline\ttext-decoration"
+			],
+			[
+				"hei",
+				"height\tproperty"
+			],
+			[
+				"inl",
+				"inline\tdisplay"
+			],
+			[
+				"foat",
+				"float\tproperty"
+			],
+			[
+				"head",
+				"header\tTag"
+			],
+			[
+				"bord",
+				"border-color\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"bottom",
+				"bottom\tvertical-align"
+			],
+			[
+				"alin",
+				"align-content\tproperty"
+			],
+			[
+				"ali",
+				"vertical-align\tproperty"
+			],
+			[
+				"backg",
+				"background-image\tproperty"
+			],
+			[
+				"newboo",
+				"newbook2.gif\tw:83 h:111"
+			],
+			[
+				"log",
+				"userlogin.gif\tw:201 h:33"
+			],
+			[
+				"tit",
+				"newbook2_tit.gif\tw:489 h:37"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"z",
+				"z-index\tproperty"
+			],
+			[
+				"font-",
+				"font-weight\tproperty"
+			],
+			[
+				"cell",
+				"cellspacing\tAttr"
+			],
+			[
+				"align",
+				"align-content\tproperty"
+			],
+			[
+				"aling",
+				"align-content\tproperty"
+			],
+			[
+				"im",
+				"img2/"
+			],
+			[
+				"litst",
+				"list-style\tproperty"
+			],
+			[
+				"icon",
+				"icon_coffee.png\tw:114 h:103"
+			],
+			[
+				"icon_st",
+				"icon_stop.gif\tw:8 h:8"
+			],
+			[
+				"titl",
+				"title_search.gif\tw:44 h:12"
+			],
+			[
+				"list-s",
+				"list-style\tproperty"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"syncup",
+				"Sync Settings: Upload"
+			],
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"repack",
+				"Package Control: Remove Package"
+			],
+			[
+				"sync down",
+				"Sync Settings: Download"
+			],
+			[
+				"repac",
+				"Package Control: Remove Package"
+			],
+			[
+				"inspack",
+				"Package Control: Install Package"
+			],
+			[
+				"remove packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"sync up",
+				"Sync Settings: Upload"
+			],
+			[
+				"rpac",
+				"Package Control: Remove Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"IP",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"sync do",
+				"Sync Settings: Download"
+			],
+			[
+				"Snippet: ",
+				"Snippet: snippet_html5"
+			],
+			[
+				"Snippet:",
+				"Snippet: snippet_html5"
+			],
+			[
+				"rp",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sync dele",
+				"Sync Settings: Delete"
+			],
+			[
+				"sync settings down",
+				"Sync Settings: Download"
+			],
+			[
+				"pcrp",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/[20181107 임선구]/[hp]/index.html",
+		"/D/[20181107 임선구]/[hp]/css/base.css",
+		"/D/[20181107 임선구]/mine2.ahk",
+		"/C/Users/6강의실-1/Desktop/모바일웹-마크업1/index.html",
+		"/C/Users/6강의실-1/Desktop/페이드애니메이션/일정시간마다페이드애니메이션.html",
+		"/D/[20181107 임선구]/[hp]/script/index_main_slide.js",
+		"/D/[20181107 임선구]/[hp]/css/layout_index.css",
+		"/C/Users/6강의실-1/Desktop/script/jquery_04.html",
+		"/C/Users/6강의실-1/Desktop/script/jquery_05.html",
+		"/C/Users/6강의실-1/AppData/Roaming/Sublime Text 3/Packages/JavaScript Enhancements/JavaScript Enhancements.sublime-settings",
+		"/C/Users/6강의실-1/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript Enhancements.sublime-settings",
+		"/C/Users/6강의실-1/Desktop/가족앨범/gallery.html",
+		"/D/[20181107 임선구]/4-2. (실습) Html/6.HTML5/10_required속성.html",
+		"/D/[20181107 임선구]/[hp]/info4.html",
+		"/C/Users/6강의실-1/Desktop/script/jquery_03_boxslide.html",
+		"/C/Users/6강의실-1/Desktop/portfolio/index.html",
+		"/C/Users/6강의실-1/AppData/Roaming/Sublime Text 3/Packages/User/snippet_html5.sublime-snippet",
+		"/C/Users/6강의실-1/Desktop/에니메이션과큐/2/scripts.js",
+		"/C/Users/6강의실-1/Desktop/에니메이션과큐/1/scripts.js",
+		"/C/Users/6강의실-1/Desktop/에니메이션과큐/2/index.html",
+		"/C/Users/6강의실-1/Desktop/에니메이션과큐/1/index.html",
+		"/C/Users/6강의실-1/Desktop/script/에니메이션과큐/1/index.html",
+		"/C/Users/6강의실-1/Desktop/script/에니메이션과큐/2/index.html",
+		"/C/Users/6강의실-1/Desktop/script/에니메이션과큐/1/scripts.js",
+		"/C/Users/6강의실-1/Desktop/script/에니메이션과큐/2/scripts.js",
+		"/C/Users/6강의실-1/Desktop/script/jquery_02.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/4th_slide.html",
+		"/C/Users/6강의실-1/Desktop/활성아이콘/boxslide.html",
+		"/C/Users/6강의실-1/Desktop/레이아웃스타일/index.html",
+		"/C/Users/6강의실-1/Desktop/롤오버/index.html",
+		"/C/Users/6강의실-1/Desktop/롤오버/scripts.js",
+		"/C/Users/6강의실-1/Desktop/롤오버/변수사용.html",
+		"/C/Users/6강의실-1/Desktop/test.html",
+		"/C/Users/6강의실-1/Desktop/car고르기/car_gallery.html",
+		"/C/Users/6강의실-1/Desktop/script/test01.html",
+		"/D/[20181107 임선구]/[hp]/css/reset.css",
+		"/D/[20181107 임선구]/[hp]/script/jquery_03_boxslide.html",
+		"/D/[20181107 임선구]/[hp]/script/jquery_02.html",
+		"/D/[20181107 임선구]/[hp]/info1.html",
+		"/D/[20181107 임선구]/[hp]/info2.html",
+		"/D/[20181107 임선구]/[hp]/info3.html",
+		"/D/[20181107 임선구]/[hp]/sub1.html",
+		"/D/[20181107 임선구]/[hp]/sub1_cont1.html",
+		"/D/[20181107 임선구]/[hp]/sub1_cont2.html",
+		"/D/[20181107 임선구]/[hp]/sub1_cont3.html",
+		"/D/[20181107 임선구]/[hp]/sub1_cont4.html",
+		"/D/[20181107 임선구]/[hp]/sub2.html",
+		"/D/[20181107 임선구]/[hp]/sub3.html",
+		"/D/[20181107 임선구]/[hp]/sub4.html",
+		"/C/Users/6강의실-1/Desktop/car고르기/scripts/styleswitcher.js",
+		"/C/Users/6강의실-1/Desktop/car고르기/scripts/showPic.js",
+		"/C/Users/6강의실-1/Desktop/car고르기/car_gallery_jquery.html",
+		"/C/Users/6강의실-1/Desktop/car고르기/car_gallery_js.html",
+		"/C/Users/6강의실-1/Desktop/car고르기/css/default.css",
+		"/C/Users/6강의실-1/Desktop/car고르기/css/blue.css",
+		"/C/Users/6강의실-1/Desktop/car고르기/css/red.css",
+		"/D/[20181107 임선구]/[hp]/script/jquery_01.html",
+		"/D/[20181107 임선구]/[hp]/script/test10.html",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/whtml.html",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/introduce.css",
+		"/D/[20181107 임선구]/[hp]/css/layout_sub1.css",
+		"/C/Users/6강의실-1/Desktop/html소개/html소개.html",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/qna.html",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/gallery.html",
+		"/D/[20181107 임선구]/[hp]/css/import.css",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/import.css",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/qna.css",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/board.css",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/base.css",
+		"/C/Users/6강의실-1/Desktop/서브페이지스타일/css/layout.css",
+		"/C/Users/6강의실-1/Desktop/가변그리드/fluid.html",
+		"/C/Users/6강의실-1/Desktop/태블릿스타일/[헤더] PC화면 스타일/index.html",
+		"/C/Users/6강의실-1/Desktop/태블릿스타일/[헤더] PC화면 스타일/css/base.css",
+		"/C/Users/6강의실-1/Desktop/태블릿스타일/[헤더] PC화면 스타일/css/main.css",
+		"/D/[20181107 임선구]/[hp]/script/jquery-3.3.1.js",
+		"/D/[20181107 임선구]/[hp]/script/jquery-3.3.1.min.js",
+		"/D/[20181107 임선구]/[hp]/script/test11_jquery.html",
+		"/C/Users/6강의실-1/Documents/카카오톡 받은 파일/[hp]/index.html",
+		"/C/Users/6강의실-1/Documents/카카오톡 받은 파일/[hp]/css/layout.css",
+		"/C/Users/6강의실-1/Documents/카카오톡 받은 파일/[hp]/css/base.css",
+		"/D/[20181107 임선구]/[hp]/common.html",
+		"/D/[20181107 임선구]/[hp]/sub2_cont1.html",
+		"/D/[20181107 임선구]/[hp]/sub2_cont2.html",
+		"/D/[20181107 임선구]/[hp]/script/test9.html",
+		"/D/[20181107 임선구]/[hp]/sub2_cont3.html",
+		"/C/Users/6강의실-1/Desktop/태블릿스타일/[헤더] PC화면 스타일/css/reset.css",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/css/base.css",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/5th_header.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/5rh_header.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/0_index.html",
+		"/C/Users/6강의실-1/Desktop/base.css",
+		"/D/[20181107 임선구]/[hp]/css/nav_ani.css",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/4rd_slide.html",
+		"/D/[20181107 임선구]/[hp]/script/test8_practice.html",
+		"/D/[20181107 임선구]/[hp]/script/test7.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/3rd_area.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/2nd area.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/banner.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/login.html",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/index.html",
+		"/D/[20181107 임선구]/[hp]/script/test6_newpj2.html",
+		"/D/[20181107 임선구]/[hp]/script/test5.html",
+		"/C/Users/6강의실-1/AppData/Roaming/Sublime Text 3/Packages/FuzzyFileNav/fuzzy_file_nav.sublime-settings",
+		"/C/Users/6강의실-1/Desktop/아이콕스헤더/css/reset.css",
+		"/D/[20181107 임선구]/[hp]/script/test2.html",
+		"/D/[20181107 임선구]/[hp]/sub1/cont1.html",
+		"/D/[20181107 임선구]/[hp]/script/test4_newpj.html",
+		"/D/[20181107 임선구]/[hp]/test4_miniproject1",
+		"/D/[20181107 임선구]/[hp]/script/test.html",
+		"/D/[20181107 임선구]/[hp]/script/test3.html",
+		"/C/Users/6강의실-1/Desktop/div 클리어픽스/clearfix.html",
+		"/C/Users/6강의실-1/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/D/[20181107 임선구]/[hp]/css/sub1.css",
+		"/C/Users/6강의실-1/Desktop/index.html",
+		"/D/[20181107 임선구]/[hp]/css/base (1).css",
+		"/D/[20181107 임선구]/[hp]/sftp-config.json",
+		"/D/[20181107 임선구]/[hp]/java_test.html",
+		"/C/Users/6강의실-1/Desktop/div 클리어픽스/clearboth.html",
+		"/C/Users/6강의실-1/Desktop/images/다중분할.html",
+		"/C/Users/6강의실-1/Desktop/헤더제작/index.html",
+		"/C/Users/6강의실-1/Desktop/헤더제작/css/base.css",
+		"/C/Users/6강의실-1/Desktop/헤더제작/images/common/footer_bar.gif",
+		"/C/Users/6강의실-1/Desktop/헤더제작/css/main.css",
+		"/C/Users/6강의실-1/Desktop/레이아웃스타일/css/base.css",
+		"/C/Users/6강의실-1/Desktop/[CSS3 그라데이션, 그림자효과]/css3.html",
+		"/C/Users/6강의실-1/Desktop/레이아웃스타일/sub1.html",
+		"/C/Users/6강의실-1/Desktop/레이아웃스타일/css/0main.css",
+		"/C/Users/6강의실-1/Desktop/레이아웃스타일/css/1sub.css"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 315.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "슬라이딩.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

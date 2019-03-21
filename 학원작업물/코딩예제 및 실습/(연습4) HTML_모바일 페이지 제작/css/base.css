@@ -1,0 +1,76 @@
+@media screen and (-webkit-device-pixel-ratio:2.75) {
+.iconSearch {display:inline-block;width: 15px;height: 15px;background:url(../images/btn_searchx2.png) no-repeat;margin-top:10px}
+}
+
+body {min-width:310px}
+
+/*헤더스타일*/
+#header_wrap {background:url(../images/bg_top_gnb.png) repeat-x #cd0000}
+.main_logo {display:inline-block;height:35px}
+.main_logo a {color:white;display: inline-block;font-size: 20px;padding:7px 0 0 15px;}
+#btnSearch {width: 45px;height: 35px;display: inline-block;float: right;background:url(../images/img_top_slice.png) no-repeat;text-align: center}
+.iconSearch {display:inline-block;width: 15px;height: 15px;background:url(../images/btn_search.png) no-repeat;margin-top:10px;}
+
+/*숨겨진 검색영역*/
+#searchArea {background:#cd0000;display:none;position:absolute;top:35px;width: 100%;text-align: center;white-space:nowrap;}
+#searchArea form fieldset {margin: 0 auto;width: 90%;}
+#bgSearch {display:inline-block;padding:32px 0 32px 32px;background:url(../images/bg_search_left.png) no-repeat 26px;width:70%;text-align: right}
+#bgSearch input {background:white;border: none;height:32px;outline: none;width:100%;;text-align: right}
+#bgBtnSearch {display:inline-block;text-align: left;}
+#bgBtnSearch .btnSearch {
+	background:url(../images/btn_down_search.png) no-repeat 0 1px;
+	width:40px;height:35px;
+	border:none;outline: none;
+	text-indent:-9999px
+}
+
+/*네비게이션*/
+.main_menu {
+	width:100%;
+	border-bottom:1px solid #ddd;border-top:1px solid #ddd;
+	background:#f6f6f6;
+	text-align: center;
+	overflow: hidden;
+}
+.main_menu li {background:url(../images/bg_bar.png) no-repeat 0 center;float:left;width: 25%;height: 31px;}
+.main_menu li:first-child {background:none}
+
+.tab_m {display: block;height: 25px;color:#333;padding-top:8px;font-size: 12px}
+
+.on {color:#cd0000;background:url(../images/bg_bar.png) no-repeat 0 center #ddd;border-radius:20px}
+.buttons .btn_on {background:orangered;color:white;}
+
+
+/*콘텐츠영역은 페이지별로 외부css 추가 작성*/
+
+
+/*푸터*/
+footer {background:#dcdcdc;text-align: center;margin-top:5px;}
+li a.li_a_end {background:none}
+/*바로가기*/
+.shortcut {margin-bottom:10px;padding-top: 10px;border-top:1px solid #aeaeae;}
+.shortcut li {display: inline-block}
+.shortcut a {
+	padding-right:15px;
+	background:url(../images/bg_bar.png) no-repeat 95% center;
+}
+
+
+/*버튼:로그인,PC버전,고객센터*/
+.buttons li {display: inline-block}
+.buttons input {padding:6px 8px;background:#dcdcdc;font-size: 80%;border:1px solid #aaa;cursor:pointer}
+
+/*사이트 이용안내*/
+.privacy {margin-top:10px;padding-bottom: 10px}
+.privacy li {display: inline-block}
+.privacy a {padding-right: 15px;font-size:80%;background:url(../images/bg_bar.png) no-repeat 95% center;}
+
+/*저작권*/
+.end_bar {
+	background:#424242;
+	height:25px;
+	text-align:left;
+	position: relative;
+}
+.copyrights {color:white;font-size: 70%;line-height:25px;padding-left: 5px}
+.end_bar a{padding-top:5px;position: absolute;top: 0;right: 0;}

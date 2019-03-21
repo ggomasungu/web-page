@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>가족 사진첩</title>
+  <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // function showPic(fampic) {
+    //   var source = fampic.getAttribute("href")
+    //   document.getElementById("placeholder").setAttribute("src",source);
+    // }
+
+    $(function() {
+      $("ul>li>a").click(function (){
+        $("#placeholder").attr("src",$(this).attr("href")).css({
+          width : '250px',
+          height: '200px',
+          position : 'relative',
+          top:'20px',
+          left:'10px',
+          border:'10px solid red',
+          padding: '5px'
+        });
+        return false
+      })
+    })
+
+  </script>
+</head>
+<body>
+<h1>가족 사진</h1> 
+  <ul>
+    <li>
+      <a href="images/dad.jpg" title="멋있는 아빠 사진"><img src="images/dad.jpg" alt="아빠"></a>
+    </li>
+    <li>
+      <a href="images/mom.jpg" title="이쁜 엄마 사진"><img src="images/mom.jpg" alt="엄마"></a>
+    </li>
+    <li>
+      <a href="images/jisu.jpg" title="귀여운 지수 사진"><img src="images/jisu.jpg" alt="딸"></a>
+    </li>
+    <li>
+      <a href="images/jisung.jpg" title="똑똑한 지성 사진"><img src="images/jisung.jpg" alt="아들"></a>
+    </li>
+  </ul>
+  <img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+  <p id="description">사진을 선택하세요.</p>
+</body>
+</html>

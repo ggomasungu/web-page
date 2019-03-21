@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>연습문제 - 포지션</title>
+<link rel="stylesheet" type="text/css" href=" " />
+<script type="text/javascript" src=" "></script>
+<style type="text/css">
+	div {margin: 0 auto;
+		position: relative;
+		border: 5px solid black;
+		width: 600px;
+		height: 500px
+	}
+	img {		
+		position: absolute;
+	}
+	.kim1 {
+		top: 0;
+		left: 0;
+	}
+	.kim2 {
+		top: 0;
+		right: 0;
+	}
+	.kim3 {
+		bottom: 0;
+		left: 0;
+	}
+	.kim4 {
+		bottom: 0;
+		right: 0;
+	}
+	.kim5 {
+		top: 100px;
+		left: 150px;
+		z-index:5
+	}
+</style>
+</head> 
+<body>
+	<div>
+		<img class="kim1" src="ya02.jpg" alt="1번사진" />
+		<img class="kim2" src="ya05.jpg" alt="2번사진" />
+		<img class="kim3" src="ya04.jpg" alt="3번사진" />
+		<img class="kim4" src="ya03.jpg" alt="4번사진" />
+		<img class="kim5" src="ya01.jpg" alt="맨앞사진" />
+	</div>
+</body>
+</html>

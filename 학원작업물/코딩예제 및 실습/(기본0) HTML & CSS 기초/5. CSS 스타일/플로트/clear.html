@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" >
+<head>
+	<title>clear를 이용한 float 해제</title>
+	<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+	<style type="text/css">
+		p { border:1px solid red; background:yellow; }
+		img { border:1px solid blue; padding:10px; }
+		.imgBox img { float:left; }
+
+		.textBox { clear:both; }
+	</style>
+</head>
+<body>
+	<p class="imgBox">이미지를 왼쪽으로 플로트시키면 부모 요소인 P 요소는 텍스트만을 자식 요소로 가지게 됩니다.<img src="images/float.jpg" width="150" height="150" alt="floating Text" /></p>
+	<p class="textBox">플로트를 이용하면 콘텐츠를 이동시키는 것이 가능합니다. 또한 플로트는 일반적인 블록 박스의 흐름을 벗어나 배치되기 때문에 다른 블록 박스의 배치에 영향을 주게 됩니다. 플로트 속성에 지정할 수 있는 값은 left, right, none 등이 있으며 특정 요소가 플로트되면 일반적인 흐름을 따라 배치된 박스 위에 겹쳐서 배치됩니다. 그러나 플로트 된 요소와 일반적인 흐름을 따라 배치된 박스의 인라인 텍스트는 겹치지 않고 주변에 배치됩니다.</p>
+</body>
+</html>

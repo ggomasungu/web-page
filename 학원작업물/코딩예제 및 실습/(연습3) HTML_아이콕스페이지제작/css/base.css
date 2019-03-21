@@ -1,0 +1,49 @@
+기본 스타일*/
+a { text-decoration:none; color:#999; }
+a:hover { color:#666; }
+
+h1,h2,h3,h4,h5,h6 { font-size:100%; }
+address,strong{font-style:normal; font-weight:normal;}
+
+body { font:14px "NGothicEB",Gulim; }
+
+/*숨김처리*/
+.hidden, h2, legend {display:none}
+
+/*레이아웃*/
+#wrap {width:1280px;margin:0 auto}
+header#mainhd {width:1003px;margin:0 auto;height:500px}
+
+/*바디*/
+body {background:url(../images/body_bg.gif) repeat-x;}
+
+/*헤더*/
+header#mainhd {position:relative}
+	/*로고*/
+	header#mainhd h1 img {padding-top:26px;padding-bottom:17px}
+
+	/*보조메뉴*/
+	ul#until {position:absolute;top:20px;right:0}
+	ul#until li {display:inline;padding-left:17px}
+
+	/*검색바*/
+	header#mainhd > form {position:absolute;top:60px;right:0}
+
+	/*네비게이션*/
+	nav#gnb ul#gnbul {text-align:center;position:relative}
+	nav#gnb ul#gnbul > li {float:left;width:205px;height:39px;margin-right:1px;background:#3da7db}
+	nav#gnb ul#gnbul li.customer {width:179px;margin-right:0}
+	nav#gnb ul#gnbul > li > a {display:block;padding-top:10px;height:35px;color:white;font-weight:bold}
+	nav#gnb ul#gnbul > li ul {display:none}
+	nav#gnb ul#gnbul > li:hover {background:url(../images/btn_allmenu.gif) no-repeat center;background-size:cover}
+	nav#gnb ul#gnbul > li:hover ul {display:block;position:absolute;top:45px;margin-left:40px}
+	nav#gnb ul#gnbul > li ul li {float:left;margin-left:20px;width:auto;height:auto}
+	nav#gnb ul#gnbul > li ul li:first-child {float:left;margin-left:0px}
+	nav#gnb ul#gnbul > li ul li a {display:block;height:20px}
+
+/*컨텐츠영역*/
+	/*1단영역*/
+		/*로그인영역*/
+		
+	/*2단영역*/
+	/*3단영역

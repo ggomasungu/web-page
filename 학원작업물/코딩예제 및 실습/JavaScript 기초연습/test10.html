@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="#">
+	<script type="text/javascript">
+		// function plusTen (x) {
+		// 	return x+10;
+		// }
+		// alert(plusTen(5));
+
+		// function printTen(x) {
+		// 	alert("A+");
+		// 	return;
+		// 	alert("B");
+		// }
+		// var out = printTen(5);
+		// alert(out)
+
+		function coffeemachine (x) {
+			if (x<900) {
+				alert("겨우 ["+x+"]원으로 살 수 있는 건 없어요. 최소 900원 이상 넣어주세요.");
+				document.writeln("<p style=text-align:center><input type=button value=재시도 onclick=location.reload()><p>");
+			}
+			else if (900<=x&&x<1000) {
+				alert("[아메리카노 커피R] 한 잔과, 거스름돈 ["+(x-900)+"]원을 얻었습니다.")
+			}
+			else if (1000<=x&&x<1500) {
+				alert("[식혜] 한 잔과, 거스름돈 ["+(x-1000)+"]원을 얻었습니다.")
+			}
+			else if (1500<=x&&x<2500) {
+				alert("[아메리카노 커피L] 한 잔과, 거스름돈 ["+(x-1500)+"]원을 얻었습니다.")
+			}
+			else if (2500<=x) {
+				alert("[카페라떼] 한 잔과, 거스름돈 ["+(x-2500)+"]원을 얻었습니다.")
+			}
+			else {
+				alert("제대로 입력하세요!");
+				location.reload()
+			}
+		}
+		var coin=prompt("금액을 입력하세요(단위:원)",0);
+		var coin=Number(coin);
+		coffeemachine(coin);
+
+		// function coffeeMachine(x) { // 커피머신 선언적 함수
+		// 	var total=null; // 돈통
+		// 	var amR=900;
+		// 	var amL=1500;
+		// 	var kt=1000;
+		// 	var latte=2500;
+
+		// 	for (var i=0;i<x.length;i++) {
+		// 		total += x[i]
+		// 	}
+
+		// 	if (total==amR) {
+		// 		total = null;
+		// 		total = "아메리카노 커피R 나왔습니다"
+		// 	}
+
+		// 	else if (total<amR) {
+		// 		total = null;
+		// 		total = "동전을 더 넣으세요"
+		// 	}
+
+		// 	else {
+		// 		total = null;
+		// 		total = "다른선택을 하거나 잔돈을 받으세요"
+		// 	}
+
+		// 	return total;
+		// }
+		// var inputcoin = prompt("금액을 입력하세요",0)
+		// inputcoin = Number(inputcoin)
+		// var coin = [inputcoin]
+		// alert(coffeeMachine(coin));
+
+	</script>
+</head>
+<body>
+</body>
+</html>
