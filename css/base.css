@@ -1544,6 +1544,8 @@ footer {overflow-y:hidden}
 		width:17px;
 		height:15px;
 		border-radius:8px 0 8px 0;
+		background:orange;
+		animation:none;
 	}
 	/*푸터_내용*/
 	.contact_cont {
