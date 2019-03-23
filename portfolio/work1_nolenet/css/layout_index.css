@@ -42,13 +42,22 @@
 }
 #slidebtns li.btnslide0 {padding-left:0}
 
+@media (min-width:769px) and (max-width:1023px) {
+	/*슬라이드 영역 및 이미지*/
+	#slideArea {height:580px;width:100%;position:relative;overflow: hidden}
+	#slideBox {height:580px;width:400%;position:relative;left:0}
+	#slideBox img {height:580px;width:25%;float:left}
+	/*슬라이드 좌우버튼*/
+	.nextpre {font-size:70px;line-height:580px}
+}
+
 @media (max-width:768px) {
 	/*슬라이드 영역 및 이미지*/
 	#slideArea {height:410px;width:100%;position:relative;overflow: hidden}
 	#slideBox {height:410px;width:400%;position:relative;left:0}
 	#slideBox img {height:410px;width:25%;float:left}
 	/*슬라이드 좌우버튼*/
-	.nextpre {font-size:70px;}
+	.nextpre {font-size:70px;line-height: 410px}
 	/*슬라이드 네비게이션*/
 	#slidebtns {
 		height:32px;width:140px;
@@ -56,11 +65,4 @@
 	#slidebtns li {
 	font-size:20px;
 	}
-}
-
-@media (min-width:769px) and (max-width:1023px) {
-	/*슬라이드 영역 및 이미지*/
-	#slideArea {height:580px;width:100%;position:relative;overflow: hidden}
-	#slideBox {height:580px;width:400%;position:relative;left:0}
-	#slideBox img {height:580px;width:25%;float:left}	
 }
