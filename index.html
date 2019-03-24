@@ -27,26 +27,34 @@
 	</style>
 </head>
 <body>
+<!-- 테마 변경 버튼 -->
 <div id="btn_open_theme" class="btn_theme">
 	<i class="fas fa-palette" title="테마 변경 열기"></i>
 </div>
+<!-- 테마 변경 버튼_내용 -->
 <div id="theme_box">
 	<i class="fas fa-times-circle btn_close_theme" title="테마 변경 닫기"></i>
 	<i class="fas fa-fill-drip theme_white" title="밝은테마_기본"></i>
 	<i class="fas fa-fill-drip theme_black" title="어두운테마"></i>
 </div>
+<!-- 헤더 영역 -->
 <header>
+	<!-- 로고 -->
 	<h1 id="logo" title="웹페이지 포트폴리오">
 		<i class="fab fa-connectdevelop fa-spin"></i>Web-Page Portfolio
 	</h1>
+	<!-- 로고 비스듬히 배경 -->
 	<div data-skew-bg></div>
 </header>
+<!-- 컨텐츠 영역 -->
 <section id="contents">
 	<h2>컨텐츠 영역</h2>
-		<!-- 공지사항_플로트 -->
+		<!-- 공지사항_fixed -->
 		<div class="notice">
 			<h3>공지사항</h3>
+			<!-- 공지사항 배경 애니메이션 -->
 			<div class="noticebg"></div>
+			<!-- 공지사항 내용 -->
 			<div class="noticeBox">
 				<span class="noticetit">
 				<i class="fas fa-exclamation-triangle"></i>
@@ -54,25 +62,31 @@
 				<span class="noticetext" title="공지사항"> GitHub Page 서버 상황에 따라 <span class="mobile_br">종종 사이트 로딩이 느릴 수 있습니다.</span></span>
 				<span class="auto_close">(<span class="countdown">5</span>초 후 자동닫힘)
 				</span>
+				<!-- 공지사항 닫기 버튼 -->
 				<a href="#" class="btn_close_notice" onclick="return false" title="공지사항 닫기">
 					<i class="fas fa-window-close"></i>
 				</a>
 			</div>
 		</div>
+		<!-- 공지사항 열기 버튼 -->
 		<div class="btn_open_notice"><a href="#" onclick="return false" title="공지사항 열기">Notice</a></div>
-		<!-- //공지사항_플로트 -->
+		<!-- 컨텐츠1_소개 -->
 		<section id="cont1">
 			<h3>자기소개</h3>
+			<!-- 비디오 배경 -->
 			<figure class="vid_cont1">
 				<video loop autoplay muted>
 					<source src="vid/network.mp4" type="video/mp4">
 					브라우저에서 &lt;videogt; 요소, 혹은 mp4를 지원하지 않습니다.
 				</video>
 			</figure>
+			<!-- 텍스트배경 -->
 			<div class="bg_cont1"></div>
+			<!-- 움직이는 선 효과 -->
 			<svg class="border-svg" height="100%" xmlns="http://www.w3.org/2000/svg" width="100%">
-							<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
-						</svg>
+				<rect class="border-rect" height="100%" width="100%" x="0" y="0"/>
+			</svg>
+			<!-- 소개_텍스트 -->
 			<div class="introduce" title="안녕하세요. 웹퍼블리셔를 지망하는 임선구 입니다. ^^">
 				<p style="font-weight:bold">웹퍼블리셔</p>
 				<p>를꿈꾸는</p>
@@ -80,33 +94,45 @@
 				<p>입니</p>
 				<p style="font-weight:bold">다</p>
 			</div>
+			<!-- 컨텐츠1_소개_보조텍스트 -->
 			<p class="intro_text" title="현재 보유 스킬">
 				HTML5 / CSS3 / JS(with Jquery) <i class="fab fa-linode"></i>
 			</p>
 		</section>
+		<!-- 컨텐츠2_작품목록 -->
 		<section id="cont2">
+			<!-- 상단부 비쥬얼 -->
 			<div class="show_visual"></div>
+			<!-- 모달영역 -->
 			<div class="pf_modal">
+				<!-- 모달 닫기 버튼 -->
 				<div class="btn_modal_close" title="모달 닫기">
 					<a href="#" onclick="return false"><i class="fas fa-window-close"></i></a>
 				</div>
+				<!-- 모달 애니메이션 배경 -->
 				<div class="modal_ani1"></div>
 				<div class="modal_ani2"></div>
 				<div class="modal_ani3"></div>
+				<!-- 배경1_작품 사진 -->
 				<div class="modal_bg"></div>
+				<!-- 배경2_타이포 -->
 				<div class="modal_bg_typo1">웹퍼블리싱</div>
 				<div class="modal_bg_typo2">포트폴리오</div>
+				<!-- 마우스 따라다니기 -->
 				<div class="mouse_move">
 					<div class="mouse_move_bg"></div>
 					<span class="mouse_move_tit"></span>
 				</div>
+				<!-- 마우스 따라다니기2 -->
 				<div class="mouse_move2"></div>
+				<!-- 모달_내용 영역 / 자바스크립트로 불러오기 -->
 				<div class="modal_cont"></div>
 			</div>
 			<h3>작품목록</h3>
+			<!-- 작품 목록 -->
 			<div id="pf_list">
+				<!-- 작품1 -->
 				<article class="pf pf1" title="작품1 포트폴리오 모음 페이지">
-					<a href="#" onclick="return false">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
@@ -162,6 +188,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품2 -->
 				<article class="pf pf2" title="작품2 놀이넷">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -205,6 +232,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품3 -->
 				<article class="pf pf3" title="작품3">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -234,6 +262,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품4 -->
 				<article class="pf pf4" title="작품4">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -263,6 +292,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품5 -->
 				<article class="pf pf5" title="작품5">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -292,6 +322,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품6 -->
 				<article class="pf pf6" title="작품6">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -321,6 +352,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품7 -->
 				<article class="pf pf7" title="작품7">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -350,6 +382,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품8 -->
 				<article class="pf pf8" title="작품8">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -379,6 +412,7 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품9 -->
 				<article class="pf pf9" title="작품9">
 					<a href="#" onclick="return false">
 					<div class="pf_bg"></div>
@@ -408,9 +442,11 @@
 					</p>
 					</a>
 				</article>
+				<!-- 작품목록 움직이는 배경 / 모바일은 애니메이션효과 제외 -->
 				<div class="pf_list_bg"></div>
 			</div>
 		</section>
+		<!-- 컨텐츠3_스킬영역 -->
 		<section id="cont3">
 			<h3>배운 것들/배우려는 것들</h3>
 			<div class="cont3_bg1"></div>
@@ -423,15 +459,20 @@
 			</div>
 		</section>
 </section>
+<!-- 푸터 영역 -->
 <footer>
 	<h2>푸터 영역</h2>
+	<!-- 푸터 비쥬얼영역 -->
 	<div id="footer_bg">
 		<div class="footer_bg_circle"></div>
 	</div>
+	<!-- 푸터 제목 -->
 	<div class="contact" title="연락처">
 		<div class="visual"></div>CONTACT
 	</div>
+	<!-- 푸터 내용 영역 -->
 	<div class="contact_cont">
+		<!-- 푸터_이메일 정보 -->
 		<div class="mail" title="이메일 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
@@ -444,6 +485,7 @@
 				</span>
 			</a>		
 		</div>
+		<!-- 푸터_메신저 정보 -->
 		<div class="messenger" title="카카오톡 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
@@ -454,6 +496,7 @@
 				<span class="context">ggomasungu@gmail.com</span>
 			</span>
 		</div>
+		<!-- 푸터_저작권 정보 -->
 		<div class="copyright" title="저작권 정보">
 			<div class="bg_cc"></div>
 			<div class="bg_cc2"></div>
