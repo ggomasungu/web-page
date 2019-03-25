@@ -175,7 +175,8 @@ $('.pf').click(function() {
 	$('.modal_cont').find('.concept_color').css('color',cc);
 	$('.modal_cont').find('.hex_code').text(cc);
 	$('.hex_code').css({'background':cc,'color':ctc,'padding':'0 5px'});
-	$data_pf_link=$(this).find('.pf_tit_text').data('pf-link')
+	$data_pf_link=$(this).find('.pf_tit_text').data('pf-link');
+	$('.modal_bg').parent('a').attr('href',$data_pf_link);
 });
 $('.pf_modal').click(function() {
 	$('body').css('overflow-y', 'visible');
@@ -221,7 +222,7 @@ $('.modal_bg').hover(
 		}
 		else {
 			$(this).mousemove(popup2);
-			$('.mouse_move2').text('사진 클릭 시, 새 페이지로 연결됩니다.')			
+			$('.mouse_move2').text('사진 클릭 시, 해당 페이지로 이동합니다.')			
 		}
 	}, function() {
 		$('.mouse_move2').hide();
@@ -242,7 +243,7 @@ $('.modal_cont').hover(
 
 // 모달 팝업 배경누르면 새페이지 띄우기
 $('.modal_bg').click(function() {
-	window.open($data_pf_link)
+	open_link();
 });
 
 // 푸터 애니메이션

@@ -104,17 +104,17 @@
 			<!-- 상단부 비쥬얼 -->
 			<div class="show_visual"></div>
 			<!-- 모달영역 -->
-			<div class="pf_modal">
+			<div class="pf_modal" id="popup">
 				<!-- 모달 닫기 버튼 -->
 				<div class="btn_modal_close" title="모달 닫기">
-					<a href="#" onclick="return false"><i class="fas fa-window-close"></i></a>
+					<a href="#"><i class="fas fa-window-close"></i></a>
 				</div>
 				<!-- 모달 애니메이션 배경 -->
 				<div class="modal_ani1"></div>
 				<div class="modal_ani2"></div>
 				<div class="modal_ani3"></div>
 				<!-- 배경1_작품 사진 -->
-				<div class="modal_bg"></div>
+				<a href="#"><div class="modal_bg"></div></a>
 				<!-- 배경2_타이포 -->
 				<div class="modal_bg_typo1">웹퍼블리싱</div>
 				<div class="modal_bg_typo2">포트폴리오</div>
@@ -133,7 +133,7 @@
 			<div id="pf_list">
 				<!-- 작품1 -->
 				<article class="pf pf1" title="작품1 포트폴리오 모음 페이지">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="https://ggomasungu.github.io/web-page" data-pf-bg="url(img/work1_frame.png)">포트폴리오 모음 페이지</em>
@@ -163,8 +163,8 @@
 						<br>크롬 브라우저와 1920x1080 해상도에 최적화.
 						<br>순서상으론 두번째지만 가장 중요한 페이지므로 첫번째에 두었다.
 						<span class="text_line"></span>
-						<br><span class="first_char">최</span>대한 플러그인이나 라이브러리는 배제하면서 이것저것 효과만 잔뜩 넣어보느라 난잡하기만 하다. ㅠ
-						<br>근데 유독 모바일에서 퍼포먼스가 상당히 떨어지길래, 이유는 잘 모르겠지만 과도한 애니메이션 효과때문인 것 같아서 모바일화면에서 로고정도만 제외하고 효과를 싹 다 빼버렸다.
+						<br><span class="first_char">최</span>대한 플러그인이나 라이브러리는 배제하려 노력했지만, 대신 이것저것 효과를 넣어본답시고 꽤나 난잡해졌다.
+						<br>근데 유독 모바일에서 퍼포먼스가 상당히 떨어지길래,<span class="small_text">이유는 잘 모르겠지만</span> 과도한 애니메이션 효과때문인 것 같아서 모바일화면에서 로고정도만 제외하고 효과를 싹 다 빼버렸다.
 						
 						<br><br>여튼 디자인 작업은 최소화하여 포트폴리오 화면별 이미지정도만 캡쳐하거나 수정했고 그 외에는 죄다 코딩과 딩벳폰트 위주로 구현.
 						<br>그러다 보니 사이트 디자인은 단순한 도형이나 텍스트 위주가 됐다.
@@ -172,7 +172,8 @@
 						<br><span class="first_char">사</span>실 처음에는 단순하고 깔끔하게 서체와, 폰트 사이즈, 두께정도만 조절해가면서 제목과 작품목록 정리한 것만 넣을 생각이었는데, 갑자기 애니메이션 효과에 꽂혀서 쓰잘데기 없이 많이 집어 넣어 버렸다.
 
 						<br><br>keyframes와 Jquery, animation, transition을 활용한 애니메이션과 svg를 활용한 벡터그리기 효과 등등, 직접 코드를 쓸 수 있는 선에서만 섞어봤다.
-						<br>정작 이렇게 꾸미기 위주로 하다보니 시맨틱구조와 아웃라인은 그렇다치고 웹 접근성 측면에선 미흡해진 것 같다.<span class="small_text">특히 키보드 만으로 사이트 이용 측면에서</span>
+						<br>정작 이렇게 꾸미기 위주로 하다보니 시맨틱구조와 아웃라인은 그렇다치고 웹 접근성 측면에선 미흡해진 것 같다.
+						<br>나름 챙길거 챙긴다고 일단 키보드만으로 이용 할 수 있도록 최대한 노력은 해봤다.
 						<span class="text_line"></span>
 						<br><span class="first_char">이</span> 쯤부터 웹호환성(크로스브라우징), 웹표준, 웹접근성 등을 위시하여 CSS 네이밍 방법론<span class="small_text">BEM,SMACSS,OOCSS 등</span>에 관심을 가졌지만 아직까지는 그냥 개념정도로만 잡고 작업물에 적용하진 않았다.
 						<br>어차피 클래스 네이밍같은 것은 회사자체 규정이 따로 있는 경우가 많다고 하기도 하고. 아직은 그냥 '이런것이 있다'정도만 알아도 되겠다 싶어서 보류.
@@ -190,7 +191,7 @@
 				</article>
 				<!-- 작품2 -->
 				<article class="pf pf2" title="작품2 놀이넷">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="https://ggomasungu.github.io/web-page/portfolio/work1_nolenet" data-pf-bg="url(img/work2_frame.png)">놀이넷</em>
@@ -234,7 +235,7 @@
 				</article>
 				<!-- 작품3 -->
 				<article class="pf pf3" title="작품3">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -264,7 +265,7 @@
 				</article>
 				<!-- 작품4 -->
 				<article class="pf pf4" title="작품4">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -294,7 +295,7 @@
 				</article>
 				<!-- 작품5 -->
 				<article class="pf pf5" title="작품5">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#" data-pf-bg="url(img/inthemake.png)">제작중</em>
@@ -324,7 +325,7 @@
 				</article>
 				<!-- 작품6 -->
 				<article class="pf pf6" title="작품6">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -354,7 +355,7 @@
 				</article>
 				<!-- 작품7 -->
 				<article class="pf pf7" title="작품7">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -384,7 +385,7 @@
 				</article>
 				<!-- 작품8 -->
 				<article class="pf pf8" title="작품8">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
@@ -414,7 +415,7 @@
 				</article>
 				<!-- 작품9 -->
 				<article class="pf pf9" title="작품9">
-					<a href="#" onclick="return false">
+					<a href="#popup">
 					<div class="pf_bg"></div>
 					<h4 class="pf_tit">
 						<em class="pf_tit_text" data-pf-link="#">제작중</em>
