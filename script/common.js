@@ -1,7 +1,14 @@
 $(function() {
-// 백그라운드 비디오를 위해 페이지 로딩 두번 후 애니메이션 & 공지닫기
+// 원활한 로고 비디오 로딩을 위한 로딩페이지
 window.onload = function () {
 	if(!window.location.hash) {
+		setTimeout(function () {
+			window.location = window.location + '#loaded';
+			window.location.reload()
+		},1000)
+	}
+	else {
+		$('#loading').hide();
 		if ($(window).width()<=767) {
 			$('#logo').css({
 				animation: 'logo_show_mobile 1.3s steps(200, end)',
@@ -12,13 +19,8 @@ window.onload = function () {
 				visibility: 'visible'
 			});
 		}
-		else {
-			window.location = window.location + '#loaded';
-			window.location.reload()
-		}
-	}
-	else {
-		if ($(window).width()<=767) {
+
+		else if ($(window).width()<=767) {
 		}
 		else {
 			$('#logo').css({
@@ -33,38 +35,17 @@ window.onload = function () {
 	}
 }
 
-// 스크롤 이벤트 (cont2/footer)
+// 스크롤 이벤트 (cont2/cont3)
 $(window).scroll(function() {
-	var $wsT = $(window).scrollTop(),
-		 $cont2sT = $('#cont2').offset().top,
-		 $cont3sT = $('#cont3').offset().top,
-		 $foot_sT = $('footer').offset().top;
+	var $wsT = $(window).scrollTop();
 	if ($(window).width()>767) {
-		if ($wsT < $cont2sT-$('#cont2').height()/2.7) {
-			$('.pf_list_bg').stop(true,true);
-			$('.pf').css('opacity', 0);
-			$('.pf_list_bg').css('left','100%');
-			$('.pf_bg').css('top', '-100%');
-		}
-		else if($wsT >= $cont2sT-$('#cont2').height()/2.7 && $wsT < $cont3sT-$('#cont3').height()/3) {
+		if($wsT >= $('#cont2').offset().top-$('#cont2').height()/2 && $wsT < $('#cont3').offset().top-$('#cont3').height()/3) {
 			$('.pf').css('opacity', 1);
 			$('.pf_list_bg').css('left',0)
 		}
-		else if ($wsT >= $cont3sT-$('#cont3').height()/3 && $wsT < $cont3sT-$('#cont3').height()/8) {
-			$('.pf_list_bg').stop(true,true);
-			$('.pf').css('opacity', 0);
-			$('.pf_list_bg').css('left','100%');
-			$('.pf_bg').css('top', '-100%');
-			$('.cont3_float').css({'height':0,'border-width':'100px'});
-			$('.float_bg').css({'letter-spacing':'20px','color':'white','font-size':'500%'});
-		}
-		else if ($wsT >= $cont3sT-$('#cont3').height()/8 && $wsT < $cont3sT+$('#cont3').height()/2.7) {
+		else if ($wsT >= $('#cont3').offset().top-$('#cont3').height()/8 && $wsT < $('#cont3').offset().top+$('#cont3').height()/2.7) {
 			$('.cont3_float').css({'height':'50%','border-width':'10px'});
 			$('.float_bg').css({'letter-spacing':0,'color':'#777','font-size':'100%'});
-		}
-		else if ($wsT >= $cont3sT+$('#cont3').height()/2.7 && $wsT < $foot_sT-$('footer').height()/3.2) {
-			$('.cont3_float').css({'height':0,'border-width':'100px'});
-			$('.float_bg').css({'letter-spacing':'50px','color':'white'});
 		}
 	}
 	else {}

@@ -14,6 +14,17 @@ body {padding-top:30px}
 
 /*PC기본 레이아웃 1600이상, 1920 최적화*/
 body {overflow-x: hidden;transition:background 1s}
+/*로딩화면 제이쿼리로 컨트롤*/
+#loading {
+	display: block;
+	position:fixed;z-index:100;
+	width:100vw;height:100vh;
+	padding-top: 20vh;
+	background:white;
+	text-align: center;
+	line-height: 50vh;
+	opacity: .8;
+}
 /*테마변경*/
 #btn_open_theme {
 	position:fixed;top:5px;left:5px ;z-index:120;
@@ -409,7 +420,7 @@ header {width: 100%;height: 100%;}
 	top: 0;left:100%;
 	width: 100%;height: 100%;
 	background:#991111;
-	transition:.5s;
+	transition:1s;
 }
 #cont2 #pf_list .pf {
 	opacity: 0;
@@ -520,12 +531,12 @@ header {width: 100%;height: 100%;}
 /*컨텐츠3*/
 #cont3 {
 	position: relative;
-	height:1200px;
+	height:150vh;
 	width: 100%;
 }
 #cont3 .cont3_bg1 {
 	position: relative;
-	width:100%;height:35%;
+	width:100%;height:45%;
 	background:url(../img/bg1.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
@@ -533,12 +544,12 @@ header {width: 100%;height: 100%;}
 }
 #cont3 .cont3_bg2 {
 	position: relative;z-index:10;
-	width: 100%;height:30%;
+	width: 100%;height:10%;
 	background:#991111;
 }
 #cont3 .cont3_bg3 {
 	position: relative;
-	width:100%;height:35%;
+	width:100%;height:45%;
 	background:url(../img/bg2.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
@@ -558,7 +569,7 @@ header {width: 100%;height: 100%;}
 	position: absolute;
 	color:#777;
 	white-space:nowrap;
-	transition:1s;
+	transition:2s;
 	letter-spacing:50px;
 	font-size:500%
 }
@@ -582,25 +593,7 @@ header {width: 100%;height: 100%;}
 }
 
 /*푸터*/
-footer {overflow-y:hidden}
-/*푸터_배경*/
-#footer_bg {
-	position: relative;
-	padding:10%;
-	background:linear-gradient(to right, #f12711,#991111,black,black,black,black,#991111,#f12711, #f5af19);
-	background-size:400%;
-	animation:bpl2 8s alternate infinite both;
-}
-#footer_bg .footer_bg_circle{
-	position: absolute;
-	left: 50%;top:10%;
-	transform:translate(-50%);
-	margin:0 auto;padding:20%;
-	background:linear-gradient(to right, #f5af19, orange,gold,#ebebeb,#ebebeb,#ebebeb,#ebebeb,gold,orange, #f5af19);
-	background-size:1000%;
-	border-radius:100%;
-	animation:bpr 8s alternate infinite linear;
-}
+footer {overflow:hidden;height: 100vh;background:#991111;}
 /*푸터_제목*/
 .contact {
 	position: relative;
@@ -609,7 +602,7 @@ footer {overflow-y:hidden}
 	border-bottom:20px dashed #EBEB90;
 	color:white;
 	font-size:30px;font-weight: bold;
-	transition:1s
+	transition:1s;
 }
 .contact .visual {
 	display: inline-block;
@@ -624,7 +617,7 @@ footer {overflow-y:hidden}
 	position: relative;
 	padding-top:5%;
 	text-align: center;
-	transition:1s
+	transition:1s;
 }
 .contact_cont > div {
 	vertical-align: bottom;
@@ -924,25 +917,7 @@ footer {overflow-y:hidden}
 	#cont2 #pf_list .pf .pf_cont {font-size:90%}
 
 	/*푸터*/
-	footer {overflow-y:hidden}
-	/*푸터_배경*/
-	#footer_bg {
-		position: relative;
-		padding:10%;
-		background:linear-gradient(to right, #f12711,#991111,black,black,black,black,#991111,#f12711, #f5af19);
-		background-size:400%;
-		animation:bpl2 8s alternate infinite both;
-	}
-	#footer_bg .footer_bg_circle{
-		position: absolute;
-		left: 50%;top:10%;
-		transform:translate(-50%);
-		margin:0 auto;padding:16%;
-		background:linear-gradient(to right, #f5af19, orange,gold,#ebebeb,#ebebeb,#ebebeb,#ebebeb,gold,orange, #f5af19);
-		background-size:1000%;
-		border-radius:100%;
-		animation:bpr 8s alternate infinite linear;
-	}
+	footer {}
 	/*푸터_제목*/
 	.contact {
 		position: relative;
@@ -1191,25 +1166,7 @@ footer {overflow-y:hidden}
 	#cont2 #pf_list .pf .pf_cont {font-size:90%}
 
 	/*푸터*/
-	footer {overflow-y:hidden}
-	/*푸터_배경*/
-	#footer_bg {
-		position: relative;
-		padding:10%;
-		background:linear-gradient(to right, #f12711,#991111,black,black,black,black,#991111,#f12711, #f5af19);
-		background-size:400%;
-		animation:bpl2 8s alternate infinite both;
-	}
-	#footer_bg .footer_bg_circle{
-		position: absolute;
-		left: 50%;top:10%;
-		transform:translate(-50%);
-		margin:0 auto;padding:16%;
-		background:linear-gradient(to right, #f5af19, orange,gold,#ebebeb,#ebebeb,#ebebeb,#ebebeb,gold,orange, #f5af19);
-		background-size:1000%;
-		border-radius:100%;
-		animation:bpr 8s alternate infinite linear;
-	}
+	footer {}
 	/*푸터_제목*/
 	.contact {
 		position: relative;
@@ -1511,7 +1468,6 @@ footer {overflow-y:hidden}
 	#cont2 #pf_list .pf .pf_cont {display: none}
 
 	/*컨텐츠3*/
-	#cont3 {height:700px}
 	#cont3 .cont3_float {
 		position: absolute;top:50%;left:50%;z-index: 10;
 		width:90%;height:50%;
@@ -1534,10 +1490,7 @@ footer {overflow-y:hidden}
 	#cont3 .cont3_float .float_bg3 {bottom:5%}
 
 	/*푸터*/
-	footer {overflow-y:hidden}
-
-	/*푸터_배경*/
-	#footer_bg {display: none}
+	footer {}
 
 	/*푸터_제목*/
 	.contact {
