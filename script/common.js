@@ -2,13 +2,12 @@ $(function() {
 // 원활한 로고 비디오 로딩을 위한 로딩페이지
 window.onload = function () {
 	if(!window.location.hash) {
-		setTimeout(function () {
-			window.location = window.location + '#loaded';
-			window.location.reload()
-		},1000)
+		window.location = window.location + '#loaded';
+		window.location.reload()
 	}
 	else {
 		$('#loading').hide();
+
 		if ($(window).width()<=767) {
 			$('#logo').css({
 				animation: 'logo_show_mobile 1.3s steps(200, end)',
@@ -18,9 +17,6 @@ window.onload = function () {
 				animation: 'intro_ani 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
 				visibility: 'visible'
 			});
-		}
-
-		else if ($(window).width()<=767) {
 		}
 		else {
 			$('#logo').css({
