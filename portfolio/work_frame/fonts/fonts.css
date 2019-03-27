@@ -1,0 +1,7 @@
+@font-face {
+	font-family:'';
+	font-style:normal;
+	font-weight:bold;
+	src:url('') format(''),
+		 url('') format('');
+}

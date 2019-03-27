@@ -5,5 +5,194 @@ h2,h3,h5,h6 {visibility:hidden; height:0; font-size:0}
 a {text-decoration:none;color:black;display:block}
 nav a:hover, nav a:active, nav a:focus{text-decoration:none}
 .cfx:after {content:'';display:block;clear: both}
+html {
+	font-size:20px;
+	font-family:'GothamRounded',sans-serif;
+}
 
 /*기본레이아웃*/
+header, #area1, #area2, #area3, #area4, #area5, footer {
+	width: 100%;
+	height: 100vh;
+}
+
+/*헤더*/
+header {
+	background:url(../image/area1_bg.png) no-repeat 50% 50%;
+	background-size:100% 100%;
+	font-weight: bold;
+	color:white;
+}
+header #logo {
+	position: absolute;top:10px;left: 50%;
+	transform:translateX(-50%) scale(1.2);
+}
+header #logo a {
+	display:block;
+	padding:20px;
+}
+header nav {
+	position: absolute;top:60px;left: 50%;
+	font-size:0;
+	transform:translateX(-50%);
+}
+header nav #gnb {
+	position: relative;top: 0;left: 50%;
+	display: inline-block;
+	width:140px;height:40px;
+	transform:translateX(-50%);
+}
+header nav #gnb li {
+	position: absolute;
+	width: 100%;
+}
+header nav #gnb li:nth-child(1) {left: -300%}
+header nav #gnb li:nth-child(2) {left: -140%}
+header nav #gnb li:nth-child(3) {left: 150%}
+header nav #gnb li:nth-child(4) {left: 300%}
+header nav #gnb li a {
+	display: block;
+	padding:10px;
+	color:white;
+	font-size:1rem;
+}
+header nav #gnb li a span {
+	position: absolute;
+	top: 0;left: 0;
+	transition:.7s
+}
+header nav #gnb li a .li_eng {
+	top: 0;
+	opacity:1;
+}
+header nav #gnb li a .li_kor {
+	top: 100%;
+	opacity:0;
+	transform:skewX(40deg) translateX(5px);
+	font-family:'NanumSquareRound',sans-serif;
+	font-weight:bold;
+}
+header nav #gnb li:hover a .li_eng {
+	top: -100%;
+	opacity:0;
+	transform:skewX(-40deg) translateX(5px);
+}
+header nav #gnb li:hover a .li_kor {
+	top:0;
+	opacity: 1;
+	transform:skewX(0) translateX(0);
+}
+header .slogan {
+	position: absolute;
+	top:50%;left: 50%;
+	width: 100%;
+	transform:translate(-50%,-50%);
+	text-align: center;
+	white-space:nowrap;
+}
+header .slogan .slogan1 {
+	margin-bottom:20px;
+	font-size:3rem;
+	font-weight: bold;
+	letter-spacing:5px
+}
+header .slogan .slogan2 {
+	margin-bottom: 35px;
+	font-size:1.2rem;
+	font-family:'NanumSquareRound';
+	letter-spacing:3px
+}
+header .slogan .slogan_eng {
+	opacity: 1;
+	animation:slogan1 10s alternate infinite;
+}
+header .slogan .slogan_kor {
+	opacity: 0;
+	animation:slogan2 10s alternate infinite;
+	font-family:'NanumSquareRound'
+}
+header .slogan .slogan1_span {
+	position: absolute;top:-20%;left: 50%;
+	transform:translateX(-50%);
+}
+header .slogan .slogan2_span {
+	position: absolute;top:60%;left: 50%;
+	transform:translateX(-50%)
+}
+
+@keyframes slogan1{
+	0% {opacity: 1}
+	50% {opacity: 0}
+	100% {opacity: 0}
+}
+@keyframes slogan2{
+	0% {opacity: 0}
+	50% {opacity: 0}
+	100% {opacity: 1}
+}
+
+header .slogan button {
+	position: relative;
+	top: 100px;
+	padding: 20px 40px;
+	background: #16a085;
+	border:none;
+	border-radius:5px;
+	cursor: pointer;
+	color:white;
+	font-size:1rem;
+	font-family:'GothamRounded';
+	font-weight: bold;
+}
+header .slogan button span {transition:.7s}
+header .slogan button .start_eng {
+	opacity: 1;
+}
+header .slogan button .start_kor {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%, -50%);
+	opacity: 0;
+	text-indent:-300px;
+	font-family:'NanumSquareRound';
+}
+header .slogan button:hover .start_eng {
+	opacity: 0;
+	text-indent:-300px
+}
+header .slogan button:hover .start_kor {
+	opacity: 1;
+	text-indent:0;
+}
+header .sns {
+	position: absolute;bottom:30px;left: 50%;
+	transform:translateX(-50%);
+}
+header .sns li {
+	float: left;
+}
+header .sns li a {
+	display: block;
+	padding:20px;
+}
+header .sns li a img {
+	transform:scale(1.4);
+	transition:.5s
+}
+header .sns li:hover a img {
+	transform:scale(2);
+}
+
+/*섹션1*/
+
+@media (min-width:1024px) and (max-width:1278px) {
+header {background-size:cover}
+}
+	
+@media (min-width:768px) and (max-width:1023px) {
+header {background-size:cover}	
+}
+
+@media screen and (max-width:767px) {
+body {min-width:320px}
+header {background-size:cover}
+}
