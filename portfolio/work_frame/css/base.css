@@ -1,0 +1,9 @@
+/*숨김처리*/
+h2,h3,h5,h6 {visibility:hidden; height:0; font-size:0}
+
+/*기본설정*/
+a {text-decoration:none;color:black;display:block}
+nav a:hover, nav a:active, nav a:focus{text-decoration:none}
+.cfx:after {content:'';display:block;clear: both}
+
+/*기본레이아웃*/

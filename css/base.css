@@ -406,6 +406,7 @@ header {width: 100%;height: 100%;}
 	background:white;
 	transform:translateX(-50%);
 }
+
 /*컨텐츠2_작품리스트*/
 #cont2 #pf_list {
 	position: relative;
