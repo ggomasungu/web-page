@@ -23,9 +23,9 @@
 }
 
 @font-face {
-	font-family:'NanumSquareRound';
+	font-family:'BMJUA';
 	font-style:normal;
-	font-weight:bold;
-	src:url('NanumSquareRoundEB.woff') format('woff'),
-		 url('NanumSquareRoundEB.ttf') format('truetype');
+	font-weight:normal;
+	src:url('BMJUA_otf.otf') format('opentype'),
+		 url('BMJUA_ttf.ttf') format('truetype');
 }

@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2,h3,h5,h6 {visibility:hidden; height:0; font-size:0}
+h2,h3,h5,h6, legend {visibility:hidden; height:0; font-size:0}
 
 /*기본설정*/
 a {text-decoration:none;color:black;display:block}
@@ -15,16 +15,19 @@ header, #area1, #area2, #area3, #area4, #area5, footer {
 	width: 100%;
 	height: 100vh;
 }
+#area5 {height:80vh}
+footer {height:20vh}
 
 /*헤더*/
 header {
 	background:url(../image/area1_bg.png) no-repeat 50% 50%;
 	background-size:100% 100%;
+	background-attachment:fixed;
 	font-weight: bold;
 	color:white;
 }
 header #logo {
-	position: absolute;top:10px;left: 50%;
+	position: absolute;top:10px;left: 50%;z-index: 10;
 	transform:translateX(-50%) scale(1.2);
 }
 header #logo a {
@@ -69,8 +72,9 @@ header nav #gnb li a .li_kor {
 	top: 100%;
 	opacity:0;
 	transform:skewX(40deg) translateX(5px);
-	font-family:'NanumSquareRound',sans-serif;
-	font-weight:bold;
+	font-family:'BMJUA',sans-serif;
+	font-weight: normal;
+	font-weight:normal;
 }
 header nav #gnb li:hover a .li_eng {
 	top: -100%;
@@ -98,9 +102,8 @@ header .slogan .slogan1 {
 }
 header .slogan .slogan2 {
 	margin-bottom: 35px;
-	font-size:1.2rem;
-	font-family:'NanumSquareRound';
-	letter-spacing:3px
+	font-size:1.1rem;
+	letter-spacing:5px
 }
 header .slogan .slogan_eng {
 	opacity: 1;
@@ -109,7 +112,8 @@ header .slogan .slogan_eng {
 header .slogan .slogan_kor {
 	opacity: 0;
 	animation:slogan2 10s alternate infinite;
-	font-family:'NanumSquareRound'
+	font-family:'BMJUA';
+	font-weight: normal;
 }
 header .slogan .slogan1_span {
 	position: absolute;top:-20%;left: 50%;
@@ -117,24 +121,26 @@ header .slogan .slogan1_span {
 }
 header .slogan .slogan2_span {
 	position: absolute;top:60%;left: 50%;
-	transform:translateX(-50%)
+	transform:translateX(-50%);
 }
 
 @keyframes slogan1{
 	0% {opacity: 1}
-	50% {opacity: 0}
+	20% {opacity: 1;letter-spacing:5px}
+	50% {opacity: 0;letter-spacing:-10px}
 	100% {opacity: 0}
 }
 @keyframes slogan2{
 	0% {opacity: 0}
-	50% {opacity: 0}
+	50% {opacity: 0;letter-spacing:-10px}
+	80% {opacity: 1;letter-spacing:5px}
 	100% {opacity: 1}
 }
 
 header .slogan button {
 	position: relative;
 	top: 100px;
-	padding: 20px 40px;
+	width: 250px;height:80px;
 	background: #16a085;
 	border:none;
 	border-radius:5px;
@@ -146,22 +152,24 @@ header .slogan button {
 }
 header .slogan button span {transition:.7s}
 header .slogan button .start_eng {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%,-50%) scaleY(1);
 	opacity: 1;
 }
 header .slogan button .start_kor {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%, -50%);
+	transform:translate(-50%, 0) scaleY(0);
 	opacity: 0;
-	text-indent:-300px;
-	font-family:'NanumSquareRound';
+	font-family:'BMJUA';
+	font-weight: normal;
 }
 header .slogan button:hover .start_eng {
 	opacity: 0;
-	text-indent:-300px
+	transform:translate(-50%, -100%) scaleY(0);
 }
 header .slogan button:hover .start_kor {
 	opacity: 1;
-	text-indent:0;
+	transform:translate(-50%, -50%) scaleY(1);
 }
 header .sns {
 	position: absolute;bottom:30px;left: 50%;
@@ -172,17 +180,287 @@ header .sns li {
 }
 header .sns li a {
 	display: block;
-	padding:20px;
+	padding:10px;
+	margin-left:20px;
+	font-size:2rem;
+	color:white;
+	transition:.5s;
 }
-header .sns li a img {
-	transform:scale(1.4);
-	transition:.5s
+header .sns li:nth-of-type(1) a {
+	margin-left: 0;
 }
-header .sns li:hover a img {
-	transform:scale(2);
+header .sns li:hover a {
+	color:#16a085;
 }
 
 /*섹션1*/
+#area1 {
+	position: relative;
+	background:#f5f6f7 url(../image/area2_bg.png) no-repeat 80% 100%;
+	background-attachment:fixed
+}
+#area1 .area1_box {
+	position: absolute;top:50%;left: 0;
+	transform:translateY(-50%);
+	margin:0 10%;
+	width:35%;
+}
+#area1 .area1_box .area1_tit {
+	margin-bottom:15%;
+	font-weight: bold;
+	font-size:1.5rem;
+	letter-spacing:0.2rem;
+	color:#16a085;
+	line-height:1.2;
+}
+#area1 .area1_box .area1_text {
+	margin-bottom:15%;
+	font-size:0.8rem;
+	letter-spacing:0.15rem;
+	line-height:2;
+}
+#area1 .area1_box .area1_text strong {font-weight: bold}
+
+#area1 .area1_box button {
+	position: relative;
+	width: 250px;height:80px;
+	background: #16a085;
+	border:none;
+	border-radius:5px;
+	cursor: pointer;
+	color:white;
+	font-size:1rem;
+	font-family:'GothamRounded';
+	font-weight: bold;
+	white-space:nowrap;
+}
+#area1 .area1_box button span {transition:.7s}
+#area1 .area1_box button .start_eng {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%,-50%) scaleY(1);
+	opacity: 1;
+}
+#area1 .area1_box button .start_kor {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%, 0) scaleY(0);
+	opacity: 0;
+	font-family:'BMJUA';
+	font-weight: normal;
+}
+#area1 .area1_box button:hover .start_eng {
+	opacity: 0;
+	transform:translate(-50%, -100%) scaleY(0);
+}
+#area1 .area1_box button:hover .start_kor {
+	opacity: 1;
+	transform:translate(-50%, -50%) scaleY(1);
+}
+
+/*섹션2*/
+#area2 {
+	position: relative;
+	background:#fff url(../image/area3_bg.png) no-repeat 11% 160%;
+	background-attachment:fixed
+}
+#area2 .area2_box {
+	position: absolute;top:50%;right: 0;
+	transform:translateY(-50%);
+	margin:0 10%;
+	width:35%;
+}
+#area2 .area2_box .area2_tit {
+	margin-bottom:8%;
+	font-weight: bold;
+	font-size:1.5rem;
+	letter-spacing:0.2rem;
+	color:#16a085;
+	line-height:1.2;
+}
+#area2 .area2_box .area2_text {
+	margin-bottom:8%;
+	font-size:0.8rem;
+	letter-spacing:0.15rem;
+	line-height:2;
+}
+#area2 .area2_box .area2_text strong {font-weight: bold}
+
+#area2 .area2_box button {
+	position: relative;
+	width: 250px;height:80px;
+	margin-bottom:8%;
+	background: #16a085;
+	border:none;
+	border-radius:5px;
+	cursor: pointer;
+	color:white;
+	font-size:1rem;
+	font-family:'GothamRounded';
+	font-weight: bold;
+	white-space:nowrap;
+}
+#area2 .area2_box button span {transition:.7s}
+#area2 .area2_box button .start_eng {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%,-50%) scaleY(1);
+	opacity: 1;
+}
+#area2 .area2_box button .start_kor {
+	position: absolute;top: 50%;left: 50%;
+	transform:translate(-50%, 0) scaleY(0);
+	opacity: 0;
+	font-family:'BMJUA';
+	font-weight: normal;
+}
+#area2 .area2_box button:hover .start_eng {
+	opacity: 0;
+	transform:translate(-50%, -100%) scaleY(0);
+}
+#area2 .area2_box button:hover .start_kor {
+	opacity: 1;
+	transform:translate(-50%, -50%) scaleY(1);
+}
+#area2 .area2_box .slide_controls {
+	width:65px;
+}
+#area2 .area2_box .slide_controls .slide_order {
+	margin-bottom: 10px;
+	padding-left: 2px;
+	font-weight: bold;
+	font-size:0.9rem;
+	letter-spacing:2px
+}
+#area2 .area2_box .slide_controls .slide_btn {
+}
+#area2 .area2_box .slide_controls .slide_btn li:nth-child(1) {float: left}
+#area2 .area2_box .slide_controls .slide_btn li:nth-child(2) {float: right}
+#area2 .area2_box .slide_controls .slide_btn li a {
+	display:block;
+	padding:5px 8px;
+	font-size:1.3rem;
+	transition:.5s;
+}
+#area2 .area2_box .slide_controls .slide_btn li:hover a {
+	color:#16a085;
+}
+
+/*섹션3*/
+#area3 {position: relative;background: #f5f6f7}
+#area3 .area3_box {
+	position: relative;top:50%;
+	transform:translateY(-50%);
+	float: left;
+	margin:0 5% 0 10%;
+	width:20%;
+	text-align: center;
+}
+#area3 .area3_box img {
+	margin-bottom:15%;
+	transform:scale(1.5);
+}
+#area3 .area3_box .area3_tit {
+	margin-bottom:8%;
+	font-size:1.5rem;
+	letter-spacing:0.2rem;
+	font-weight: bold;
+}
+#area3 .area3_box .area3_text {
+	width:65%;
+	margin: 0 auto;
+	font-size:0.9rem;
+	line-height:1.3
+}
+#area3 .slide_box {
+	position: relative;top:50%;
+	transform:translateY(-50%);
+	float: right;
+	margin:0 15% 0 0;
+	width:50%;
+}
+#area3 .slide_box .slide_btn {float: right;margin-bottom:1%;}
+#area3 .slide_box .slide_btn li {float:left}
+#area3 .slide_box .slide_btn li a {
+	display:block;
+	padding:5px 8px;
+	font-size:1.3rem;
+	transition:.5s;
+}
+
+#area3 .slide_box .slide_btn li:hover a {
+	color:#16a085;
+}
+#area3 .slide_box .slide_images {
+	float: left;
+	width: 100%;
+}
+#area3 .slide_box .slide_images li {
+	float: left;
+	width:44.5%;
+	margin-left:5%;
+}
+#area3 .slide_box .slide_images li a img {
+	width:100%;
+}
+
+/*섹션4*/
+#area4 {
+	position: relative;
+	background:#16a085 url(../image/area5_bg.png) no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	text-align: center;
+}
+#area4 .area4_box {
+	position:relative;top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
+#area4 .area4_box .area4_tit {
+	margin-bottom:2%;
+	color:white;
+	font-weight: bold;
+	font-size:1.5rem;
+	letter-spacing:0.2rem;
+}
+#area4 .area4_box form {font-size:0}
+#area4 .area4_box form input{
+	position: relative;
+	border:none;
+	width:280px;height:60px;
+	padding:0 20px;
+	border-radius:5px 0 0 5px;
+	font-family:'GothamRounded';
+	font-weight: bold;
+	font-size:1rem;
+	letter-spacing:3px
+}
+#area4 .area4_box form input:focus {
+	letter-spacing:0;
+}
+#area4 .area4_box form button {
+	position: relative;left:-1px;
+	border:7px solid transparent;
+	border-radius:0 5px 5px 0;
+	box-sizing:border-box;
+	width: 65px;
+	height: 60px;
+	background: #16a085;
+	color:white;
+	font-weight: bold;
+	transition:.5s;
+	cursor: pointer;
+}
+#area4 .area4_box form button i {
+	font-size:1rem;
+}
+#area4 .area4_box form button:hover {
+	border:7px solid #16a085;
+	background:white;
+	color:#16a085;
+}
+
+/*섹션5*/
+#area5 {
+	background: #f5f6f7;
+}
 
 @media (min-width:1024px) and (max-width:1278px) {
 header {background-size:cover}
