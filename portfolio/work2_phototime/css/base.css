@@ -424,13 +424,13 @@ header .sns li:hover a {
 #area4 .area4_box form input{
 	position: relative;
 	border:none;
-	width:280px;height:60px;
-	padding:0 20px;
+	width:280px;height:70px;
+	padding:0 1rem;
 	border-radius:5px 0 0 5px;
 	font-family:'GothamRounded';
 	font-weight: bold;
-	font-size:1rem;
-	letter-spacing:3px
+	font-size:.9rem;
+	letter-spacing:3px;
 }
 #area4 .area4_box form input:focus {
 	letter-spacing:0;
@@ -441,7 +441,7 @@ header .sns li:hover a {
 	border-radius:0 5px 5px 0;
 	box-sizing:border-box;
 	width: 65px;
-	height: 60px;
+	height: 70px;
 	background: #16a085;
 	color:white;
 	font-weight: bold;
