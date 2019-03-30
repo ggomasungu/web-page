@@ -18,6 +18,15 @@ header, #area1, #area2, #area3, #area4, #area5, footer {
 #area5 {height:80vh}
 footer {height:20vh}
 
+/*바디*/
+#logo {
+	position: absolute;top:10px;left: 50%;z-index: 10;
+	transform:translateX(-50%) scale(1.2);
+}
+#logo a {
+	display:block;
+	padding:20px;
+}
 /*헤더*/
 header {
 	background:url(../image/area1_bg.png) no-repeat 50% 50%;
@@ -25,14 +34,6 @@ header {
 	background-attachment:fixed;
 	font-weight: bold;
 	color:white;
-}
-header #logo {
-	position: absolute;top:10px;left: 50%;z-index: 10;
-	transform:translateX(-50%) scale(1.2);
-}
-header #logo a {
-	display:block;
-	padding:20px;
 }
 header nav {
 	position: absolute;top:60px;left: 50%;
