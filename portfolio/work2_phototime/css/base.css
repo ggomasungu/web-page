@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2,h3,h5,h6, legend {visibility:hidden; height:0; font-size:0}
+h2, h3, h4, h5, h6 {position: absolute;z-index: -1}
 
 /*기본설정*/
 a {text-decoration:none;color:black;display:block}
@@ -153,24 +153,19 @@ header .slogan button {
 header .slogan button span {transition:.7s}
 header .slogan button .start_eng {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%,-50%) scaleY(1);
+	transform:translate(-50%,-50%);
 	opacity: 1;
 }
 header .slogan button .start_kor {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%, 0) scaleY(0);
+	transform:translate(-50%,-50%);
 	opacity: 0;
 	font-family:'BMJUA';
 	font-weight: normal;
+	letter-spacing:-10px
 }
-header .slogan button:hover .start_eng {
-	opacity: 0;
-	transform:translate(-50%, -100%) scaleY(0);
-}
-header .slogan button:hover .start_kor {
-	opacity: 1;
-	transform:translate(-50%, -50%) scaleY(1);
-}
+header .slogan button:hover .start_eng {opacity: 0;letter-spacing:-10px}
+header .slogan button:hover .start_kor {opacity: 1;letter-spacing:0}
 header .sns {
 	position: absolute;bottom:30px;left: 50%;
 	transform:translateX(-50%);
@@ -237,24 +232,19 @@ header .sns li:hover a {
 #area1 .area1_box button span {transition:.7s}
 #area1 .area1_box button .start_eng {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%,-50%) scaleY(1);
+	transform:translate(-50%,-50%);
 	opacity: 1;
 }
 #area1 .area1_box button .start_kor {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%, 0) scaleY(0);
+	transform:translate(-50%,-50%);
 	opacity: 0;
 	font-family:'BMJUA';
 	font-weight: normal;
+	letter-spacing:-10px
 }
-#area1 .area1_box button:hover .start_eng {
-	opacity: 0;
-	transform:translate(-50%, -100%) scaleY(0);
-}
-#area1 .area1_box button:hover .start_kor {
-	opacity: 1;
-	transform:translate(-50%, -50%) scaleY(1);
-}
+#area1 .area1_box button:hover .start_eng {opacity: 0;letter-spacing:-10px}
+#area1 .area1_box button:hover .start_kor {opacity: 1;letter-spacing:0}
 
 /*섹션2*/
 #area2 {
@@ -301,24 +291,19 @@ header .sns li:hover a {
 #area2 .area2_box button span {transition:.7s}
 #area2 .area2_box button .start_eng {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%,-50%) scaleY(1);
+	transform:translate(-50%,-50%);
 	opacity: 1;
 }
 #area2 .area2_box button .start_kor {
 	position: absolute;top: 50%;left: 50%;
-	transform:translate(-50%, 0) scaleY(0);
+	transform:translate(-50%,-50%);
 	opacity: 0;
 	font-family:'BMJUA';
 	font-weight: normal;
+	letter-spacing:-10px
 }
-#area2 .area2_box button:hover .start_eng {
-	opacity: 0;
-	transform:translate(-50%, -100%) scaleY(0);
-}
-#area2 .area2_box button:hover .start_kor {
-	opacity: 1;
-	transform:translate(-50%, -50%) scaleY(1);
-}
+#area2 .area2_box button:hover .start_eng {opacity: 0;letter-spacing:-10px}
+#area2 .area2_box button:hover .start_kor {opacity: 1;letter-spacing:0}
 #area2 .area2_box .slide_controls {
 	width:65px;
 }
@@ -396,6 +381,16 @@ header .sns li:hover a {
 	float: left;
 	width:44.5%;
 	margin-left:5%;
+	border:10px solid transparent;
+	box-sizing:border-box;
+	font-size: 0;
+	transition:border .7s
+}
+#area3 .slide_box .slide_images li:hover {
+	border-color:#16a085
+}
+#area3 .slide_box .slide_images li:target {
+	border-color:#16a085
 }
 #area3 .slide_box .slide_images li a img {
 	width:100%;
@@ -420,9 +415,8 @@ header .sns li:hover a {
 	font-size:1.5rem;
 	letter-spacing:0.2rem;
 }
-#area4 .area4_box form {font-size:0}
+#area4 .area4_box form {font-size: 0}
 #area4 .area4_box form input{
-	position: relative;
 	border:none;
 	width:280px;height:70px;
 	padding:0 1rem;
@@ -435,9 +429,11 @@ header .sns li:hover a {
 #area4 .area4_box form input:focus {
 	letter-spacing:0;
 }
+#area4 .area4_box form input:invalid {
+	background:#dd0011;color:white;
+}
 #area4 .area4_box form button {
-	position: relative;left:-1px;
-	border:7px solid transparent;
+	border:none;
 	border-radius:0 5px 5px 0;
 	box-sizing:border-box;
 	width: 65px;
