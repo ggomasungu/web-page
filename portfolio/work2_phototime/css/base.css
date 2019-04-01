@@ -1,5 +1,5 @@
 /*숨김처리*/
-h2, h3, h4, h5, h6 {position: absolute;z-index: -1}
+h2, h3, h4, h5, h6 {position: absolute;z-index:-1}
 
 /*기본설정*/
 a {text-decoration:none;color:black;display:block}
@@ -9,6 +9,7 @@ html {
 	font-size:20px;
 	font-family:'GothamRounded',sans-serif;
 }
+body {background-color:white}
 
 /*기본레이아웃*/
 header, #area1, #area2, #area3, #area4, #area5, footer {
