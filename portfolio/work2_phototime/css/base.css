@@ -9,7 +9,6 @@ html {
 	font-size:20px;
 	font-family:'GothamRounded',sans-serif;
 }
-body {background-color:white}
 
 /*기본레이아웃*/
 header, #area1, #area2, #area3, #area4, #area5, footer {
