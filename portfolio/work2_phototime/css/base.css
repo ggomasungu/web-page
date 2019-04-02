@@ -1,9 +1,10 @@
 /*숨김처리*/
-h2, h3, h4, h5, h6 {position: absolute;z-index:-1}
+h2, h3, h4, h5, h6 {position: absolute;z-index:-1;width: 1px;height: 1px;left:-100%}
+body {overflow-x:hidden}
 
 /*기본설정*/
 a {text-decoration:none;color:black;display:block}
-nav a:hover, nav a:active, nav a:focus{text-decoration:none}
+a:hover, a:active, a:focus{text-decoration:none}
 .cfx:after {content:'';display:block;clear: both}
 html {
 	font-size:20px;
@@ -83,6 +84,16 @@ header nav #gnb li:hover a .li_eng {
 	transform:skewX(-40deg) translateX(5px);
 }
 header nav #gnb li:hover a .li_kor {
+	top:0;
+	opacity: 1;
+	transform:skewX(0) translateX(0);
+}
+header nav #gnb li a:focus .li_eng {
+	top: -100%;
+	opacity:0;
+	transform:skewX(-40deg) translateX(5px);
+}
+header nav #gnb li a:focus .li_kor {
 	top:0;
 	opacity: 1;
 	transform:skewX(0) translateX(0);
@@ -167,13 +178,13 @@ header .slogan button .start_kor {
 }
 header .slogan button:hover .start_eng {opacity: 0;letter-spacing:-10px}
 header .slogan button:hover .start_kor {opacity: 1;letter-spacing:0}
+header .slogan button:focus .start_eng {opacity: 0;letter-spacing:-10px}
+header .slogan button:focus .start_kor {opacity: 1;letter-spacing:0}
 header .sns {
 	position: absolute;bottom:30px;left: 50%;
 	transform:translateX(-50%);
 }
-header .sns li {
-	float: left;
-}
+header .sns li {float: left}
 header .sns li a {
 	display: block;
 	padding:10px;
@@ -182,12 +193,9 @@ header .sns li a {
 	color:white;
 	transition:.5s;
 }
-header .sns li:nth-of-type(1) a {
-	margin-left: 0;
-}
-header .sns li:hover a {
-	color:#16a085;
-}
+header .sns li:nth-of-type(1) a {margin-left: 0}
+header .sns li:hover a {color:#16a085}
+header .sns li a:focus {color:#16a085}
 
 /*섹션1*/
 #area1 {
@@ -246,6 +254,8 @@ header .sns li:hover a {
 }
 #area1 .area1_box button:hover .start_eng {opacity: 0;letter-spacing:-10px}
 #area1 .area1_box button:hover .start_kor {opacity: 1;letter-spacing:0}
+#area1 .area1_box button:focus .start_eng {opacity: 0;letter-spacing:-10px}
+#area1 .area1_box button:focus .start_kor {opacity: 1;letter-spacing:0}
 
 /*섹션2*/
 #area2 {
@@ -305,6 +315,8 @@ header .sns li:hover a {
 }
 #area2 .area2_box button:hover .start_eng {opacity: 0;letter-spacing:-10px}
 #area2 .area2_box button:hover .start_kor {opacity: 1;letter-spacing:0}
+#area2 .area2_box button:focus .start_eng {opacity: 0;letter-spacing:-10px}
+#area2 .area2_box button:focus .start_kor {opacity: 1;letter-spacing:0}
 #area2 .area2_box .slide_controls {
 	width:65px;
 }
@@ -325,9 +337,8 @@ header .sns li:hover a {
 	font-size:1.3rem;
 	transition:.5s;
 }
-#area2 .area2_box .slide_controls .slide_btn li:hover a {
-	color:#16a085;
-}
+#area2 .area2_box .slide_controls .slide_btn li:hover a {color:#16a085}
+#area2 .area2_box .slide_controls .slide_btn li a:focus {color:#16a085}
 
 /*섹션3*/
 #area3 {position: relative;background: #f5f6f7}
@@ -371,9 +382,8 @@ header .sns li:hover a {
 	transition:.5s;
 }
 
-#area3 .slide_box .slide_btn li:hover a {
-	color:#16a085;
-}
+#area3 .slide_box .slide_btn li:hover a {color:#16a085}
+#area3 .slide_box .slide_btn li a:focus {color:#16a085}
 #area3 .slide_box .slide_images {
 	float: left;
 	width: 100%;
@@ -382,20 +392,17 @@ header .sns li:hover a {
 	float: left;
 	width:44.5%;
 	margin-left:5%;
+	font-size: 0;
+}
+#area3 .slide_box .slide_images li a {
+	display: block;
 	border:10px solid transparent;
 	box-sizing:border-box;
-	font-size: 0;
 	transition:border .7s
 }
-#area3 .slide_box .slide_images li:hover {
-	border-color:#16a085
-}
-#area3 .slide_box .slide_images li:target {
-	border-color:#16a085
-}
-#area3 .slide_box .slide_images li a img {
-	width:100%;
-}
+#area3 .slide_box .slide_images li a:hover {border-color:#16a085}
+#area3 .slide_box .slide_images li a:focus {border-color:#16a085}
+#area3 .slide_box .slide_images li a img {width:100%}
 
 /*섹션4*/
 #area4 {
@@ -427,12 +434,8 @@ header .sns li:hover a {
 	font-size:.9rem;
 	letter-spacing:3px;
 }
-#area4 .area4_box form input:focus {
-	letter-spacing:0;
-}
-#area4 .area4_box form input:invalid {
-	background:#dd0011;color:white;
-}
+#area4 .area4_box form input:focus {letter-spacing:0}
+#area4 .area4_box form input:invalid {background:#dd0011;color:white}
 #area4 .area4_box form button {
 	border:none;
 	border-radius:0 5px 5px 0;
@@ -445,19 +448,58 @@ header .sns li:hover a {
 	transition:.5s;
 	cursor: pointer;
 }
-#area4 .area4_box form button i {
-	font-size:1rem;
-}
+#area4 .area4_box form button i {font-size:1rem}
 #area4 .area4_box form button:hover {
+	border:7px solid #16a085;
+	background:white;
+	color:#16a085;
+}
+#area4 .area4_box form button:focus {
 	border:7px solid #16a085;
 	background:white;
 	color:#16a085;
 }
 
 /*섹션5*/
-#area5 {
-	background: #f5f6f7;
+#area5 {position: relative;background: #f5f6f7}
+#area5 .area5_box {
+	position: absolute;top:25%;left: 50%;
+	transform:translateX(-50%);
 }
+#area5 .area5_box .area5_tit {
+	margin-bottom:2%;
+	font-size:1.5rem;
+	font-weight: bold;
+	letter-spacing:0.2rem;
+	text-align: center;
+}
+#area5 .area5_box .area5_text {
+	margin-bottom:7%;
+	font-size:0.9rem;
+	letter-spacing:0.1rem;
+	line-height:1.2rem;
+	text-align: center;
+}
+#area5 .area5_box .download_link {
+	border: 1px solid #000;
+	text-align: center;
+}
+#area5 .area5_box .download_link li {
+	display: inline-block;
+	font-size:1.5rem;
+	font-weight: bold;
+	background: #16a085;
+}
+#area5 .area5_box .download_link li a {
+	color:white;
+}
+#area5 .area5_box .download_link .apple_store {
+	
+}
+#area5 .area5_box .download_link .play_store {
+	
+}
+
 
 @media (min-width:1024px) and (max-width:1278px) {
 header {background-size:cover}
