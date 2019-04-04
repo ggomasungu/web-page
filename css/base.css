@@ -25,6 +25,25 @@ body {overflow-x: hidden;transition:background 1s}
 	line-height: 50vh;
 	opacity: .8;
 }
+/*스킵 네비게이션*/
+#skip_nav {
+	position: absolute;top: 0;left: 0;z-index: 130;
+	width: 100%;
+}
+#skip_nav a {
+	position: absolute;top: 0;left: 0;
+	opacity: 0;
+	width: 100%;height:0;
+	background:blue;
+	color:white;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px
+}
+#skip_nav a:focus {
+	opacity: 1;
+	height:30px;
+}
 /*테마변경*/
 #btn_open_theme {
 	position:fixed;top:5px;left:5px ;z-index:120;
@@ -484,47 +503,47 @@ header {width: 100%;height: 100%;}
 	display: none;
 }
 #cont2 #pf_list .pf.pf1 {
-	background:url(../img/work1.png) no-repeat;
+	background:url(../img/work1_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf2 {
-	background:url(../img/work2.png) no-repeat;
+	background:url(../img/work2_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf3 {
-	background:url(../img/work3.png) no-repeat;
+	background:url(../img/work3_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf4 {
-	background:url(../img/work4.png) no-repeat;
+	background:url(../img/work4_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf5 {
-	background:url(../img/work5.png) no-repeat;
+	background:url(../img/work5_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf6 {
-	background:url(../img/work6.png) no-repeat;
+	background:url(../img/work6_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf7 {
-	background:url(../img/work7.png) no-repeat;
+	background:url(../img/work7_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf8 {
-	background:url(../img/work8.png) no-repeat;
+	background:url(../img/work8_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
 #cont2 #pf_list .pf.pf9 {
-	background:url(../img/work9.png) no-repeat;
+	background:url(../img/work9_resize.jpg) no-repeat;
 	background-size:100% 100%;
 	background-position:center
 }
@@ -538,7 +557,7 @@ header {width: 100%;height: 100%;}
 #cont3 .cont3_bg1 {
 	position: relative;
 	width:100%;height:45%;
-	background:url(../img/bg1.jpg) no-repeat;
+	background:url(../img/bg1_resize.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 	background-position:center;
@@ -551,7 +570,7 @@ header {width: 100%;height: 100%;}
 #cont3 .cont3_bg3 {
 	position: relative;
 	width:100%;height:45%;
-	background:url(../img/bg2.jpg) no-repeat;
+	background:url(../img/bg2_resize.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 	background-position:center;
@@ -594,7 +613,7 @@ header {width: 100%;height: 100%;}
 }
 
 /*푸터*/
-footer {overflow:hidden;height: 100vh;background:#991111;}
+footer {overflow:hidden;height:70vh;background:#991111;}
 /*푸터_제목*/
 .contact {
 	position: relative;

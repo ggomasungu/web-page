@@ -47,6 +47,13 @@ $(window).scroll(function() {
 	else {}
 });
 
+// 스킵네비게이션 부드럽게 이동
+$('#skip_nav').find('a').click(function(e) {
+	e.preventDefault();
+	$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	//$(this).attr('href').focus() 포커스 이동 구현이 안됨... 미완성
+});
+
 // 공지 카운트다운 & 자동닫기
 var count = 5; //기본 5초로 설정
 notice_count = setInterval(function () {
@@ -133,16 +140,28 @@ $('.pf').hover(
 	}
 );
 
+//리사이즈 시 모달팝업 사이즈도 같이 변경
+$(window).resize(function() {
+	$('.pf_modal').css({'top':$(window).scrollTop()-$('#cont2').offset().top,'width':$(window).width(),'height':$(window).height()});
+});
+
 // 포트폴리오 모달 팝업 여닫기
 var $data_pf_link;
 $('.pf').click(function() {
 	$('body').css('overflow-y', 'hidden');
-	$modal_width = $(window).width();
-	$modal_height = $(window).height();
-	$modal_top = $(window).scrollTop()-$('#cont2').offset().top;
+	var $modal_width = $(window).width(),
+		 $modal_height = $(window).height(),
+		 $modal_top = $(window).scrollTop()-$('#cont2').offset().top;
+
 	$('.pf_modal').css({'top':$modal_top,'width':$modal_width,'height':$modal_height});
 	$('.pf_modal').fadeIn(500);
-	$('.modal_bg').css({'background-image':$(this).find('.pf_tit_text').data('pf-bg')});
+
+	if ($(window).width()<=767) {
+		$('.modal_bg').css({'background-image':$(this).find('.pf_tit_text').data('pf-bg-mobile')});
+	} else {
+		$('.modal_bg').css({'background-image':$(this).find('.pf_tit_text').data('pf-bg')});
+	}
+
 	$('.modal_bg').fadeIn(500);
 	pftit = $(this).find('.pf_tit_text').text();
 	$('.mouse_move_tit').html(pftit+'&nbsp;<i class="fas fa-question-circle"></i>');
