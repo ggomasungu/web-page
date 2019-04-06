@@ -183,6 +183,7 @@ header .slogan button:focus .start_kor {opacity: 1;letter-spacing:0}
 header .sns {
 	position: absolute;bottom:30px;left: 50%;
 	transform:translateX(-50%);
+	overflow-x: hidden;
 }
 header .sns li {float: left}
 header .sns li a {

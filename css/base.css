@@ -27,23 +27,20 @@ body {overflow-x: hidden;transition:background 1s}
 }
 /*스킵 네비게이션*/
 #skip_nav {
-	position: absolute;top: 0;left: 0;z-index: 130;
-	width: 100%;
+	position: absolute;top: 0;left: 0;
+	width: 100%;height: 30px;
 }
 #skip_nav a {
-	position: absolute;top: 0;left: 0;
-	opacity: 0;
-	width: 100%;height:0;
-	background:blue;
+	display:block;
+	position: absolute;top: 0;left: 0;z-index: -1;
+	width: 100%;
+	background:#119933;
 	color:white;
-	font-weight: bold;
-	text-align: center;
-	line-height: 30px
+	font-weight:bold;
+	text-align:center;
+	line-height:30px
 }
-#skip_nav a:focus {
-	opacity: 1;
-	height:30px;
-}
+#skip_nav a:focus {z-index: 130}
 /*테마변경*/
 #btn_open_theme {
 	position:fixed;top:5px;left:5px ;z-index:120;
@@ -553,31 +550,38 @@ header {width: 100%;height: 100%;}
 	position: relative;
 	height:150vh;
 	width: 100%;
+	overflow-x: hidden;
 }
 #cont3 .cont3_bg1 {
 	position: relative;
-	width:100%;height:45%;
+	width:100%;height:50%;
 	background:url(../img/bg1_resize.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 	background-position:center;
 }
 #cont3 .cont3_bg2 {
-	position: relative;z-index:10;
-	width: 100%;height:10%;
-	background:#991111;
-}
-#cont3 .cont3_bg3 {
 	position: relative;
-	width:100%;height:45%;
+	width:100%;height:50%;
 	background:url(../img/bg2_resize.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 	background-position:center;
 }
-#cont3 .cont3_float {
+#cont3 .cont3_float_bg1 {
+	position:absolute;top:0;left:0;z-index: 10;
+	width:5%;height:100%;
+	background:#991111;
+}
+#cont3 .cont3_float_bg2 {
+	position:absolute;bottom:0;right:0;z-index: 10;
+	width:5%;height:100%;
+	background:#991111;
+}
+#cont3 .cont3_float_area {
 	position: absolute;top:50%;left:50%;z-index: 10;
-	width:90%;height:0;
+	width:70%;height:0;
+	box-sizing:border-box;
 	overflow: hidden;
 	transform:translate(-50%,-50%);
 	border:100px solid white;
@@ -585,7 +589,7 @@ header {width: 100%;height: 100%;}
 	color:white;
 	transition:1s
 }
-#cont3 .cont3_float .float_bg {
+#cont3 .cont3_float_area .float_bg {
 	position: absolute;
 	color:#777;
 	white-space:nowrap;
@@ -594,19 +598,19 @@ header {width: 100%;height: 100%;}
 	font-size:500%
 }
 
-#cont3 .cont3_float .float_bg1 {
+#cont3 .cont3_float_area .float_bg1 {
 	top:10%;left:0;
 }
-#cont3 .cont3_float .float_bg2 {
+#cont3 .cont3_float_area .float_bg2 {
 	top:0;left:97.5%;
 	transform-origin:0% 0%;
 	transform:rotate(90deg) translateX(-10%);
 }
-#cont3 .cont3_float .float_bg3 {
+#cont3 .cont3_float_area .float_bg3 {
 	bottom:10%;right:0;	
 	transform:rotate(180deg);
 }
-#cont3 .cont3_float .float_bg4 {
+#cont3 .cont3_float_area .float_bg4 {
 	bottom:0;left:2.5%;
 	transform-origin:0% 0%;
 	transform:rotate(270deg) translateX(-10%);
@@ -617,7 +621,7 @@ footer {overflow:hidden;height:70vh;background:#991111;}
 /*푸터_제목*/
 .contact {
 	position: relative;
-	padding:20px 0 20px 50px;
+	padding:20px 0 20px 100px;
 	background:#991111;
 	border-bottom:20px dashed #EBEB90;
 	color:white;

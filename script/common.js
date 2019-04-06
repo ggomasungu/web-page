@@ -40,7 +40,7 @@ $(window).scroll(function() {
 			$('.pf_list_bg').css('left',0)
 		}
 		else if ($wsT >= $('#cont3').offset().top-$('#cont3').height()/8 && $wsT < $('#cont3').offset().top+$('#cont3').height()/2.7) {
-			$('.cont3_float').css({'height':'50%','border-width':'10px'});
+			$('.cont3_float_area').css({'height':'50%','border-width':'10px'});
 			$('.float_bg').css({'letter-spacing':0,'color':'#777','font-size':'100%'});
 		}
 	}
@@ -49,9 +49,7 @@ $(window).scroll(function() {
 
 // 스킵네비게이션 부드럽게 이동
 $('#skip_nav').find('a').click(function(e) {
-	e.preventDefault();
 	$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-	//$(this).attr('href').focus() 포커스 이동 구현이 안됨... 미완성
 });
 
 // 공지 카운트다운 & 자동닫기
@@ -106,7 +104,7 @@ $('.theme_black').click(function() {
 	$('.bg_cont1').css('background', 'black');
 	$('.introduce').css('color', 'white');
 	$('#pf_list').css('background', 'black');
-	$('.cont3_float').css('border-color', 'black');
+	$('.cont3_float_area').css('border-color', 'black');
 	$('.contact_cont > div').css('background', 'black');
 	$('.contact').css('border-bottom', '20px dashed #333');
 	$('.contact_cont').css('background', '#333');
@@ -121,7 +119,7 @@ $('.theme_white').click(function() {
 	$('.bg_cont1').css('background', 'white');
 	$('.introduce').css('color', 'black');
 	$('#pf_list').css('background', 'white');
-	$('.cont3_float').css('border-color', 'white');
+	$('.cont3_float_area').css('border-color', 'white');
 	$('.contact_cont > div').css('background', 'white');
 	$('.contact').css('border-bottom', '20px dashed #EBEB90');
 	$('.contact_cont').css('background', '#EBEB90');
