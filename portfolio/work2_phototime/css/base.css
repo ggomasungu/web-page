@@ -482,24 +482,69 @@ header .sns li a:focus {color:#16a085}
 	text-align: center;
 }
 #area5 .area5_box .download_link {
-	border: 1px solid #000;
-	text-align: center;
+	width: 650px;
+	margin:0 auto;
 }
 #area5 .area5_box .download_link li {
-	display: inline-block;
-	font-size:1.5rem;
+	width:48%;
+	height:3rem;
+	line-height:3rem;
+	font-size:1.2rem;
+	letter-spacing:2px;
 	font-weight: bold;
-	background: #16a085;
+	background: #1abc9c;
+	border-radius:5px;
 }
+#area5 .area5_box .download_link .apple_store {float: left}
+#area5 .area5_box .download_link .play_store {float: right}
 #area5 .area5_box .download_link li a {
 	color:white;
+	padding-left: 20px;
+	transition:.7s;
 }
-#area5 .area5_box .download_link .apple_store {
-	
+#area5 .area5_box .download_link li a i {
+	float: right;
+	width:3rem;
+	height: 3rem;
+	line-height: 3rem;
+	background:#16a085;
+	text-align: center;
+	border-radius:0 5px 5px 0;
 }
-#area5 .area5_box .download_link .play_store {
-	
+#area5 .area5_box .download_link li:hover a {background:#16a085}
+#area5 .area5_box .download_link li a:focus {background:#16a085}
+
+/*푸터*/
+#footer {position: relative}
+#footer .site_info {
+	position: relative;
+	top: 50%;left:10%;
+	transform:translate(0,-50%);
 }
+#footer .site_info ul {font-weight:normal}
+#footer .site_info ul li {
+	float: left;
+	position: relative;
+	margin-right:1.5rem
+}
+#footer .site_info ul li:after {
+	content:"|";
+	position: absolute;top: 0;left:-0.8rem;
+	color:#16a085;
+}
+#footer .site_info ul li:first-child:after {
+	content: "";
+}
+#footer .site_info p {
+	clear:left;
+	padding-top:1rem;
+}
+#footer .foot_logo {
+	position: absolute;
+	right:10%;top: 50%;
+	transform:translateY(-50%);
+}
+
 
 
 @media (min-width:1024px) and (max-width:1278px) {
