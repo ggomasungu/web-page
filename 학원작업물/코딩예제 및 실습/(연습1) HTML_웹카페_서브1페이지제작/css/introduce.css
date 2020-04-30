@@ -1,6 +1,0 @@
-/*html소개페이지*/
-#contentsArea h2{padding:0 0 15px 24px;color: #1698a7;background:url(../images/common/icon_h2.gif) no-repeat 4px 2px;}
-#contentsArea .text{padding:0 0 15px 24px;line-height: 1.4;color: #595959;border: 1px solid blue;}
-#contentsArea .viewCode{max-width: 0 0 20px 24px;padding: 14px;background:#f7f7f7;border-left: 4px solid  #dadada}
-.viewCode code{padding-right: 15px;line-height: 1.5;color: #587174;font-family:"Courier New", Courier, monospace;border: 1px solid green;}
-
